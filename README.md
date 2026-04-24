@@ -1,3 +1,11 @@
+<div align="center">
+
+<img src="assets/logo.jpg" width="1000"/>
+
+
+
+
+
 # Learning-By-Doing – Orby & Doom
 
 Projet de détection intelligente des fuites d’eau dans un réseau de distribution, avec un robot sphérique **Orby** et une intelligence artificielle **Doom** pour l’analyse prédictive des pertes.
