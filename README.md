@@ -135,5 +135,10 @@ Veillez à respecter les licences de EPANET, de ses wrappers Python et de toute 
 
 ## Auteurs
 
-- [Nom de l’équipe ou de chaque membre]  
-- Projet de [Année] – [Nom de l’établissement], Learning-By-Doing.
+- PLBD34:
+   Ouattara El Hadj Sinali Hassane
+   Azami  Idrissi Mohammed
+   Ouajif Omar 
+   Stitou Amal
+   Zerzbane Khaoula  
+- Projet de 2025-2026 – Ecole centrale Casablanca, Learning-By-Doing.
