@@ -1,0 +1,37 @@
+DOOM — Rapport de Synthèse
+==================================================
+Date d'analyse : 2026-04-23 12:12
+
+RÉSULTATS PAR SECTEUR
+--------------------------------------------------
+  [OK] S1_Centre            ILP=1.895  Score=19/100
+      Statut : Normal
+      Message : ILP=1.89 m³/km/j — fonctionnement normal. Score DOOM : 19/100.
+
+  [!!] S2_Nord              ILP=4.141  Score=72/100
+      Statut : Suspect
+      ⚠ Anomalie statistique (Z=7.52)
+      → Localisation probable : P11
+      Message : ILP=4.14 m³/km/j — pertes suspectes, surveillance recommandée. Anomalie statistique détectée (Z=+7.5). Score DOOM : 72/100.
+
+  [!!] S3_Est               ILP=2.659  Score=59/100
+      Statut : Suspect
+      ⚠ Anomalie statistique (Z=4.21)
+      → Localisation probable : P8
+      Message : ILP=2.66 m³/km/j — pertes suspectes, surveillance recommandée. Anomalie statistique détectée (Z=+4.2). Score DOOM : 59/100.
+
+  [OK] S4_Ouest             ILP=1.071  Score=18/100
+      Statut : Normal
+      Message : ILP=1.07 m³/km/j — fonctionnement normal. Score DOOM : 18/100.
+
+==================================================
+ILP moyen réseau : 2.441 m³/km/jour
+Secteurs en alerte rouge  : 0
+Secteurs en alerte orange : 2
+
+Fichiers générés :
+  - output/risk_chart.png
+  - output/network_map.png
+  - output/summary.txt
+  - data/alerts.csv
+  - data/simulation_results.csv
