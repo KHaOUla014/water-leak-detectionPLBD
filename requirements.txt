@@ -15,3 +15,6 @@ wntr>=1.1.0
 
 # (Optionnel) Interface console enrichie
 # rich>=13.0.0
+Flask==3.0.0
+pandas==2.1.1
+numpy==1.26.0

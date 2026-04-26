@@ -1,5 +1,0 @@
-secteur,ILP,couleur,statut,score_fuite,zscore,anomalie_statistique,localisation_probable,pipes_suspects,message
-S1_Centre,1.8948,green,Normal,18.8,-0.12,False,—,—,ILP=1.89 m³/km/j — fonctionnement normal. Score DOOM : 19/100.
-S2_Nord,4.1408,orange,Suspect,72.4,7.52,True,P11,"P11, P12","ILP=4.14 m³/km/j — pertes suspectes, surveillance recommandée. Anomalie statistique détectée (Z=+7.5). Score DOOM : 72/100."
-S3_Est,2.6588,orange,Suspect,59.0,4.21,True,P8,"P8, P9","ILP=2.66 m³/km/j — pertes suspectes, surveillance recommandée. Anomalie statistique détectée (Z=+4.2). Score DOOM : 59/100."
-S4_Ouest,1.0713,green,Normal,17.9,-0.94,False,—,—,ILP=1.07 m³/km/j — fonctionnement normal. Score DOOM : 18/100.
