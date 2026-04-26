@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Doom — Détection de Fuites</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+
+<header class="topbar">
+  <h1>💧 Doom <span class="subtitle">— IA de Détection de Fuites</span></h1>
+  <div class="status-pill" id="data-source">📊 Données : par défaut</div>
+</header>
+
+<main class="container">
+
+  <!-- SECTION UPLOAD -->
+  <section class="card upload-card">
+    <h2>📤 Charger vos données</h2>
+    <p class="hint">Format CSV requis avec : <code>sector_id, length_km, volume_injected, volume_consumed, pressure_avg, flow_night</code> (lat/lon optionnels)</p>
+    
+    <div class="upload-zone" id="drop-zone">
+      <input type="file" id="csv-input" accept=".csv" hidden>
+      <div class="upload-icon">📁</div>
+      <p><strong>Glissez votre CSV ici</strong> ou cliquez pour parcourir</p>
+      <button class="btn btn-primary" onclick="document.getElementById('csv-input').click()">
+        Choisir un fichier
+      </button>
+    </div>
+    
+    <div class="upload-actions">
+      <button class="btn btn-success" id="btn-analyze" onclick="runAnalysis()">
+        🚀 Lancer l'analyse
+      </button>
+      <button class="btn btn-secondary" onclick="resetData()">
+        ↺ Données par défaut
+      </button>
+      <button class="btn btn-outline" onclick="exportResults()">
+        ⬇ Exporter résultats
+      </button>
+    </div>
+    <div id="upload-status"></div>
+  </section>
+
+  <!-- STATS GLOBALES -->
+  <section class="stats-grid">
+    <div class="stat-box stat-green">
+      <div class="stat-label">Secteurs sains</div>
+      <div class="stat-value" id="count-green">-</div>
+    </div>
+    <div class="stat-box stat-orange">
+      <div class="stat-label">À surveiller</div>
+      <div class="stat-value" id="count-orange">-</div>
+    </div>
+    <div class="stat-box stat-red">
+      <div class="stat-label">Fuites probables</div>
+      <div class="stat-value" id="count-red">-</div>
+    </div>
+    <div class="stat-box stat-blue">
+      <div class="stat-label">Pertes totales</div>
+      <div class="stat-value" id="total-loss">- m³</div>
+    </div>
+  </section>
+
+  <!-- CARTE -->
+  <section class="card">
+    <h2>🗺️ Cartographie décisionnelle</h2>
+    <div id="map"></div>
+    <div class="legend">
+      <span><i style="background:#10b981"></i> Normal</span>
+      <span><i style="background:#f59e0b"></i> Suspect</span>
+      <span><i style="background:#ef4444"></i> Fuite probable</span>
+    </div>
+  </section>
+
+  <!-- LISTE DES SECTEURS -->
+  <section class="card">
+    <h2>📋 Détail des secteurs</h2>
+    <div class="sectors-grid" id="sectors-list"></div>
+  </section>
+
+</main>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

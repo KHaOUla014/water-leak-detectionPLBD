@@ -1,20 +1,6 @@
-# DOOM — Détection de Fuites Hydrauliques
-# Dépendances Python
-
-# Calcul scientifique
-numpy>=1.24.0
-pandas>=2.0.0
-scipy>=1.10.0
-
-# Visualisation
-matplotlib>=3.7.0
-
-# Lecture des fichiers EPANET (optionnel mais recommandé)
-# Installe avec : pip install wntr
-wntr>=1.1.0
-
-# (Optionnel) Interface console enrichie
-# rich>=13.0.0
 Flask==3.0.0
-pandas==2.1.1
-numpy==1.26.0
+pandas==2.1.4
+numpy==1.26.2
+scikit-learn==1.3.2
+joblib==1.3.2
+plotly==5.18.0
