@@ -8,4 +8,5 @@ if __name__ == "__main__":
     print("\n🧠 Entraînement de Doom...")
     doom = DoomAI()
     doom.train(csv_path="../data/synthetic_data.csv")
+    
     print("\n✨ Doom est prêt !")
