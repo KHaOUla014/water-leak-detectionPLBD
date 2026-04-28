@@ -1,120 +1,837 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doom - Tableau de Bord IA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            margin: 0;
-            padding: 40px;
-            color: #333;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .header h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-        }
-        .dashboard {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 30px; /* Bords très arrondis */
-            padding: 30px;
-            width: 250px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .status-indicator {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%; /* Indicateur parfaitement rond */
-            margin: 0 auto 20px;
-            box-shadow: inset 0 5px 10px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .sector-name {
-            font-size: 1.2em;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .ilp-value {
-            font-size: 1.1em;
-            color: #7f8c8d;
-        }
-        .action-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px; /* Bouton arrondi */
-            background-color: #34495e;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .action-btn:hover {
-            background-color: #2c3e50;
-        }
-    </style>
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Lydec — Détection Fuites Casablanca</title>
 
-    <div class="header">
-        <h1>Analyse Prédictive Doom 🌊</h1>
-        <p>Surveillance du réseau d'eau en temps réel</p>
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /* ═══════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f172a;
+      --bg2:       #1e293b;
+      --bg3:       #334155;
+      --accent:    #3b82f6;
+      --accent2:   #60a5fa;
+      --text:      #f1f5f9;
+      --text2:     #94a3b8;
+      --green:     #10b981;
+      --orange:    #f59e0b;
+      --red:       #ef4444;
+      --radius:    12px;
+      --shadow:    0 4px 24px rgba(0,0,0,0.35);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* ═══════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════ */
+    .app {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      grid-template-columns: 300px 1fr;
+      grid-template-areas:
+        "header  header"
+        "sidebar main";
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════
+       HEADER
+    ═══════════════════════════════════ */
+    header {
+      grid-area: header;
+      background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+      border-bottom: 1px solid var(--bg3);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      z-index: 100;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+
+    .header-title h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .header-title p {
+      font-size: 0.75rem;
+      color: var(--text2);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    #data-source {
+      font-size: 0.78rem;
+      color: var(--text2);
+      background: var(--bg2);
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--green);
+    }
+
+    .live-dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.2; }
+    }
+
+    /* ═══════════════════════════════════
+       SIDEBAR
+    ═══════════════════════════════════ */
+    .sidebar {
+      grid-area: sidebar;
+      background: var(--bg2);
+      border-right: 1px solid var(--bg3);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+
+    .sidebar-section {
+      padding: 16px;
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text2);
+      margin-bottom: 12px;
+    }
+
+    /* Compteurs statut */
+    .status-counts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .status-count-card {
+      background: var(--bg3);
+      border-radius: var(--radius);
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .status-count-card .count {
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .status-count-card .label {
+      font-size: 0.68rem;
+      color: var(--text2);
+      margin-top: 3px;
+    }
+
+    .count-normal  { color: var(--green); }
+    .count-suspect { color: var(--orange); }
+    .count-fuite   { color: var(--red); }
+
+    /* Pertes totales */
+    .total-loss-card {
+      background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(239,68,68,0.05));
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+    }
+
+    .total-loss-card .loss-label {
+      font-size: 0.72rem;
+      color: var(--text2);
+      margin-bottom: 4px;
+    }
+
+    .total-loss-card .loss-value {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--red);
+    }
+
+    /* KPIs */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .kpi-card {
+      background: var(--bg3);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .kpi-card .kpi-label {
+      font-size: 0.68rem;
+      color: var(--text2);
+      margin-bottom: 3px;
+    }
+
+    .kpi-card .kpi-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent2);
+    }
+
+    /* Filtres carte */
+    .filter-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .filter-btn {
+      background: var(--bg3);
+      border: 1px solid transparent;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.83rem;
+      text-align: left;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent);
+      background: rgba(59,130,246,0.12);
+    }
+
+    .filter-btn.active {
+      background: rgba(59,130,246,0.2);
+      border-color: var(--accent);
+      color: var(--accent2);
+      font-weight: 600;
+    }
+
+    /* Upload */
+    .drop-zone {
+      border: 2px dashed var(--bg3);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text2);
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: var(--accent);
+      background: rgba(59,130,246,0.08);
+      color: var(--text);
+    }
+
+    .drop-zone .drop-icon { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+
+    #upload-status {
+      margin-top: 8px;
+      font-size: 0.78rem;
+      min-height: 20px;
+      line-height: 1.5;
+    }
+
+    .msg-success { color: var(--green); }
+    .msg-error   { color: var(--red); }
+
+    /* Boutons actions */
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .btn {
+      padding: 9px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .btn-primary  { background: var(--accent); color: white; }
+    .btn-primary:hover  { background: #2563eb; }
+    .btn-success  { background: var(--green); color: white; }
+    .btn-success:hover  { background: #059669; }
+    .btn-danger   { background: rgba(239,68,68,0.15); color: var(--red);
+                    border: 1px solid rgba(239,68,68,0.3); }
+    .btn-danger:hover   { background: rgba(239,68,68,0.25); }
+    .btn-outline  { background: transparent; color: var(--accent2);
+                    border: 1px solid var(--accent); }
+    .btn-outline:hover  { background: rgba(59,130,246,0.1); }
+
+    /* ═══════════════════════════════════
+       MAIN
+    ═══════════════════════════════════ */
+    main {
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Onglets */
+    .tabs {
+      display: flex;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--bg3);
+      padding: 0 16px;
+    }
+
+    .tab {
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text2);
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--accent2); border-bottom-color: var(--accent); }
+
+    /* Panneaux */
+    .tab-panel {
+      display: none;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .tab-panel.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Carte ── */
+    #map {
+      flex: 1;
+      width: 100%;
+    }
+
+    /* ── Tableau ── */
+    .table-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    .table-toolbar input,
+    .table-toolbar select {
+      background: var(--bg3);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-size: 0.83rem;
+      outline: none;
+    }
+
+    .table-toolbar input { flex: 1; }
+    .table-toolbar input::placeholder { color: var(--text2); }
+
+    #tableCount {
+      font-size: 0.78rem;
+      color: var(--text2);
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    .table-wrapper {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .table-wrapper::-webkit-scrollbar { width: 5px; }
+    .table-wrapper::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      background: var(--bg2);
+      color: var(--text2);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 10px 14px;
+      text-align: left;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--bg3);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background 0.15s;
+    }
+
+    tbody tr:hover { background: rgba(59,130,246,0.07); }
+
+    tbody td {
+      padding: 10px 14px;
+      vertical-align: middle;
+    }
+
+    .empty-row {
+      text-align: center;
+      color: var(--text2);
+      padding: 40px !important;
+    }
+
+    /* Badges statut */
+    .status-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .status-0 { background: rgba(16,185,129,0.2);  color: var(--green); }
+    .status-1 { background: rgba(245,158,11,0.2);  color: var(--orange); }
+    .status-2 { background: rgba(239,68,68,0.2);   color: var(--red); }
+
+    /* Barre métrique */
+    .metric-bar { display: flex; flex-direction: column; gap: 3px; }
+    .metric-bar span { font-size: 0.82rem; font-weight: 600; }
+    .bar {
+      height: 4px;
+      background: var(--bg3);
+      border-radius: 2px;
+      overflow: hidden;
+      width: 80px;
+    }
+    .fill { height: 100%; border-radius: 2px; transition: width 0.4s; }
+
+    /* Bouton action tableau */
+    .action-btn {
+      background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.25);
+      color: var(--accent2);
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .action-btn:hover { background: rgba(59,130,246,0.2); }
+
+    /* ═══════════════════════════════════
+       MODAL HISTORIQUE
+    ═══════════════════════════════════ */
+    #historyModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-box {
+      background: var(--bg2);
+      border: 1px solid var(--bg3);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 860px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .modal-box::-webkit-scrollbar { width: 5px; }
+    .modal-box::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--bg3);
+      position: sticky;
+      top: 0;
+      background: var(--bg2);
+      z-index: 2;
+    }
+
+    .modal-header h2 { font-size: 1rem; font-weight: 700; }
+
+    .modal-close {
+      background: var(--bg3);
+      border: none;
+      color: var(--text);
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .modal-close:hover { background: rgba(239,68,68,0.25); color: var(--red); }
+
+    .modal-body { padding: 20px 22px; }
+
+    /* ═══════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════ */
+    @media (max-width: 900px) {
+      .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "main";
+      }
+
+      .sidebar {
+        overflow-x: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-right: none;
+        border-bottom: 1px solid var(--bg3);
+      }
+
+      .sidebar-section { min-width: 200px; border-bottom: none; border-right: 1px solid var(--bg3); }
+    }
+  </style>
+</head>
+
+<body>
+<div class="app">
+
+  <!-- ═══════════════════
+       HEADER
+  ═══════════════════ -->
+  <header>
+    <div class="header-left">
+      <div class="logo">💧</div>
+      <div class="header-title">
+        <h1>Lydec — Détection des Fuites</h1>
+        <p>Réseau d'eau potable — Grand Casablanca</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span id="data-source">📊 Données : Lydec Casablanca (défaut)</span>
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        <span>LIVE</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════
+       SIDEBAR
+  ═══════════════════ -->
+  <aside class="sidebar">
+
+    <!-- Statuts -->
+    <div class="sidebar-section">
+      <div class="section-title">📊 État du réseau</div>
+      <div class="status-counts">
+        <div class="status-count-card">
+          <div class="count count-normal" id="count-green">—</div>
+          <div class="label">Normal</div>
+        </div>
+        <div class="status-count-card">
+          <div class="count count-suspect" id="count-orange">—</div>
+          <div class="label">Suspect</div>
+        </div>
+        <div class="status-count-card">
+          <div class="count count-fuite" id="count-red">—</div>
+          <div class="label">Fuite</div>
+        </div>
+      </div>
+      <div class="total-loss-card" style="margin-top:10px">
+        <div class="loss-label">💧 Pertes totales estimées</div>
+        <div class="loss-value" id="total-loss">— m³</div>
+      </div>
     </div>
 
-    <div class="dashboard" id="dashboard">
+    <!-- KPIs -->
+    <div class="sidebar-section">
+      <div class="section-title">📈 Indicateurs Lydec</div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">📅 Date</div>
+          <div class="kpi-value" id="kpi-date">—</div>
         </div>
+        <div class="kpi-card">
+          <div class="kpi-label">⚡ Rendement réseau</div>
+          <div class="kpi-value" id="kpi-yield">— %</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">📊 ILP moyen</div>
+          <div class="kpi-value" id="kpi-ilp">—</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">💧 Taux de pertes</div>
+          <div class="kpi-value" id="kpi-loss-pct">— %</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">🚿 Volume perdu</div>
+          <div class="kpi-value" id="kpi-lost-m3">— m³</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">⬇️ ΔP moyen</div>
+          <div class="kpi-value" id="kpi-delta-p">— bar</div>
+        </div>
+      </div>
+    </div>
 
-    <script>
-        async function fetchDiagnostic() {
-            const response = await fetch('/api/diagnostic');
-            const data = await response.json();
-            const dashboard = document.getElementById('dashboard');
-            dashboard.innerHTML = '';
+    <!-- Filtres carte -->
+    <div class="sidebar-section">
+      <div class="section-title">🗺️ Filtres carte</div>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-status="ALL"    onclick="filterMap('ALL')">
+          🔵 Tous les secteurs
+        </button>
+        <button class="filter-btn" data-status="NORMAL"  onclick="filterMap('NORMAL')">
+          🟢 Normaux uniquement
+        </button>
+        <button class="filter-btn" data-status="SUSPECT" onclick="filterMap('SUSPECT')">
+          🟡 Suspects uniquement
+        </button>
+        <button class="filter-btn" data-status="FUITE"   onclick="filterMap('FUITE')">
+          🔴 Fuites uniquement
+        </button>
+      </div>
+    </div>
 
-            data.forEach(sector => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                
-                // Si le statut est Rouge, on propose d'envoyer Orby
-                const actionButton = sector.statut === "Fuite Probable" 
-                    ? `<button class="action-btn" onclick="alert('Déploiement de Orby dans le ${sector.secteur} initié !')">Envoyer Orby 🤖</button>` 
-                    : `<div style="height: 40px;"></div>`;
+    <!-- Upload -->
+    <div class="sidebar-section">
+      <div class="section-title">📂 Import données</div>
+      <label id="drop-zone" class="drop-zone" for="csv-input">
+        <span class="drop-icon">📁</span>
+        Glisser un fichier CSV<br>ou cliquer pour parcourir
+      </label>
+      <input type="file" id="csv-input" accept=".csv,.xlsx"
+             style="display:none" />
+      <div id="upload-status"></div>
+    </div>
 
-                card.innerHTML = `
-                    <div class="status-indicator" style="background-color: ${sector.couleur};"></div>
-                    <div class="sector-name">${sector.secteur}</div>
-                    <div class="ilp-value">ILP: ${sector.ilp_actuel} m³/km/j</div>
-                    <div style="color: ${sector.couleur}; font-weight: 600; margin-top: 10px;">${sector.statut}</div>
-                    ${actionButton}
-                `;
-                dashboard.appendChild(card);
-            });
+    <!-- Actions -->
+    <div class="sidebar-section">
+      <div class="section-title">⚙️ Actions</div>
+      <div class="action-buttons">
+        <button class="btn btn-primary"  onclick="runAnalysis()">
+          🔍 Lancer l'analyse
+        </button>
+        <button class="btn btn-success"  onclick="exportResults()">
+          📥 Exporter CSV
+        </button>
+        <button class="btn btn-danger"   onclick="resetData()">
+          ↺ Réinitialiser
+        </button>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ═══════════════════
+       MAIN
+  ═══════════════════ -->
+  <main>
+
+    <!-- Onglets -->
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('map-panel', this)">
+        🗺️ Carte
+      </div>
+      <div class="tab" onclick="switchTab('table-panel', this)">
+        📋 Tableau des secteurs
+      </div>
+    </div>
+
+    <!-- Panneau CARTE -->
+    <div id="map-panel" class="tab-panel active">
+      <div id="map"></div>
+    </div>
+
+    <!-- Panneau TABLEAU -->
+    <div id="table-panel" class="tab-panel">
+      <div class="table-toolbar">
+        <input type="text"   id="searchInput"  placeholder="🔍 Rechercher un quartier…" />
+        <select id="filterStatus">
+          <option value="all">Tous les statuts</option>
+          <option value="0">✅ Normal</option>
+          <option value="1">⚠️ Suspect</option>
+          <option value="2">🚨 Fuite</option>
+        </select>
+        <select id="sortBy">
+          <option value="status_code">Trier : Priorité</option>
+          <option value="sector_id">Trier : Nom</option>
+          <option value="ilp">Trier : ILP</option>
+          <option value="loss">Trier : Pertes</option>
+          <option value="delta_p">Trier : ΔP</option>
+        </select>
+        <span id="tableCount">— secteur(s)</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Quartier</th>
+              <th>Statut</th>
+              <th>Réseau</th>
+              <th>ILP (m³/km/j)</th>
+              <th>Pertes (m³)</th>
+              <th>ΔP (bar)</th>
+              <th>Recommandation</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="sectorsTableBody">
+            <tr>
+              <td colspan="8" class="empty-row">⏳ Chargement des données…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+<!-- ═══════════════════
+     MODAL HISTORIQUE
+═══════════════════ -->
+<div id="historyModal" onclick="closeHistory(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 id="historyTitle">📈 Détails secteur</h2>
+      <button class="modal-close" onclick="closeHistory()">✕</button>
+    </div>
+    <div class="modal-body" id="historyBody">
+      <!-- Rempli dynamiquement par dashboard.js -->
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════
+     SCRIPTS
+═══════════════════ -->
+<script>
+  // Gestion des onglets
+  function switchTab(panelId, tabEl) {
+    document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+    document.getElementById(panelId).classList.add("active");
+    tabEl.classList.add("active");
+
+    // Forcer Leaflet à recalculer la taille si on revient sur la carte
+    if (panelId === "map-panel" && typeof map !== "undefined") {
+      setTimeout(() => {
+        if (window.map && typeof window.map.invalidateSize === "function") {
+          window.map.invalidateSize();
         }
+      }, 100);
+    }
+  }
 
-        // Charger les données au démarrage
-        fetchDiagnostic();
-        // Optionnel : Actualiser toutes les X secondes pour un vrai "temps réel"
-        // setInterval(fetchDiagnostic, 10000); 
-    </script>
+  // Filtres carte (depuis sidebar)
+  function filterMap(status) {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    document.querySelector(`.filter-btn[data-status="${status}"]`)?.classList.add("active");
+
+    const filtered = status === "ALL"
+      ? allSectors
+      : allSectors.filter(s => s.status === status);
+
+    // Redessiner uniquement les marqueurs
+    markersLayer.clearLayers();
+    pipesLayer.clearLayers();
+    updateMap(filtered);
+  }
+</script>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
 </body>
 </html>

@@ -1,0 +1,2001 @@
+sector_id,pipe_id,pressure_psi,flow_gpm,velocity_fps,temperature_f,pipe_age_years,pipe_material,soil_corrosivity,leak_class
+Ain_Diab,P-184,67.4,130.6,4.0,64,8,Cast Iron,Low,0
+Ain_Sebaa,P-1213,61.4,135.0,3.4,80,7,Cast Iron,High,0
+Anfa,P-870,75.1,128.4,3.5,68,3,HDPE,Medium,0
+Beauséjour,P-1890,39.9,245.5,7.9,79,15,Cast Iron,Low,1
+Ben_Msick,P-133,59.7,120.1,5.0,84,5,Cast Iron,High,0
+Bourgogne,P-1672,36.3,246.2,9.5,80,10,HDPE,High,1
+Bouskoura,P-1154,58.4,104.4,4.3,53,3,Cast Iron,Medium,0
+Derb_Sultan,P-1332,71.1,86.8,4.7,59,8,HDPE,Low,0
+Gauthier,P-1871,28.9,178.3,8.9,80,13,Steel,Low,1
+Hay_Hassani,P-1037,58.9,104.9,3.4,75,7,Steel,Low,0
+Hay_Mohammadi,P-185,63.9,76.8,3.1,51,7,HDPE,Medium,0
+Lissasfa,P-1146,65.1,117.1,3.7,52,6,PVC,Medium,0
+Maarif,P-439,56.5,103.4,3.3,59,9,Cast Iron,High,0
+Medina,P-1908,28.7,177.8,6.6,67,21,PVC,Low,1
+Racine,P-479,80.4,89.9,3.5,82,6,PVC,Medium,0
+Roches_Noires,P-754,70.3,107.7,3.7,77,6,PVC,Medium,0
+Sbata,P-069,66.8,131.3,4.2,56,1,PVC,High,0
+Sidi_Bernoussi,P-1418,66.3,113.1,4.4,73,6,Cast Iron,Medium,0
+Sidi_Maarouf,P-1172,66.4,119.1,4.5,72,4,PVC,High,0
+Val_Fleuri,P-1894,38.9,162.8,6.9,57,29,HDPE,High,1
+Ain_Diab,P-489,73.4,110.4,3.7,61,2,HDPE,Low,0
+Ain_Sebaa,P-1543,73.3,123.2,3.2,75,2,Cast Iron,High,0
+Anfa,P-1282,64.2,110.5,4.1,84,3,Cast Iron,High,0
+Beauséjour,P-833,60.0,133.4,3.2,82,1,PVC,Low,0
+Ben_Msick,P-1214,69.5,132.8,4.1,68,3,PVC,Low,0
+Bourgogne,P-218,63.8,109.0,4.4,54,6,Cast Iron,Low,0
+Bouskoura,P-839,69.9,143.3,3.8,67,5,PVC,Medium,0
+Derb_Sultan,P-765,70.7,113.8,4.8,61,8,HDPE,Low,0
+Gauthier,P-709,54.6,104.7,4.3,54,7,Cast Iron,High,0
+Hay_Hassani,P-1359,57.6,116.9,4.4,71,4,PVC,Low,0
+Hay_Mohammadi,P-611,68.3,119.8,4.8,62,6,HDPE,High,0
+Lissasfa,P-677,59.4,115.2,5.0,80,7,PVC,Low,0
+Maarif,P-484,66.0,98.5,4.4,70,6,PVC,High,0
+Medina,P-948,61.5,65.1,3.2,76,5,PVC,High,0
+Racine,P-1665,53.0,255.8,9.8,64,15,PVC,Low,1
+Roches_Noires,P-1101,70.0,99.4,3.1,71,3,HDPE,High,0
+Sbata,P-773,68.2,107.3,4.7,67,6,HDPE,Low,0
+Sidi_Bernoussi,P-1748,45.0,225.4,9.0,68,15,PVC,Medium,1
+Sidi_Maarouf,P-158,67.4,105.2,4.2,60,8,Steel,Low,0
+Val_Fleuri,P-1677,52.2,222.2,10.0,50,23,HDPE,Medium,1
+Ain_Diab,P-337,60.9,117.5,3.6,71,3,HDPE,Low,0
+Ain_Sebaa,P-171,60.6,124.8,4.0,58,6,PVC,High,0
+Anfa,P-982,67.1,129.1,3.8,79,2,PVC,Low,0
+Beauséjour,P-1004,61.8,138.3,3.1,78,1,PVC,High,0
+Ben_Msick,P-087,69.6,102.4,3.9,82,1,PVC,Low,0
+Bourgogne,P-550,62.0,141.3,4.8,60,2,Steel,Low,0
+Bouskoura,P-096,57.7,108.9,3.3,55,1,HDPE,Medium,0
+Derb_Sultan,P-1226,64.4,95.2,3.2,82,9,PVC,Low,0
+Gauthier,P-168,74.5,91.1,3.7,77,2,Cast Iron,Medium,0
+Hay_Hassani,P-1600,61.4,106.6,4.6,53,6,Cast Iron,Medium,0
+Hay_Mohammadi,P-168,74.5,91.1,3.7,77,2,Cast Iron,Medium,0
+Lissasfa,P-882,62.3,78.2,4.2,56,9,Cast Iron,Medium,0
+Maarif,P-162,68.9,113.7,3.8,76,2,PVC,Low,0
+Medina,P-1972,10.6,186.9,7.0,79,10,HDPE,High,1
+Racine,P-1141,63.5,122.7,3.8,55,6,HDPE,Low,0
+Roches_Noires,P-292,62.5,124.7,4.4,56,2,PVC,Low,0
+Sbata,P-512,64.7,118.2,4.4,81,8,PVC,High,0
+Sidi_Bernoussi,P-1671,37.6,250.9,8.5,73,17,Cast Iron,Medium,1
+Sidi_Maarouf,P-1791,21.2,237.6,9.9,77,15,PVC,Medium,1
+Val_Fleuri,P-1072,67.4,135.5,4.8,52,9,HDPE,High,0
+Ain_Diab,P-364,67.0,126.7,4.5,73,9,Cast Iron,Low,0
+Ain_Sebaa,P-675,58.0,94.9,4.3,75,6,PVC,Low,0
+Anfa,P-844,66.9,92.5,3.2,79,7,PVC,Low,0
+Beauséjour,P-1729,43.7,184.0,6.7,58,24,PVC,Low,1
+Ben_Msick,P-1782,39.2,210.2,9.2,68,21,PVC,Low,1
+Bourgogne,P-1432,69.1,130.2,3.0,50,3,Cast Iron,Low,0
+Bouskoura,P-837,72.8,138.6,3.4,82,6,PVC,Low,0
+Derb_Sultan,P-515,62.1,108.1,3.9,57,5,Steel,Low,0
+Gauthier,P-585,65.9,126.4,4.4,67,3,PVC,High,0
+Hay_Hassani,P-1542,73.9,131.8,3.1,79,2,Cast Iron,Low,0
+Hay_Mohammadi,P-1899,45.6,232.9,7.2,81,12,HDPE,Low,1
+Lissasfa,P-1445,67.0,120.4,4.7,57,9,PVC,Low,0
+Maarif,P-620,66.1,131.8,3.3,67,9,PVC,Medium,0
+Medina,P-1404,68.6,108.5,4.8,57,6,HDPE,Low,0
+Racine,P-1879,23.2,174.0,9.1,66,17,HDPE,Medium,1
+Roches_Noires,P-1730,58.4,150.5,6.9,83,18,HDPE,Low,1
+Sbata,P-605,67.1,100.6,4.2,78,6,HDPE,Low,0
+Sidi_Bernoussi,P-1359,57.6,116.9,4.4,71,4,PVC,Low,0
+Sidi_Maarouf,P-1082,63.3,112.1,3.1,64,8,Steel,Medium,0
+Val_Fleuri,P-997,74.0,113.9,3.2,79,9,PVC,Low,0
+Ain_Diab,P-1941,43.1,231.4,7.5,60,17,Cast Iron,Low,1
+Ain_Sebaa,P-436,65.4,104.5,3.6,74,6,Cast Iron,Medium,0
+Anfa,P-1338,63.5,107.8,4.9,83,3,PVC,High,0
+Beauséjour,P-1081,63.3,128.0,3.1,75,2,HDPE,Low,0
+Ben_Msick,P-238,65.9,95.7,4.8,61,7,PVC,Medium,0
+Bourgogne,P-1075,70.0,99.0,4.0,59,9,PVC,Low,0
+Bouskoura,P-700,64.1,129.9,4.4,52,4,Steel,Medium,0
+Derb_Sultan,P-1244,59.9,125.9,4.9,57,9,HDPE,Medium,0
+Gauthier,P-1887,31.9,154.1,9.0,54,28,Steel,Medium,1
+Hay_Hassani,P-160,68.3,118.4,3.8,66,7,Cast Iron,Medium,0
+Hay_Mohammadi,P-1449,71.2,104.2,3.5,72,2,Steel,High,0
+Lissasfa,P-543,67.6,106.7,3.8,73,1,PVC,Low,0
+Maarif,P-1576,64.8,114.3,4.8,78,4,PVC,Low,0
+Medina,P-1107,68.1,90.6,3.4,51,1,PVC,Low,0
+Racine,P-797,64.8,118.6,4.6,55,5,PVC,Low,0
+Roches_Noires,P-1184,57.1,105.0,4.1,54,4,PVC,Low,0
+Sbata,P-780,68.1,117.2,4.9,81,9,Cast Iron,Low,0
+Sidi_Bernoussi,P-1724,46.2,166.4,7.5,73,20,PVC,Low,1
+Sidi_Maarouf,P-458,59.8,113.6,3.6,71,5,PVC,Low,0
+Val_Fleuri,P-241,61.0,111.6,4.9,55,2,Steel,Medium,0
+Ain_Diab,P-995,60.0,95.7,4.0,76,9,PVC,Low,0
+Ain_Sebaa,P-1992,47.5,205.9,9.2,62,12,PVC,Low,1
+Anfa,P-835,64.8,106.3,3.9,80,2,Cast Iron,Low,0
+Beauséjour,P-527,56.9,116.3,4.3,53,3,HDPE,Low,0
+Ben_Msick,P-1688,42.0,227.9,7.5,64,24,PVC,Medium,1
+Bourgogne,P-026,65.6,112.8,3.5,66,7,Steel,Low,0
+Bouskoura,P-1054,66.3,98.2,4.6,70,1,HDPE,Low,0
+Derb_Sultan,P-296,61.5,117.8,3.7,80,2,Cast Iron,High,0
+Gauthier,P-1340,65.9,136.9,3.7,58,8,HDPE,Medium,0
+Hay_Hassani,P-1890,39.9,245.5,7.9,79,15,Cast Iron,Low,1
+Hay_Mohammadi,P-1623,49.2,160.7,8.5,61,23,PVC,Medium,1
+Lissasfa,P-269,62.8,102.4,4.6,73,8,PVC,High,0
+Maarif,P-1257,73.4,96.8,3.9,62,8,PVC,Low,0
+Medina,P-387,66.7,106.5,5.0,67,4,HDPE,Medium,0
+Racine,P-223,68.4,121.2,4.5,66,9,Cast Iron,High,0
+Roches_Noires,P-1662,38.8,198.2,7.7,72,15,Cast Iron,Low,1
+Sbata,P-317,68.4,122.6,4.1,51,7,HDPE,Medium,0
+Sidi_Bernoussi,P-1137,70.9,124.3,3.8,71,4,PVC,Low,0
+Sidi_Maarouf,P-1344,71.0,128.5,3.8,55,4,PVC,Medium,0
+Val_Fleuri,P-1409,63.4,106.7,4.2,58,2,HDPE,Low,0
+Ain_Diab,P-186,68.6,133.0,4.1,73,2,HDPE,Low,0
+Ain_Sebaa,P-579,57.6,114.2,4.5,50,6,Cast Iron,High,0
+Anfa,P-303,68.7,104.2,4.0,71,5,HDPE,Medium,0
+Beauséjour,P-1841,38.7,201.6,7.2,56,12,PVC,Low,1
+Ben_Msick,P-1268,60.5,104.3,3.6,78,7,PVC,Low,0
+Bourgogne,P-1138,58.9,94.7,3.1,62,8,HDPE,Low,0
+Bouskoura,P-1388,72.8,111.2,3.7,55,9,Cast Iron,Low,0
+Derb_Sultan,P-1660,51.4,286.4,7.3,80,12,PVC,Low,1
+Gauthier,P-1441,68.3,112.2,4.7,60,9,HDPE,High,0
+Hay_Hassani,P-1875,53.1,197.8,7.0,50,12,Cast Iron,Low,1
+Hay_Mohammadi,P-1304,61.2,94.6,3.1,54,9,HDPE,High,0
+Lissasfa,P-1109,61.9,116.8,4.2,65,2,HDPE,Medium,0
+Maarif,P-375,75.8,126.8,3.7,81,3,HDPE,Low,0
+Medina,P-099,65.0,86.7,3.9,83,1,Cast Iron,High,0
+Racine,P-1988,45.2,203.6,9.7,60,29,PVC,Medium,1
+Roches_Noires,P-1077,57.2,121.6,4.3,61,5,HDPE,Medium,0
+Sbata,P-1087,70.2,109.2,3.3,57,9,PVC,Low,0
+Sidi_Bernoussi,P-1744,51.6,225.0,7.0,51,13,PVC,High,1
+Sidi_Maarouf,P-663,64.8,119.0,4.4,68,7,PVC,Low,0
+Val_Fleuri,P-919,62.8,111.5,3.0,50,6,HDPE,High,0
+Ain_Diab,P-506,62.6,97.6,5.0,70,4,Cast Iron,Medium,0
+Ain_Sebaa,P-774,69.9,86.8,3.5,65,2,PVC,Low,0
+Anfa,P-350,63.9,104.1,3.6,63,1,Cast Iron,High,0
+Beauséjour,P-1188,63.9,123.4,3.4,53,4,PVC,Low,0
+Ben_Msick,P-1116,66.8,113.8,3.6,82,8,PVC,Low,0
+Bourgogne,P-1944,36.6,148.3,9.5,73,26,HDPE,Medium,1
+Bouskoura,P-1659,29.9,224.8,8.1,58,17,HDPE,Medium,1
+Derb_Sultan,P-187,67.4,88.6,3.8,63,6,Cast Iron,Medium,0
+Gauthier,P-199,65.3,100.4,3.4,71,8,PVC,Medium,0
+Hay_Hassani,P-074,72.8,113.0,4.8,82,6,Cast Iron,High,0
+Hay_Mohammadi,P-1913,46.4,250.3,9.4,55,29,Cast Iron,Low,1
+Lissasfa,P-525,61.2,123.8,3.7,66,8,Cast Iron,Medium,0
+Maarif,P-150,66.5,85.4,3.9,56,3,PVC,Low,0
+Medina,P-1939,50.9,209.5,7.4,59,21,Steel,High,1
+Racine,P-1375,72.4,84.8,4.9,52,2,PVC,Medium,0
+Roches_Noires,P-125,67.9,110.3,4.5,74,9,PVC,Low,0
+Sbata,P-1467,73.3,103.8,3.9,75,9,PVC,Low,0
+Sidi_Bernoussi,P-803,65.5,115.2,3.8,71,6,HDPE,Medium,0
+Sidi_Maarouf,P-1873,36.9,187.1,8.5,71,27,HDPE,Low,1
+Val_Fleuri,P-1496,75.0,139.0,4.1,60,4,PVC,Medium,0
+Ain_Diab,P-431,59.1,118.5,3.5,54,8,PVC,Medium,0
+Ain_Sebaa,P-1914,45.0,194.7,7.6,57,17,PVC,High,1
+Anfa,P-1818,32.8,216.3,8.3,82,25,Steel,Low,1
+Beauséjour,P-1437,63.8,118.6,4.7,67,1,Cast Iron,High,0
+Ben_Msick,P-937,59.9,100.9,4.3,72,6,PVC,Low,0
+Bourgogne,P-1999,38.4,269.3,7.8,55,24,PVC,High,1
+Bouskoura,P-1505,64.1,102.5,4.8,69,5,HDPE,Low,0
+Derb_Sultan,P-1864,22.5,213.5,8.2,52,21,PVC,Low,1
+Gauthier,P-1996,50.7,220.9,8.2,82,17,Cast Iron,High,1
+Hay_Hassani,P-1503,60.9,110.7,3.2,52,7,Steel,Low,0
+Hay_Mohammadi,P-1727,34.6,234.9,6.8,53,27,Cast Iron,Low,1
+Lissasfa,P-1887,31.9,154.1,9.0,54,28,Steel,Medium,1
+Maarif,P-670,70.5,119.4,4.1,62,5,PVC,Low,0
+Medina,P-1956,53.7,201.7,9.9,67,13,Cast Iron,Low,1
+Racine,P-172,60.9,108.9,4.8,53,1,HDPE,High,0
+Roches_Noires,P-1435,64.2,144.1,4.5,79,1,HDPE,High,0
+Sbata,P-933,57.8,96.7,3.3,81,6,Cast Iron,Medium,0
+Sidi_Bernoussi,P-1338,63.5,107.8,4.9,83,3,PVC,High,0
+Sidi_Maarouf,P-269,62.8,102.4,4.6,73,8,PVC,High,0
+Val_Fleuri,P-632,72.6,116.9,3.5,76,5,PVC,Low,0
+Ain_Diab,P-1110,74.6,82.0,3.4,66,1,HDPE,Medium,0
+Ain_Sebaa,P-1419,72.6,90.6,4.2,74,4,HDPE,Low,0
+Anfa,P-668,72.5,91.5,3.9,65,4,HDPE,Medium,0
+Beauséjour,P-937,59.9,100.9,4.3,72,6,PVC,Low,0
+Ben_Msick,P-1973,46.6,230.4,9.8,56,22,HDPE,High,1
+Bourgogne,P-1740,57.1,179.6,6.7,53,13,HDPE,Low,1
+Bouskoura,P-669,51.7,118.3,4.8,64,8,Cast Iron,Low,0
+Derb_Sultan,P-297,69.5,116.3,4.5,60,4,HDPE,Low,0
+Gauthier,P-454,67.5,99.3,3.1,54,4,PVC,High,0
+Hay_Hassani,P-1473,64.3,110.8,4.0,72,8,Cast Iron,High,0
+Hay_Mohammadi,P-1964,46.5,243.1,9.4,62,13,Steel,Medium,1
+Lissasfa,P-879,64.9,114.4,3.3,67,7,PVC,Low,0
+Maarif,P-1710,30.3,221.2,8.2,75,17,PVC,Low,1
+Medina,P-1430,63.6,126.5,3.2,56,7,Cast Iron,Low,0
+Racine,P-370,61.1,128.5,3.4,70,3,Cast Iron,Low,0
+Roches_Noires,P-1208,61.7,122.5,3.4,83,2,Cast Iron,Medium,0
+Sbata,P-960,67.2,93.4,3.7,55,3,HDPE,Low,0
+Sidi_Bernoussi,P-1001,72.0,81.4,3.3,62,4,PVC,Low,0
+Sidi_Maarouf,P-361,67.6,94.6,4.4,72,3,PVC,High,0
+Val_Fleuri,P-1532,56.2,137.9,4.6,79,9,PVC,High,0
+Ain_Diab,P-757,67.5,112.9,3.7,73,3,Cast Iron,Low,0
+Ain_Sebaa,P-040,66.0,83.5,4.7,59,1,HDPE,Low,0
+Anfa,P-1834,42.9,177.3,6.7,76,19,HDPE,Medium,1
+Beauséjour,P-1391,67.3,86.3,4.9,53,8,HDPE,Low,0
+Ben_Msick,P-1258,67.1,99.3,3.1,59,6,PVC,Medium,0
+Bourgogne,P-1386,66.5,101.5,3.8,73,8,Steel,High,0
+Bouskoura,P-357,64.9,104.5,4.4,58,2,HDPE,Medium,0
+Derb_Sultan,P-1939,50.9,209.5,7.4,59,21,Steel,High,1
+Gauthier,P-1240,73.1,124.1,4.0,66,4,Cast Iron,Medium,0
+Hay_Hassani,P-473,57.4,98.2,4.3,54,5,Cast Iron,Low,0
+Hay_Mohammadi,P-1299,66.3,92.7,4.3,66,6,Steel,Low,0
+Lissasfa,P-200,59.3,117.3,3.3,60,8,HDPE,High,0
+Maarif,P-363,64.5,87.2,4.2,52,5,PVC,Low,0
+Medina,P-734,56.5,96.8,3.2,81,5,Cast Iron,High,0
+Racine,P-1289,59.5,100.6,3.1,70,9,Steel,High,0
+Roches_Noires,P-1087,70.2,109.2,3.3,57,9,PVC,Low,0
+Sbata,P-1708,59.0,260.6,6.7,78,18,Cast Iron,Low,1
+Sidi_Bernoussi,P-134,67.4,118.9,3.8,76,7,PVC,Low,0
+Sidi_Maarouf,P-667,63.7,122.7,3.1,59,4,PVC,Low,0
+Val_Fleuri,P-393,58.4,87.6,3.5,52,4,Steel,Medium,0
+Ain_Diab,P-1238,62.2,91.2,4.6,80,7,Cast Iron,Low,0
+Ain_Sebaa,P-1147,59.5,99.4,3.7,59,1,PVC,High,0
+Anfa,P-1722,37.4,271.1,7.6,60,26,PVC,Low,1
+Beauséjour,P-1505,64.1,102.5,4.8,69,5,HDPE,Low,0
+Ben_Msick,P-344,62.5,102.1,3.8,63,4,HDPE,Medium,0
+Bourgogne,P-1223,68.2,130.6,4.7,55,6,Cast Iron,Low,0
+Bouskoura,P-1817,18.5,208.5,7.0,57,28,HDPE,Low,1
+Derb_Sultan,P-967,61.6,115.3,3.3,79,7,Cast Iron,Low,0
+Gauthier,P-1467,73.3,103.8,3.9,75,9,PVC,Low,0
+Hay_Hassani,P-1684,43.2,256.9,8.1,59,24,PVC,Low,1
+Hay_Mohammadi,P-1992,47.5,205.9,9.2,62,12,PVC,Low,1
+Lissasfa,P-1879,23.2,174.0,9.1,66,17,HDPE,Medium,1
+Maarif,P-871,64.1,100.4,3.0,51,6,HDPE,Low,0
+Medina,P-1688,42.0,227.9,7.5,64,24,PVC,Medium,1
+Racine,P-1043,70.4,101.2,3.5,76,5,Cast Iron,Low,0
+Roches_Noires,P-254,70.2,109.8,4.2,61,9,PVC,Medium,0
+Sbata,P-321,65.5,116.6,4.7,62,5,HDPE,Low,0
+Sidi_Bernoussi,P-1572,58.7,129.7,4.8,65,1,Cast Iron,Low,0
+Sidi_Maarouf,P-1220,75.7,120.8,3.8,67,7,Steel,Low,0
+Val_Fleuri,P-1253,55.0,119.6,3.2,55,8,HDPE,Low,0
+Ain_Diab,P-1226,64.4,95.2,3.2,82,9,PVC,Low,0
+Ain_Sebaa,P-971,65.6,81.3,3.9,51,2,Cast Iron,Low,0
+Anfa,P-1876,54.0,255.8,7.3,62,21,Cast Iron,Medium,1
+Beauséjour,P-012,62.7,98.6,3.5,64,7,HDPE,Medium,0
+Ben_Msick,P-946,59.6,92.8,4.1,52,4,PVC,Low,0
+Bourgogne,P-1688,42.0,227.9,7.5,64,24,PVC,Medium,1
+Bouskoura,P-359,66.6,83.4,4.2,80,6,PVC,High,0
+Derb_Sultan,P-1011,71.6,108.6,3.8,59,4,PVC,High,0
+Gauthier,P-139,69.1,91.4,4.9,53,9,PVC,Medium,0
+Hay_Hassani,P-628,64.4,120.5,3.6,52,5,Cast Iron,Low,0
+Hay_Mohammadi,P-1448,67.9,97.9,3.3,73,5,PVC,Low,0
+Lissasfa,P-1099,69.6,108.1,3.1,54,2,HDPE,Low,0
+Maarif,P-114,77.3,95.0,4.9,68,3,PVC,High,0
+Medina,P-831,58.3,84.4,3.3,75,8,PVC,High,0
+Racine,P-341,60.9,120.5,4.5,60,9,PVC,Low,0
+Roches_Noires,P-1166,77.2,83.7,4.3,51,7,Cast Iron,Low,0
+Sbata,P-1568,67.6,126.1,3.9,50,9,Steel,Low,0
+Sidi_Bernoussi,P-1225,64.1,114.3,3.7,57,7,Steel,Low,0
+Sidi_Maarouf,P-971,65.6,81.3,3.9,51,2,Cast Iron,Low,0
+Val_Fleuri,P-1072,67.4,135.5,4.8,52,9,HDPE,High,0
+Ain_Diab,P-1237,73.4,125.1,4.1,59,8,PVC,Low,0
+Ain_Sebaa,P-1727,34.6,234.9,6.8,53,27,Cast Iron,Low,1
+Anfa,P-381,60.8,95.5,3.4,53,3,Steel,Medium,0
+Beauséjour,P-1460,68.4,92.4,4.8,73,8,PVC,Low,0
+Ben_Msick,P-1018,62.6,67.5,3.0,79,1,HDPE,Medium,0
+Bourgogne,P-499,60.6,121.9,5.0,83,6,HDPE,Medium,0
+Bouskoura,P-1373,58.1,131.8,4.2,52,7,PVC,Low,0
+Derb_Sultan,P-957,66.7,124.0,4.4,68,3,PVC,Low,0
+Gauthier,P-774,69.9,86.8,3.5,65,2,PVC,Low,0
+Hay_Hassani,P-1750,50.0,175.8,8.3,63,13,Steel,High,1
+Hay_Mohammadi,P-203,70.4,120.8,3.9,75,2,Steel,Low,0
+Lissasfa,P-984,64.8,114.3,4.0,78,5,PVC,Low,0
+Maarif,P-1797,36.8,215.1,8.5,56,23,HDPE,Medium,1
+Medina,P-834,61.2,105.9,4.2,74,8,Steel,High,0
+Racine,P-193,66.1,140.4,4.9,64,6,Cast Iron,High,0
+Roches_Noires,P-757,67.5,112.9,3.7,73,3,Cast Iron,Low,0
+Sbata,P-1206,65.2,99.8,3.7,65,7,HDPE,Low,0
+Sidi_Bernoussi,P-903,65.1,101.5,3.6,65,7,Cast Iron,Low,0
+Sidi_Maarouf,P-613,66.4,107.0,3.3,54,2,Cast Iron,Medium,0
+Val_Fleuri,P-690,67.2,119.2,4.9,78,6,Steel,Medium,0
+Ain_Diab,P-852,62.2,122.5,4.3,80,5,HDPE,Low,0
+Ain_Sebaa,P-984,64.8,114.3,4.0,78,5,PVC,Low,0
+Anfa,P-914,72.9,121.4,3.0,84,1,HDPE,High,0
+Beauséjour,P-1769,41.2,239.9,9.7,68,20,Cast Iron,Medium,1
+Ben_Msick,P-329,68.1,120.4,3.5,73,9,PVC,Low,0
+Bourgogne,P-1075,70.0,99.0,4.0,59,9,PVC,Low,0
+Bouskoura,P-705,57.2,113.7,4.3,82,5,PVC,High,0
+Derb_Sultan,P-1042,62.7,112.4,4.1,80,4,HDPE,Low,0
+Gauthier,P-354,64.2,89.5,4.2,66,3,HDPE,Low,0
+Hay_Hassani,P-059,66.7,113.9,4.1,56,9,Cast Iron,Low,0
+Hay_Mohammadi,P-1246,58.9,121.6,4.2,62,1,Steel,Medium,0
+Lissasfa,P-1073,65.4,113.0,4.6,67,2,Steel,Low,0
+Maarif,P-517,67.5,111.3,4.9,74,6,Steel,Low,0
+Medina,P-1701,43.5,252.0,8.7,64,20,Cast Iron,High,1
+Racine,P-971,65.6,81.3,3.9,51,2,Cast Iron,Low,0
+Roches_Noires,P-1450,65.1,103.8,3.4,61,7,HDPE,Low,0
+Sbata,P-1468,67.0,112.0,4.2,63,2,PVC,Low,0
+Sidi_Bernoussi,P-1061,68.9,114.8,4.1,78,9,HDPE,Low,0
+Sidi_Maarouf,P-1712,38.8,180.5,7.6,68,29,PVC,Medium,1
+Val_Fleuri,P-303,68.7,104.2,4.0,71,5,HDPE,Medium,0
+Ain_Diab,P-1634,50.3,242.3,9.4,72,11,HDPE,Low,1
+Ain_Sebaa,P-995,60.0,95.7,4.0,76,9,PVC,Low,0
+Anfa,P-1373,58.1,131.8,4.2,52,7,PVC,Low,0
+Beauséjour,P-002,64.3,107.8,3.2,63,8,Cast Iron,Low,0
+Ben_Msick,P-1228,64.3,128.7,3.6,73,1,Cast Iron,High,0
+Bourgogne,P-830,63.6,104.5,4.1,84,3,Steel,Low,0
+Bouskoura,P-862,57.4,117.3,5.0,51,8,PVC,Medium,0
+Derb_Sultan,P-1261,67.8,106.4,4.1,50,8,PVC,High,0
+Gauthier,P-174,66.7,112.3,4.2,65,5,Cast Iron,Medium,0
+Hay_Hassani,P-1421,67.7,100.9,3.8,65,8,PVC,Low,0
+Hay_Mohammadi,P-1108,59.7,118.6,3.6,56,8,PVC,High,0
+Lissasfa,P-969,64.8,82.7,4.2,68,7,PVC,High,0
+Maarif,P-1973,46.6,230.4,9.8,56,22,HDPE,High,1
+Medina,P-1613,48.8,214.6,8.9,82,25,Cast Iron,Low,1
+Racine,P-219,62.6,141.5,3.6,81,2,PVC,Low,0
+Roches_Noires,P-1523,63.9,95.5,4.5,84,5,PVC,Low,0
+Sbata,P-1024,75.7,127.3,4.5,51,4,PVC,Medium,0
+Sidi_Bernoussi,P-822,72.0,122.7,3.4,61,7,Cast Iron,Low,0
+Sidi_Maarouf,P-856,62.1,102.3,4.3,71,6,HDPE,Medium,0
+Val_Fleuri,P-140,58.8,88.0,3.4,64,3,Cast Iron,Medium,0
+Ain_Diab,P-242,64.4,118.8,4.9,74,8,PVC,Low,0
+Ain_Sebaa,P-1779,35.7,157.7,7.3,64,18,PVC,Medium,1
+Anfa,P-1203,65.6,113.3,4.2,59,7,Steel,Low,0
+Beauséjour,P-863,72.7,93.5,3.8,62,6,HDPE,Medium,0
+Ben_Msick,P-287,64.2,121.8,4.7,81,6,HDPE,High,0
+Bourgogne,P-1270,71.2,119.7,4.3,66,9,PVC,Medium,0
+Bouskoura,P-103,63.3,97.0,3.9,58,7,HDPE,High,0
+Derb_Sultan,P-1991,48.0,169.3,8.9,80,27,HDPE,High,1
+Gauthier,P-076,69.1,105.3,4.8,80,4,PVC,Low,0
+Hay_Hassani,P-1014,61.6,89.0,3.9,84,9,HDPE,Medium,0
+Hay_Mohammadi,P-739,73.3,133.3,3.3,66,5,PVC,Low,0
+Lissasfa,P-1723,47.4,170.9,8.1,75,11,Cast Iron,Low,1
+Maarif,P-514,60.5,106.2,3.1,69,1,HDPE,High,0
+Medina,P-1388,72.8,111.2,3.7,55,9,Cast Iron,Low,0
+Racine,P-1690,37.4,215.4,7.1,69,23,HDPE,Medium,1
+Roches_Noires,P-700,64.1,129.9,4.4,52,4,Steel,Medium,0
+Sbata,P-820,70.3,81.1,4.2,54,2,HDPE,Low,0
+Sidi_Bernoussi,P-1445,67.0,120.4,4.7,57,9,PVC,Low,0
+Sidi_Maarouf,P-1483,73.6,104.6,4.5,81,2,PVC,Low,0
+Val_Fleuri,P-1779,35.7,157.7,7.3,64,18,PVC,Medium,1
+Ain_Diab,P-655,77.9,100.1,3.4,73,2,Cast Iron,High,0
+Ain_Sebaa,P-1464,60.7,125.4,3.5,78,3,HDPE,Low,0
+Anfa,P-1001,72.0,81.4,3.3,62,4,PVC,Low,0
+Beauséjour,P-113,65.3,110.6,4.5,76,1,HDPE,Medium,0
+Ben_Msick,P-1057,64.9,101.7,3.3,52,5,PVC,High,0
+Bourgogne,P-927,62.2,108.3,4.0,60,5,Cast Iron,Medium,0
+Bouskoura,P-977,62.7,129.0,4.6,65,7,Cast Iron,Low,0
+Derb_Sultan,P-1083,63.4,80.5,3.4,82,7,Steel,Low,0
+Gauthier,P-254,70.2,109.8,4.2,61,9,PVC,Medium,0
+Hay_Hassani,P-568,60.0,119.8,3.1,70,3,PVC,Low,0
+Hay_Mohammadi,P-186,68.6,133.0,4.1,73,2,HDPE,Low,0
+Lissasfa,P-1418,66.3,113.1,4.4,73,6,Cast Iron,Medium,0
+Maarif,P-1561,64.9,113.5,4.3,50,4,Cast Iron,Low,0
+Medina,P-1852,57.8,234.8,8.5,51,18,PVC,High,1
+Racine,P-344,62.5,102.1,3.8,63,4,HDPE,Medium,0
+Roches_Noires,P-818,69.4,115.5,3.9,65,3,PVC,High,0
+Sbata,P-277,66.0,120.2,3.9,64,4,HDPE,Low,0
+Sidi_Bernoussi,P-1698,33.2,230.0,7.6,75,19,PVC,Medium,1
+Sidi_Maarouf,P-912,66.1,115.4,3.1,64,6,Steel,Low,0
+Val_Fleuri,P-733,67.0,118.4,3.8,50,2,Steel,High,0
+Ain_Diab,P-1682,39.8,208.2,6.8,72,15,HDPE,Low,1
+Ain_Sebaa,P-033,64.9,117.1,3.6,63,1,HDPE,Low,0
+Anfa,P-1013,75.4,90.7,3.5,78,1,HDPE,Low,0
+Beauséjour,P-863,72.7,93.5,3.8,62,6,HDPE,Medium,0
+Ben_Msick,P-1601,38.2,195.3,7.4,70,11,HDPE,Medium,1
+Bourgogne,P-610,72.5,129.1,4.0,74,6,PVC,Medium,0
+Bouskoura,P-223,68.4,121.2,4.5,66,9,Cast Iron,High,0
+Derb_Sultan,P-1020,67.1,118.3,4.6,70,8,PVC,Medium,0
+Gauthier,P-1707,46.7,204.3,10.0,81,16,Steel,Low,1
+Hay_Hassani,P-354,64.2,89.5,4.2,66,3,HDPE,Low,0
+Hay_Mohammadi,P-800,65.1,114.5,3.5,56,2,Cast Iron,High,0
+Lissasfa,P-1628,52.8,242.9,7.5,64,16,Cast Iron,Low,1
+Maarif,P-480,70.6,120.4,3.8,82,2,Cast Iron,Medium,0
+Medina,P-1322,67.6,96.4,4.4,61,3,PVC,Low,0
+Racine,P-003,68.2,98.1,4.9,78,4,HDPE,High,0
+Roches_Noires,P-1612,24.4,223.3,7.6,61,26,Cast Iron,High,1
+Sbata,P-1289,59.5,100.6,3.1,70,9,Steel,High,0
+Sidi_Bernoussi,P-322,68.0,121.7,4.2,60,4,PVC,Medium,0
+Sidi_Maarouf,P-066,71.8,101.3,3.2,71,6,Cast Iron,Medium,0
+Val_Fleuri,P-1750,50.0,175.8,8.3,63,13,Steel,High,1
+Ain_Diab,P-546,61.0,116.5,3.5,56,4,Cast Iron,Medium,0
+Ain_Sebaa,P-551,65.4,86.2,4.6,73,7,HDPE,Medium,0
+Anfa,P-1340,65.9,136.9,3.7,58,8,HDPE,Medium,0
+Beauséjour,P-1336,63.3,89.9,3.6,58,2,Steel,Low,0
+Ben_Msick,P-1671,37.6,250.9,8.5,73,17,Cast Iron,Medium,1
+Bourgogne,P-693,59.6,109.4,4.7,60,2,HDPE,Low,0
+Bouskoura,P-950,66.2,85.5,4.7,69,9,Cast Iron,Medium,0
+Derb_Sultan,P-213,69.8,123.2,3.9,71,2,Cast Iron,Low,0
+Gauthier,P-098,66.3,93.9,4.5,69,4,HDPE,High,0
+Hay_Hassani,P-464,66.1,91.4,3.2,82,1,HDPE,Medium,0
+Hay_Mohammadi,P-1529,62.6,82.5,4.1,72,2,HDPE,Low,0
+Lissasfa,P-1011,71.6,108.6,3.8,59,4,PVC,High,0
+Maarif,P-1331,72.7,123.7,3.4,58,9,Cast Iron,Medium,0
+Medina,P-1769,41.2,239.9,9.7,68,20,Cast Iron,Medium,1
+Racine,P-1639,60.6,216.3,6.8,54,27,PVC,High,1
+Roches_Noires,P-094,63.4,92.9,5.0,68,1,PVC,Medium,0
+Sbata,P-1071,64.8,91.0,3.2,70,3,PVC,Low,0
+Sidi_Bernoussi,P-1371,64.1,108.8,4.4,62,9,PVC,Low,0
+Sidi_Maarouf,P-380,61.0,113.9,3.5,77,6,PVC,Low,0
+Val_Fleuri,P-480,70.6,120.4,3.8,82,2,Cast Iron,Medium,0
+Ain_Diab,P-1487,57.9,133.0,4.5,81,4,Cast Iron,Medium,0
+Ain_Sebaa,P-1669,48.4,215.7,7.1,52,16,HDPE,Low,1
+Anfa,P-1161,52.5,100.9,4.1,65,7,Cast Iron,Low,0
+Beauséjour,P-1220,75.7,120.8,3.8,67,7,Steel,Low,0
+Ben_Msick,P-1503,60.9,110.7,3.2,52,7,Steel,Low,0
+Bourgogne,P-618,68.6,111.2,4.3,71,5,PVC,Low,0
+Bouskoura,P-720,64.7,111.9,4.3,80,7,PVC,Medium,0
+Derb_Sultan,P-1499,70.1,107.3,4.1,81,6,Steel,Low,0
+Gauthier,P-509,65.2,89.7,3.1,71,5,HDPE,Low,0
+Hay_Hassani,P-391,60.5,82.3,3.1,50,8,Steel,Medium,0
+Hay_Mohammadi,P-186,68.6,133.0,4.1,73,2,HDPE,Low,0
+Lissasfa,P-855,72.1,128.3,4.6,52,2,Cast Iron,High,0
+Maarif,P-712,64.5,133.0,3.2,72,1,PVC,High,0
+Medina,P-1047,68.3,127.4,3.5,62,3,PVC,Low,0
+Racine,P-1534,64.3,91.4,3.2,65,4,PVC,High,0
+Roches_Noires,P-1733,39.8,159.4,8.0,61,29,Cast Iron,Low,1
+Sbata,P-1535,62.7,141.4,3.3,55,3,PVC,Low,0
+Sidi_Bernoussi,P-671,71.2,99.5,4.7,62,6,PVC,Low,0
+Sidi_Maarouf,P-226,70.4,129.8,4.2,62,3,HDPE,Low,0
+Val_Fleuri,P-799,65.1,104.6,3.4,74,1,HDPE,Medium,0
+Ain_Diab,P-1740,57.1,179.6,6.7,53,13,HDPE,Low,1
+Ain_Sebaa,P-339,67.1,110.1,4.4,72,9,PVC,Low,0
+Anfa,P-1340,65.9,136.9,3.7,58,8,HDPE,Medium,0
+Beauséjour,P-647,51.5,104.4,3.2,50,1,PVC,Low,0
+Ben_Msick,P-400,71.2,111.0,3.6,53,2,HDPE,Medium,0
+Bourgogne,P-509,65.2,89.7,3.1,71,5,HDPE,Low,0
+Bouskoura,P-336,64.3,118.6,3.9,68,8,PVC,Low,0
+Derb_Sultan,P-389,69.8,123.4,4.6,84,3,PVC,Low,0
+Gauthier,P-390,62.1,125.5,3.5,80,8,Cast Iron,High,0
+Hay_Hassani,P-969,64.8,82.7,4.2,68,7,PVC,High,0
+Hay_Mohammadi,P-1387,71.5,97.8,3.1,70,6,PVC,High,0
+Lissasfa,P-1818,32.8,216.3,8.3,82,25,Steel,Low,1
+Maarif,P-1539,59.2,109.3,4.7,61,4,PVC,Low,0
+Medina,P-484,66.0,98.5,4.4,70,6,PVC,High,0
+Racine,P-1690,37.4,215.4,7.1,69,23,HDPE,Medium,1
+Roches_Noires,P-1796,32.5,210.2,7.1,52,14,Steel,High,1
+Sbata,P-932,74.4,103.2,4.2,50,9,Cast Iron,Low,0
+Sidi_Bernoussi,P-1277,76.6,127.6,4.2,56,4,Steel,High,0
+Sidi_Maarouf,P-1316,58.4,116.2,4.5,57,3,PVC,Low,0
+Val_Fleuri,P-1201,65.6,112.8,3.1,81,2,PVC,Low,0
+Ain_Diab,P-1878,37.9,227.3,6.6,58,15,PVC,Low,1
+Ain_Sebaa,P-1291,66.9,131.3,3.5,78,3,Steel,Medium,0
+Anfa,P-395,70.9,108.7,4.6,78,2,Steel,High,0
+Beauséjour,P-1911,57.3,177.5,9.8,78,10,HDPE,Low,1
+Ben_Msick,P-882,62.3,78.2,4.2,56,9,Cast Iron,Medium,0
+Bourgogne,P-986,59.2,95.6,4.0,53,3,Steel,Medium,0
+Bouskoura,P-1195,57.0,87.0,5.0,59,6,PVC,Low,0
+Derb_Sultan,P-946,59.6,92.8,4.1,52,4,PVC,Low,0
+Gauthier,P-1180,59.5,117.7,3.3,83,9,Steel,Medium,0
+Hay_Hassani,P-1935,66.4,221.8,8.4,71,25,HDPE,Low,1
+Hay_Mohammadi,P-339,67.1,110.1,4.4,72,9,PVC,Low,0
+Lissasfa,P-1303,64.1,113.2,3.4,64,5,PVC,Low,0
+Maarif,P-1187,60.1,92.0,4.7,54,9,Steel,Low,0
+Medina,P-1382,62.6,127.9,3.6,58,6,HDPE,Low,0
+Racine,P-579,57.6,114.2,4.5,50,6,Cast Iron,High,0
+Roches_Noires,P-1927,14.7,248.8,7.7,82,15,PVC,Low,1
+Sbata,P-444,64.6,120.3,4.6,52,2,HDPE,High,0
+Sidi_Bernoussi,P-003,68.2,98.1,4.9,78,4,HDPE,High,0
+Sidi_Maarouf,P-229,61.4,82.0,4.6,82,2,Cast Iron,Medium,0
+Val_Fleuri,P-1514,55.7,83.8,3.8,50,6,PVC,Medium,0
+Ain_Diab,P-1340,65.9,136.9,3.7,58,8,HDPE,Medium,0
+Ain_Sebaa,P-523,61.7,115.5,3.7,78,6,PVC,Medium,0
+Anfa,P-538,63.1,123.8,3.9,76,1,Cast Iron,Medium,0
+Beauséjour,P-728,66.7,130.1,3.3,55,3,PVC,High,0
+Ben_Msick,P-709,54.6,104.7,4.3,54,7,Cast Iron,High,0
+Bourgogne,P-526,56.0,117.2,4.4,74,8,PVC,Low,0
+Bouskoura,P-828,62.4,109.1,4.1,67,8,PVC,High,0
+Derb_Sultan,P-747,65.9,113.6,4.9,51,1,PVC,Low,0
+Gauthier,P-1341,65.8,120.6,4.7,56,7,HDPE,Medium,0
+Hay_Hassani,P-358,63.6,112.2,4.4,66,3,Cast Iron,Low,0
+Hay_Mohammadi,P-1674,30.8,244.6,10.0,50,23,PVC,Medium,1
+Lissasfa,P-681,68.6,120.2,3.2,62,5,PVC,Medium,0
+Maarif,P-078,63.5,128.1,3.3,81,6,PVC,Medium,0
+Medina,P-754,70.3,107.7,3.7,77,6,PVC,Medium,0
+Racine,P-273,70.8,99.9,4.9,61,1,PVC,High,0
+Roches_Noires,P-1503,60.9,110.7,3.2,52,7,Steel,Low,0
+Sbata,P-1105,70.5,99.1,4.1,53,7,PVC,Low,0
+Sidi_Bernoussi,P-628,64.4,120.5,3.6,52,5,Cast Iron,Low,0
+Sidi_Maarouf,P-1612,24.4,223.3,7.6,61,26,Cast Iron,High,1
+Val_Fleuri,P-219,62.6,141.5,3.6,81,2,PVC,Low,0
+Ain_Diab,P-739,73.3,133.3,3.3,66,5,PVC,Low,0
+Ain_Sebaa,P-1357,62.3,111.2,3.5,51,9,PVC,High,0
+Anfa,P-077,65.4,119.2,4.2,83,2,HDPE,Low,0
+Beauséjour,P-1279,66.0,111.2,3.0,64,6,HDPE,High,0
+Ben_Msick,P-1162,76.5,116.8,3.3,66,2,Cast Iron,Medium,0
+Bourgogne,P-546,61.0,116.5,3.5,56,4,Cast Iron,Medium,0
+Bouskoura,P-087,69.6,102.4,3.9,82,1,PVC,Low,0
+Derb_Sultan,P-300,68.1,87.5,3.7,60,5,Cast Iron,Low,0
+Gauthier,P-447,66.8,114.4,3.2,68,5,Steel,High,0
+Hay_Hassani,P-603,69.3,100.5,4.9,71,9,Steel,Medium,0
+Hay_Mohammadi,P-1101,70.0,99.4,3.1,71,3,HDPE,High,0
+Lissasfa,P-559,67.0,114.9,4.5,82,7,HDPE,Low,0
+Maarif,P-918,65.9,120.0,4.6,62,5,Cast Iron,Low,0
+Medina,P-677,59.4,115.2,5.0,80,7,PVC,Low,0
+Racine,P-1893,35.6,196.0,7.5,68,25,Steel,Low,1
+Roches_Noires,P-718,65.8,123.3,3.4,68,3,PVC,Low,0
+Sbata,P-887,67.9,102.1,4.5,51,1,HDPE,High,0
+Sidi_Bernoussi,P-129,65.5,120.7,3.6,74,1,HDPE,Low,0
+Sidi_Maarouf,P-1578,70.8,100.4,4.7,71,1,PVC,Medium,0
+Val_Fleuri,P-1774,41.9,197.2,7.2,72,15,HDPE,Medium,1
+Ain_Diab,P-1107,68.1,90.6,3.4,51,1,PVC,Low,0
+Ain_Sebaa,P-073,64.8,111.3,3.8,84,7,HDPE,High,0
+Anfa,P-718,65.8,123.3,3.4,68,3,PVC,Low,0
+Beauséjour,P-1887,31.9,154.1,9.0,54,28,Steel,Medium,1
+Ben_Msick,P-1629,40.7,173.7,8.5,63,10,HDPE,High,1
+Bourgogne,P-892,67.5,78.0,4.5,55,2,PVC,Low,0
+Bouskoura,P-1565,68.7,124.4,4.8,70,3,HDPE,Medium,0
+Derb_Sultan,P-1614,39.2,231.9,6.6,73,26,PVC,Medium,1
+Gauthier,P-1338,63.5,107.8,4.9,83,3,PVC,High,0
+Hay_Hassani,P-635,59.9,135.5,4.8,62,4,PVC,Low,0
+Hay_Mohammadi,P-1812,41.5,232.6,8.1,79,24,HDPE,Medium,1
+Lissasfa,P-650,68.5,123.5,3.8,53,5,PVC,Medium,0
+Maarif,P-453,60.1,109.0,4.1,82,3,PVC,Medium,0
+Medina,P-308,62.0,107.3,3.5,65,3,PVC,Medium,0
+Racine,P-382,62.0,95.6,3.8,64,6,HDPE,High,0
+Roches_Noires,P-690,67.2,119.2,4.9,78,6,Steel,Medium,0
+Sbata,P-182,60.7,104.6,3.2,63,4,PVC,Low,0
+Sidi_Bernoussi,P-138,63.4,133.2,3.4,52,1,Cast Iron,Low,0
+Sidi_Maarouf,P-190,57.4,118.8,4.7,76,1,Cast Iron,Low,0
+Val_Fleuri,P-1880,31.9,214.1,8.2,70,24,PVC,Low,1
+Ain_Diab,P-726,64.1,110.1,5.0,72,6,PVC,High,0
+Ain_Sebaa,P-116,66.5,102.3,3.7,75,7,PVC,Medium,0
+Anfa,P-827,72.9,128.7,4.9,79,3,HDPE,Medium,0
+Beauséjour,P-1027,65.2,112.9,3.4,65,7,HDPE,Low,0
+Ben_Msick,P-1724,46.2,166.4,7.5,73,20,PVC,Low,1
+Bourgogne,P-982,67.1,129.1,3.8,79,2,PVC,Low,0
+Bouskoura,P-951,63.8,128.1,4.7,63,7,PVC,Medium,0
+Derb_Sultan,P-904,71.4,114.9,4.9,64,5,HDPE,Medium,0
+Gauthier,P-1751,13.0,202.4,9.9,59,19,Cast Iron,High,1
+Hay_Hassani,P-503,58.0,105.0,4.3,62,9,PVC,Medium,0
+Hay_Mohammadi,P-1642,54.1,214.5,9.4,77,21,PVC,High,1
+Lissasfa,P-366,63.0,133.0,4.7,75,3,HDPE,High,0
+Maarif,P-734,56.5,96.8,3.2,81,5,Cast Iron,High,0
+Medina,P-1428,59.5,130.8,4.6,66,3,HDPE,Medium,0
+Racine,P-321,65.5,116.6,4.7,62,5,HDPE,Low,0
+Roches_Noires,P-1903,51.7,270.1,8.4,81,23,PVC,Low,1
+Sbata,P-1052,67.0,99.4,5.0,80,8,PVC,Low,0
+Sidi_Bernoussi,P-451,64.7,96.3,4.3,82,6,HDPE,Medium,0
+Sidi_Maarouf,P-1702,44.9,263.6,7.1,50,24,Cast Iron,Low,1
+Val_Fleuri,P-1853,28.1,258.9,8.7,61,23,PVC,High,1
+Ain_Diab,P-045,57.6,97.7,3.9,70,4,PVC,Low,0
+Ain_Sebaa,P-1195,57.0,87.0,5.0,59,6,PVC,Low,0
+Anfa,P-293,62.1,111.3,4.0,53,2,HDPE,Medium,0
+Beauséjour,P-536,65.2,105.6,4.8,80,2,PVC,Medium,0
+Ben_Msick,P-1125,73.2,107.9,3.5,78,9,PVC,Low,0
+Bourgogne,P-1800,40.2,189.5,6.8,61,17,HDPE,Low,1
+Bouskoura,P-1796,32.5,210.2,7.1,52,14,Steel,High,1
+Derb_Sultan,P-446,68.3,114.0,4.5,77,1,PVC,Low,0
+Gauthier,P-250,67.0,123.8,3.6,51,1,Steel,High,0
+Hay_Hassani,P-848,77.3,97.4,4.2,53,1,Steel,Low,0
+Hay_Mohammadi,P-761,62.1,119.4,4.6,51,9,HDPE,Low,0
+Lissasfa,P-627,60.1,131.1,5.0,63,9,Cast Iron,Low,0
+Maarif,P-767,64.8,109.5,4.2,77,4,PVC,Low,0
+Medina,P-032,74.3,95.4,3.7,61,9,HDPE,Medium,0
+Racine,P-872,61.0,116.9,4.8,62,5,PVC,High,0
+Roches_Noires,P-635,59.9,135.5,4.8,62,4,PVC,Low,0
+Sbata,P-1533,66.6,108.4,4.0,76,7,PVC,Medium,0
+Sidi_Bernoussi,P-147,58.8,86.0,3.5,79,7,HDPE,Medium,0
+Sidi_Maarouf,P-1902,36.7,216.1,7.9,66,22,PVC,Low,1
+Val_Fleuri,P-482,60.2,135.8,4.2,69,2,Cast Iron,Low,0
+Ain_Diab,P-010,67.7,124.1,3.2,72,8,PVC,Medium,0
+Ain_Sebaa,P-435,72.5,113.4,4.0,80,4,Cast Iron,Low,0
+Anfa,P-121,69.0,146.2,4.5,53,4,HDPE,Low,0
+Beauséjour,P-975,62.8,123.7,3.2,64,5,HDPE,High,0
+Ben_Msick,P-073,64.8,111.3,3.8,84,7,HDPE,High,0
+Bourgogne,P-037,66.0,115.9,4.5,80,9,PVC,Medium,0
+Bouskoura,P-781,65.9,123.1,4.7,71,4,HDPE,Low,0
+Derb_Sultan,P-203,70.4,120.8,3.9,75,2,Steel,Low,0
+Gauthier,P-1147,59.5,99.4,3.7,59,1,PVC,High,0
+Hay_Hassani,P-1176,63.6,98.7,4.6,74,6,PVC,High,0
+Hay_Mohammadi,P-096,57.7,108.9,3.3,55,1,HDPE,Medium,0
+Lissasfa,P-719,63.2,101.1,3.5,80,4,Cast Iron,Medium,0
+Maarif,P-947,57.4,111.3,4.1,50,9,HDPE,Low,0
+Medina,P-615,77.2,119.0,4.0,52,4,PVC,High,0
+Racine,P-933,57.8,96.7,3.3,81,6,Cast Iron,Medium,0
+Roches_Noires,P-300,68.1,87.5,3.7,60,5,Cast Iron,Low,0
+Sbata,P-1538,62.3,97.8,3.6,65,9,HDPE,Medium,0
+Sidi_Bernoussi,P-303,68.7,104.2,4.0,71,5,HDPE,Medium,0
+Sidi_Maarouf,P-1020,67.1,118.3,4.6,70,8,PVC,Medium,0
+Val_Fleuri,P-998,68.2,91.4,3.5,52,2,PVC,High,0
+Ain_Diab,P-1684,43.2,256.9,8.1,59,24,PVC,Low,1
+Ain_Sebaa,P-1290,54.2,105.7,3.9,56,4,Steel,Low,0
+Anfa,P-184,67.4,130.6,4.0,64,8,Cast Iron,Low,0
+Beauséjour,P-909,68.2,103.2,4.3,77,1,PVC,Low,0
+Ben_Msick,P-1476,68.2,90.7,4.0,84,4,HDPE,Medium,0
+Bourgogne,P-179,63.7,140.4,3.8,80,3,Steel,Low,0
+Bouskoura,P-1766,31.6,220.5,8.7,65,11,HDPE,Low,1
+Derb_Sultan,P-1024,75.7,127.3,4.5,51,4,PVC,Medium,0
+Gauthier,P-192,69.3,116.9,3.1,76,2,Cast Iron,Medium,0
+Hay_Hassani,P-508,60.7,128.7,3.9,74,9,PVC,Medium,0
+Hay_Mohammadi,P-420,65.3,90.1,4.5,68,5,PVC,Low,0
+Lissasfa,P-1794,46.7,212.8,7.6,66,18,Cast Iron,High,1
+Maarif,P-459,62.2,117.5,4.1,72,8,HDPE,Medium,0
+Medina,P-1057,64.9,101.7,3.3,52,5,PVC,High,0
+Racine,P-119,70.7,71.6,3.7,78,1,HDPE,Low,0
+Roches_Noires,P-204,70.3,90.6,3.5,70,6,Cast Iron,Low,0
+Sbata,P-267,73.2,83.3,4.8,83,1,PVC,Medium,0
+Sidi_Bernoussi,P-552,64.2,81.8,4.5,57,5,HDPE,Medium,0
+Sidi_Maarouf,P-797,64.8,118.6,4.6,55,5,PVC,Low,0
+Val_Fleuri,P-1878,37.9,227.3,6.6,58,15,PVC,Low,1
+Ain_Diab,P-551,65.4,86.2,4.6,73,7,HDPE,Medium,0
+Ain_Sebaa,P-1250,57.2,82.1,4.0,65,6,Cast Iron,Low,0
+Anfa,P-1606,30.5,196.3,7.4,84,21,HDPE,Low,1
+Beauséjour,P-1342,65.0,106.4,3.8,65,4,Cast Iron,High,0
+Ben_Msick,P-743,61.9,110.7,3.1,60,5,Steel,High,0
+Bourgogne,P-1823,37.8,218.7,8.2,70,16,Steel,Low,1
+Bouskoura,P-1050,71.9,128.0,3.2,51,1,PVC,High,0
+Derb_Sultan,P-1438,73.0,90.9,4.4,84,2,HDPE,Medium,0
+Gauthier,P-1445,67.0,120.4,4.7,57,9,PVC,Low,0
+Hay_Hassani,P-148,58.4,97.6,3.1,54,3,HDPE,Low,0
+Hay_Mohammadi,P-2000,32.6,230.8,8.0,74,16,PVC,Low,1
+Lissasfa,P-1104,64.3,126.1,4.1,53,2,PVC,Low,0
+Maarif,P-1797,36.8,215.1,8.5,56,23,HDPE,Medium,1
+Medina,P-1422,70.4,108.8,3.4,55,5,PVC,Low,0
+Racine,P-1792,41.2,207.6,6.8,59,18,PVC,Medium,1
+Roches_Noires,P-1880,31.9,214.1,8.2,70,24,PVC,Low,1
+Sbata,P-014,55.4,95.9,4.0,51,7,Cast Iron,Low,0
+Sidi_Bernoussi,P-1223,68.2,130.6,4.7,55,6,Cast Iron,Low,0
+Sidi_Maarouf,P-1328,64.3,101.2,4.7,78,3,PVC,High,0
+Val_Fleuri,P-1050,71.9,128.0,3.2,51,1,PVC,High,0
+Ain_Diab,P-1111,64.0,92.6,3.2,69,8,Cast Iron,Low,0
+Ain_Sebaa,P-562,75.4,111.3,3.4,53,1,PVC,Low,0
+Anfa,P-1953,30.9,285.5,8.6,79,24,HDPE,Medium,1
+Beauséjour,P-1103,75.4,134.7,4.0,72,6,Cast Iron,High,0
+Ben_Msick,P-126,76.0,118.2,3.1,80,2,HDPE,Low,0
+Bourgogne,P-1061,68.9,114.8,4.1,78,9,HDPE,Low,0
+Bouskoura,P-859,62.2,127.7,3.2,84,4,HDPE,Low,0
+Derb_Sultan,P-1618,32.5,211.5,6.8,73,17,Cast Iron,High,1
+Gauthier,P-1528,72.7,141.0,4.2,78,3,PVC,Low,0
+Hay_Hassani,P-311,63.9,105.2,3.5,68,3,PVC,Medium,0
+Hay_Mohammadi,P-1173,65.5,90.2,4.5,70,8,HDPE,Medium,0
+Lissasfa,P-566,63.0,103.9,4.7,82,3,HDPE,High,0
+Maarif,P-800,65.1,114.5,3.5,56,2,Cast Iron,High,0
+Medina,P-1094,65.3,116.3,4.0,77,5,PVC,Low,0
+Racine,P-1271,70.5,106.8,4.3,69,1,PVC,Medium,0
+Roches_Noires,P-1829,39.0,255.5,7.3,61,19,Cast Iron,High,1
+Sbata,P-1922,47.5,226.7,6.8,65,24,HDPE,Medium,1
+Sidi_Bernoussi,P-1477,64.4,124.7,3.3,72,5,PVC,Medium,0
+Sidi_Maarouf,P-953,58.7,117.0,3.2,72,2,Steel,Low,0
+Val_Fleuri,P-870,75.1,128.4,3.5,68,3,HDPE,Medium,0
+Ain_Diab,P-830,63.6,104.5,4.1,84,3,Steel,Low,0
+Ain_Sebaa,P-1483,73.6,104.6,4.5,81,2,PVC,Low,0
+Anfa,P-1508,69.8,109.1,4.1,77,2,PVC,Low,0
+Beauséjour,P-1179,60.1,124.6,3.9,75,2,Steel,Low,0
+Ben_Msick,P-641,63.3,137.1,3.9,58,4,Cast Iron,High,0
+Bourgogne,P-704,58.0,125.4,3.8,65,2,Cast Iron,Low,0
+Bouskoura,P-1859,42.9,198.3,7.6,66,16,PVC,Low,1
+Derb_Sultan,P-667,63.7,122.7,3.1,59,4,PVC,Low,0
+Gauthier,P-178,72.3,112.8,4.0,58,9,PVC,Medium,0
+Hay_Hassani,P-1405,70.0,116.5,4.0,56,8,PVC,Low,0
+Hay_Mohammadi,P-861,66.0,102.0,3.5,84,9,HDPE,High,0
+Lissasfa,P-358,63.6,112.2,4.4,66,3,Cast Iron,Low,0
+Maarif,P-794,58.6,96.1,3.9,62,8,Cast Iron,High,0
+Medina,P-028,66.9,128.6,3.1,59,8,Cast Iron,Low,0
+Racine,P-1787,36.9,229.5,9.7,82,19,Cast Iron,Medium,1
+Roches_Noires,P-298,66.5,131.0,3.3,69,1,PVC,Low,0
+Sbata,P-1249,66.2,113.4,4.2,73,9,HDPE,High,0
+Sidi_Bernoussi,P-168,74.5,91.1,3.7,77,2,Cast Iron,Medium,0
+Sidi_Maarouf,P-1287,55.8,105.0,4.9,64,3,HDPE,Low,0
+Val_Fleuri,P-003,68.2,98.1,4.9,78,4,HDPE,High,0
+Ain_Diab,P-959,67.8,127.0,4.2,78,6,Cast Iron,Medium,0
+Ain_Sebaa,P-1855,50.0,209.0,7.9,54,26,PVC,Low,1
+Anfa,P-355,64.9,128.2,5.0,75,1,HDPE,Medium,0
+Beauséjour,P-1273,59.5,123.2,3.8,68,1,Cast Iron,Low,0
+Ben_Msick,P-1559,72.5,108.3,3.8,78,1,HDPE,Low,0
+Bourgogne,P-1426,55.2,126.0,3.1,77,9,PVC,Medium,0
+Bouskoura,P-568,60.0,119.8,3.1,70,3,PVC,Low,0
+Derb_Sultan,P-878,66.1,100.0,4.7,59,2,HDPE,Low,0
+Gauthier,P-913,66.2,99.0,3.3,70,9,HDPE,Medium,0
+Hay_Hassani,P-895,71.9,117.6,4.8,75,3,Cast Iron,Low,0
+Hay_Mohammadi,P-1258,67.1,99.3,3.1,59,6,PVC,Medium,0
+Lissasfa,P-1795,42.1,220.2,7.9,75,22,PVC,Low,1
+Maarif,P-1982,26.2,269.2,8.2,72,24,HDPE,Medium,1
+Medina,P-796,70.3,97.3,3.5,51,8,Cast Iron,High,0
+Racine,P-372,67.5,101.8,4.9,70,6,Steel,Medium,0
+Roches_Noires,P-1926,30.8,209.9,9.7,63,23,HDPE,Low,1
+Sbata,P-1523,63.9,95.5,4.5,84,5,PVC,Low,0
+Sidi_Bernoussi,P-069,66.8,131.3,4.2,56,1,PVC,High,0
+Sidi_Maarouf,P-1103,75.4,134.7,4.0,72,6,Cast Iron,High,0
+Val_Fleuri,P-224,56.9,107.3,3.3,79,6,Steel,Low,0
+Ain_Diab,P-736,67.4,102.0,5.0,78,4,Cast Iron,Low,0
+Ain_Sebaa,P-777,61.4,106.2,3.6,62,7,HDPE,Medium,0
+Anfa,P-529,66.3,140.8,3.5,69,2,HDPE,Low,0
+Beauséjour,P-551,65.4,86.2,4.6,73,7,HDPE,Medium,0
+Ben_Msick,P-193,66.1,140.4,4.9,64,6,Cast Iron,High,0
+Bourgogne,P-957,66.7,124.0,4.4,68,3,PVC,Low,0
+Bouskoura,P-602,60.4,119.3,3.6,81,7,Cast Iron,Low,0
+Derb_Sultan,P-006,63.8,113.2,3.5,81,7,HDPE,Low,0
+Gauthier,P-265,63.7,120.2,3.7,65,1,PVC,Medium,0
+Hay_Hassani,P-1652,43.3,236.5,8.0,58,23,Cast Iron,Low,1
+Hay_Mohammadi,P-623,74.4,111.3,4.5,66,8,PVC,Low,0
+Lissasfa,P-1841,38.7,201.6,7.2,56,12,PVC,Low,1
+Maarif,P-1737,29.5,206.3,7.7,83,29,PVC,Medium,1
+Medina,P-1901,47.0,203.3,6.7,65,28,HDPE,Low,1
+Racine,P-619,67.4,116.9,3.5,58,4,HDPE,Medium,0
+Roches_Noires,P-1357,62.3,111.2,3.5,51,9,PVC,High,0
+Sbata,P-1407,57.9,120.2,4.1,63,5,PVC,High,0
+Sidi_Bernoussi,P-1641,40.2,205.1,9.0,60,15,PVC,Low,1
+Sidi_Maarouf,P-005,63.8,81.6,4.2,53,8,HDPE,Medium,0
+Val_Fleuri,P-989,63.9,93.0,3.8,78,8,Steel,Low,0
+Ain_Diab,P-1172,66.4,119.1,4.5,72,4,PVC,High,0
+Ain_Sebaa,P-014,55.4,95.9,4.0,51,7,Cast Iron,Low,0
+Anfa,P-1651,45.8,232.2,9.4,54,17,PVC,Low,1
+Beauséjour,P-187,67.4,88.6,3.8,63,6,Cast Iron,Medium,0
+Ben_Msick,P-1441,68.3,112.2,4.7,60,9,HDPE,High,0
+Bourgogne,P-1140,68.5,106.0,3.2,78,1,HDPE,Medium,0
+Bouskoura,P-190,57.4,118.8,4.7,76,1,Cast Iron,Low,0
+Derb_Sultan,P-1733,39.8,159.4,8.0,61,29,Cast Iron,Low,1
+Gauthier,P-328,69.0,104.2,4.7,66,1,PVC,Medium,0
+Hay_Hassani,P-1828,54.1,234.6,8.0,61,17,PVC,Low,1
+Hay_Mohammadi,P-914,72.9,121.4,3.0,84,1,HDPE,High,0
+Lissasfa,P-1206,65.2,99.8,3.7,65,7,HDPE,Low,0
+Maarif,P-392,67.5,96.1,3.6,52,6,HDPE,High,0
+Medina,P-284,58.8,95.3,3.8,61,2,Cast Iron,Medium,0
+Racine,P-1597,68.1,95.4,3.3,57,7,PVC,High,0
+Roches_Noires,P-1489,57.4,96.1,3.5,55,5,Cast Iron,Medium,0
+Sbata,P-1153,61.8,66.4,3.2,57,9,HDPE,Medium,0
+Sidi_Bernoussi,P-1731,37.8,245.7,7.3,56,24,PVC,Low,1
+Sidi_Maarouf,P-1992,47.5,205.9,9.2,62,12,PVC,Low,1
+Val_Fleuri,P-1302,70.0,95.9,4.8,62,1,PVC,Low,0
+Ain_Diab,P-1285,61.1,86.6,4.1,71,3,PVC,Low,0
+Ain_Sebaa,P-1293,65.0,129.2,3.9,81,7,Steel,Medium,0
+Anfa,P-161,60.1,93.3,4.4,56,7,PVC,Medium,0
+Beauséjour,P-1470,67.2,106.7,4.6,55,1,HDPE,Medium,0
+Ben_Msick,P-1479,60.6,127.3,3.7,75,5,Cast Iron,Low,0
+Bourgogne,P-1025,73.6,82.0,3.1,83,9,Cast Iron,Medium,0
+Bouskoura,P-1615,38.2,240.8,7.8,69,17,Steel,Low,1
+Derb_Sultan,P-501,69.6,118.6,4.6,73,8,Cast Iron,Low,0
+Gauthier,P-1081,63.3,128.0,3.1,75,2,HDPE,Low,0
+Hay_Hassani,P-032,74.3,95.4,3.7,61,9,HDPE,Medium,0
+Hay_Mohammadi,P-1262,65.4,110.7,4.0,74,7,PVC,Medium,0
+Lissasfa,P-1648,49.9,226.4,7.5,70,11,Steel,Low,1
+Maarif,P-436,65.4,104.5,3.6,74,6,Cast Iron,Medium,0
+Medina,P-1361,64.9,92.7,4.8,61,4,HDPE,Low,0
+Racine,P-1268,60.5,104.3,3.6,78,7,PVC,Low,0
+Roches_Noires,P-845,65.8,113.3,5.0,61,5,Cast Iron,Low,0
+Sbata,P-1656,37.0,230.9,6.8,67,10,HDPE,High,1
+Sidi_Bernoussi,P-543,67.6,106.7,3.8,73,1,PVC,Low,0
+Sidi_Maarouf,P-052,63.1,97.0,4.0,73,8,Cast Iron,Low,0
+Val_Fleuri,P-760,68.5,119.3,3.9,81,3,PVC,Low,0
+Ain_Diab,P-1041,73.4,119.2,4.8,73,4,PVC,High,0
+Ain_Sebaa,P-898,65.7,135.9,4.7,77,4,PVC,Low,0
+Anfa,P-909,68.2,103.2,4.3,77,1,PVC,Low,0
+Beauséjour,P-011,62.7,85.9,4.7,81,1,Steel,Low,0
+Ben_Msick,P-471,63.6,126.1,4.7,54,4,PVC,High,0
+Bourgogne,P-1144,65.6,101.0,4.6,73,9,PVC,Medium,0
+Bouskoura,P-575,69.1,149.3,3.1,57,5,Steel,Low,0
+Derb_Sultan,P-645,63.8,93.7,3.4,62,5,PVC,High,0
+Gauthier,P-1762,47.4,219.7,9.7,53,22,Cast Iron,High,1
+Hay_Hassani,P-1326,55.1,117.1,3.7,60,2,Steel,High,0
+Hay_Mohammadi,P-094,63.4,92.9,5.0,68,1,PVC,Medium,0
+Lissasfa,P-723,58.3,94.1,4.0,63,5,PVC,Low,0
+Maarif,P-339,67.1,110.1,4.4,72,9,PVC,Low,0
+Medina,P-040,66.0,83.5,4.7,59,1,HDPE,Low,0
+Racine,P-1620,51.5,246.8,7.3,65,10,PVC,Medium,1
+Roches_Noires,P-491,65.0,109.8,3.5,58,8,Cast Iron,Medium,0
+Sbata,P-1040,70.2,106.9,3.8,51,3,Cast Iron,Low,0
+Sidi_Bernoussi,P-456,61.0,132.3,3.2,56,4,Steel,Low,0
+Sidi_Maarouf,P-340,62.2,100.1,3.5,51,1,Cast Iron,Low,0
+Val_Fleuri,P-1897,37.4,261.8,8.8,80,18,Cast Iron,High,1
+Ain_Diab,P-271,72.2,115.2,3.2,58,4,PVC,Low,0
+Ain_Sebaa,P-342,66.2,116.3,3.1,80,4,PVC,Low,0
+Anfa,P-401,57.0,99.2,3.1,63,5,HDPE,Low,0
+Beauséjour,P-546,61.0,116.5,3.5,56,4,Cast Iron,Medium,0
+Ben_Msick,P-1657,41.7,220.2,9.9,68,29,Steel,Medium,1
+Bourgogne,P-1527,74.4,107.0,4.8,57,6,HDPE,High,0
+Bouskoura,P-1787,36.9,229.5,9.7,82,19,Cast Iron,Medium,1
+Derb_Sultan,P-1834,42.9,177.3,6.7,76,19,HDPE,Medium,1
+Gauthier,P-1172,66.4,119.1,4.5,72,4,PVC,High,0
+Hay_Hassani,P-1019,63.4,103.2,3.8,71,9,Cast Iron,Medium,0
+Hay_Mohammadi,P-010,67.7,124.1,3.2,72,8,PVC,Medium,0
+Lissasfa,P-1701,43.5,252.0,8.7,64,20,Cast Iron,High,1
+Maarif,P-1610,37.5,207.5,7.3,69,27,HDPE,High,1
+Medina,P-1431,66.5,117.0,3.9,71,2,HDPE,High,0
+Racine,P-090,67.6,131.8,3.1,70,7,Steel,Low,0
+Roches_Noires,P-247,62.6,96.5,3.3,52,6,HDPE,High,0
+Sbata,P-1743,40.7,229.7,8.2,59,24,PVC,Medium,1
+Sidi_Bernoussi,P-1492,77.8,106.8,4.2,81,8,HDPE,Low,0
+Sidi_Maarouf,P-1138,58.9,94.7,3.1,62,8,HDPE,Low,0
+Val_Fleuri,P-420,65.3,90.1,4.5,68,5,PVC,Low,0
+Ain_Diab,P-1872,37.9,224.7,6.7,75,20,HDPE,Medium,1
+Ain_Sebaa,P-871,64.1,100.4,3.0,51,6,HDPE,Low,0
+Anfa,P-1156,70.0,85.5,5.0,56,1,PVC,High,0
+Beauséjour,P-1501,68.9,127.7,3.2,77,7,Steel,Medium,0
+Ben_Msick,P-679,69.7,111.4,3.5,78,5,PVC,High,0
+Bourgogne,P-149,67.6,108.5,3.6,80,3,PVC,Low,0
+Bouskoura,P-703,61.5,140.2,3.1,75,5,PVC,Low,0
+Derb_Sultan,P-723,58.3,94.1,4.0,63,5,PVC,Low,0
+Gauthier,P-037,66.0,115.9,4.5,80,9,PVC,Medium,0
+Hay_Hassani,P-1285,61.1,86.6,4.1,71,3,PVC,Low,0
+Hay_Mohammadi,P-705,57.2,113.7,4.3,82,5,PVC,High,0
+Lissasfa,P-228,59.6,101.0,3.1,50,8,HDPE,High,0
+Maarif,P-783,66.9,92.0,3.8,72,8,HDPE,High,0
+Medina,P-878,66.1,100.0,4.7,59,2,HDPE,Low,0
+Racine,P-966,72.2,106.1,4.7,66,9,HDPE,Low,0
+Roches_Noires,P-1494,65.9,102.0,3.7,50,8,Cast Iron,High,0
+Sbata,P-1750,50.0,175.8,8.3,63,13,Steel,High,1
+Sidi_Bernoussi,P-021,72.3,110.9,4.7,59,8,PVC,Low,0
+Sidi_Maarouf,P-325,60.0,109.9,3.2,51,3,Steel,Low,0
+Val_Fleuri,P-1034,68.2,95.3,3.4,60,2,PVC,Low,0
+Ain_Diab,P-1870,35.9,249.9,9.5,77,15,PVC,Medium,1
+Ain_Sebaa,P-393,58.4,87.6,3.5,52,4,Steel,Medium,0
+Anfa,P-019,60.5,119.5,3.1,71,2,Steel,High,0
+Beauséjour,P-1113,69.4,105.5,3.0,83,6,HDPE,High,0
+Ben_Msick,P-1753,33.5,257.6,7.3,78,15,Cast Iron,Medium,1
+Bourgogne,P-017,59.9,106.0,4.2,73,4,Cast Iron,Medium,0
+Bouskoura,P-1059,67.7,92.0,3.8,69,1,PVC,Medium,0
+Derb_Sultan,P-321,65.5,116.6,4.7,62,5,HDPE,Low,0
+Gauthier,P-605,67.1,100.6,4.2,78,6,HDPE,Low,0
+Hay_Hassani,P-863,72.7,93.5,3.8,62,6,HDPE,Medium,0
+Hay_Mohammadi,P-821,62.4,105.8,4.0,62,2,Cast Iron,High,0
+Lissasfa,P-794,58.6,96.1,3.9,62,8,Cast Iron,High,0
+Maarif,P-546,61.0,116.5,3.5,56,4,Cast Iron,Medium,0
+Medina,P-966,72.2,106.1,4.7,66,9,HDPE,Low,0
+Racine,P-145,66.3,106.7,3.9,63,1,HDPE,Low,0
+Roches_Noires,P-1851,33.5,204.3,7.2,64,18,PVC,Medium,1
+Sbata,P-1517,72.6,98.1,3.4,56,9,Steel,Medium,0
+Sidi_Bernoussi,P-1709,38.7,232.7,7.7,74,27,Steel,Low,1
+Sidi_Maarouf,P-838,60.0,134.4,3.3,81,2,HDPE,Low,0
+Val_Fleuri,P-1536,57.0,133.9,4.1,82,6,PVC,Low,0
+Ain_Diab,P-717,65.6,119.4,5.0,79,3,PVC,Low,0
+Ain_Sebaa,P-1453,66.2,108.1,3.1,77,8,HDPE,Low,0
+Anfa,P-1038,57.7,112.6,4.9,72,7,HDPE,Medium,0
+Beauséjour,P-1027,65.2,112.9,3.4,65,7,HDPE,Low,0
+Ben_Msick,P-612,64.7,92.9,3.4,57,6,HDPE,Low,0
+Bourgogne,P-1463,64.0,112.4,3.2,58,3,HDPE,Low,0
+Bouskoura,P-1356,52.0,107.5,4.5,84,7,PVC,Low,0
+Derb_Sultan,P-1827,29.1,184.7,7.6,79,20,Cast Iron,Low,1
+Gauthier,P-137,61.1,111.5,4.7,50,8,HDPE,Medium,0
+Hay_Hassani,P-1740,57.1,179.6,6.7,53,13,HDPE,Low,1
+Hay_Mohammadi,P-736,67.4,102.0,5.0,78,4,Cast Iron,Low,0
+Lissasfa,P-1111,64.0,92.6,3.2,69,8,Cast Iron,Low,0
+Maarif,P-763,77.8,123.4,4.6,51,2,Cast Iron,Low,0
+Medina,P-1047,68.3,127.4,3.5,62,3,PVC,Low,0
+Racine,P-1146,65.1,117.1,3.7,52,6,PVC,Medium,0
+Roches_Noires,P-327,70.8,93.6,3.8,62,3,Cast Iron,High,0
+Sbata,P-1785,40.8,233.9,8.7,71,16,Steel,Low,1
+Sidi_Bernoussi,P-1368,60.3,112.7,4.1,72,1,Steel,Low,0
+Sidi_Maarouf,P-1994,47.1,242.5,8.6,74,23,PVC,Medium,1
+Val_Fleuri,P-1403,70.9,112.9,4.4,55,7,HDPE,Low,0
+Ain_Diab,P-1650,65.9,207.1,6.8,67,23,PVC,Low,1
+Ain_Sebaa,P-1211,58.8,127.8,4.5,66,5,PVC,Medium,0
+Anfa,P-233,65.2,80.4,3.9,77,8,PVC,Medium,0
+Beauséjour,P-319,66.6,101.6,3.3,70,8,PVC,Medium,0
+Ben_Msick,P-426,71.8,117.7,4.8,62,5,PVC,High,0
+Bourgogne,P-1345,69.7,95.5,3.8,60,1,Cast Iron,Medium,0
+Bouskoura,P-1025,73.6,82.0,3.1,83,9,Cast Iron,Medium,0
+Derb_Sultan,P-1643,39.2,190.3,9.5,65,29,PVC,Low,1
+Gauthier,P-1063,70.7,108.6,3.0,69,3,Cast Iron,High,0
+Hay_Hassani,P-689,68.6,121.4,4.5,52,1,Steel,Medium,0
+Hay_Mohammadi,P-1439,67.5,90.7,3.1,79,8,HDPE,Low,0
+Lissasfa,P-1489,57.4,96.1,3.5,55,5,Cast Iron,Medium,0
+Maarif,P-1768,38.2,259.1,9.9,59,16,HDPE,Low,1
+Medina,P-1880,31.9,214.1,8.2,70,24,PVC,Low,1
+Racine,P-1857,53.9,178.1,8.9,68,18,Cast Iron,Medium,1
+Roches_Noires,P-297,69.5,116.3,4.5,60,4,HDPE,Low,0
+Sbata,P-1111,64.0,92.6,3.2,69,8,Cast Iron,Low,0
+Sidi_Bernoussi,P-883,62.6,100.9,3.1,57,4,PVC,Medium,0
+Sidi_Maarouf,P-759,60.7,93.0,5.0,80,6,HDPE,Low,0
+Val_Fleuri,P-793,66.4,103.8,4.4,84,7,PVC,High,0
+Ain_Diab,P-1947,43.8,236.1,7.7,76,14,Cast Iron,High,1
+Ain_Sebaa,P-1071,64.8,91.0,3.2,70,3,PVC,Low,0
+Anfa,P-1117,77.0,107.1,3.3,75,3,HDPE,Low,0
+Beauséjour,P-346,66.2,126.5,3.6,60,6,PVC,Medium,0
+Ben_Msick,P-727,65.1,125.2,4.9,76,8,PVC,Low,0
+Bourgogne,P-1911,57.3,177.5,9.8,78,10,HDPE,Low,1
+Bouskoura,P-419,70.9,115.9,3.3,50,5,Cast Iron,High,0
+Derb_Sultan,P-037,66.0,115.9,4.5,80,9,PVC,Medium,0
+Gauthier,P-695,68.0,115.0,3.5,78,1,Steel,Medium,0
+Hay_Hassani,P-1983,33.7,314.6,8.2,67,28,Cast Iron,Medium,1
+Hay_Mohammadi,P-171,60.6,124.8,4.0,58,6,PVC,High,0
+Lissasfa,P-1658,53.2,157.4,9.3,52,23,PVC,Medium,1
+Maarif,P-1138,58.9,94.7,3.1,62,8,HDPE,Low,0
+Medina,P-1157,61.6,91.4,4.6,59,9,HDPE,Low,0
+Racine,P-1621,41.1,178.8,8.9,64,22,PVC,Low,1
+Roches_Noires,P-1793,38.4,227.7,8.4,71,22,HDPE,Medium,1
+Sbata,P-1587,65.9,99.6,3.3,84,6,HDPE,High,0
+Sidi_Bernoussi,P-387,66.7,106.5,5.0,67,4,HDPE,Medium,0
+Sidi_Maarouf,P-912,66.1,115.4,3.1,64,6,Steel,Low,0
+Val_Fleuri,P-743,61.9,110.7,3.1,60,5,Steel,High,0
+Ain_Diab,P-1494,65.9,102.0,3.7,50,8,Cast Iron,High,0
+Ain_Sebaa,P-554,66.3,115.8,4.7,71,5,HDPE,Low,0
+Anfa,P-1089,63.7,80.7,3.3,68,9,HDPE,Low,0
+Beauséjour,P-1729,43.7,184.0,6.7,58,24,PVC,Low,1
+Ben_Msick,P-1557,69.6,119.6,4.1,61,7,Cast Iron,Low,0
+Bourgogne,P-175,66.4,97.5,4.6,82,6,PVC,Low,0
+Bouskoura,P-879,64.9,114.4,3.3,67,7,PVC,Low,0
+Derb_Sultan,P-626,62.4,97.1,3.8,54,8,HDPE,Medium,0
+Gauthier,P-1079,72.5,113.5,4.2,66,6,PVC,Low,0
+Hay_Hassani,P-075,51.9,100.7,4.3,70,5,PVC,Low,0
+Hay_Mohammadi,P-791,67.1,118.9,3.0,68,3,PVC,Low,0
+Lissasfa,P-1951,22.3,235.5,9.9,62,15,PVC,Low,1
+Maarif,P-1152,54.2,104.5,3.7,74,1,PVC,Low,0
+Medina,P-501,69.6,118.6,4.6,73,8,Cast Iron,Low,0
+Racine,P-358,63.6,112.2,4.4,66,3,Cast Iron,Low,0
+Roches_Noires,P-1061,68.9,114.8,4.1,78,9,HDPE,Low,0
+Sbata,P-1050,71.9,128.0,3.2,51,1,PVC,High,0
+Sidi_Bernoussi,P-1780,33.1,217.4,9.8,66,24,Steel,Medium,1
+Sidi_Maarouf,P-487,61.8,104.2,3.6,67,3,PVC,Medium,0
+Val_Fleuri,P-1623,49.2,160.7,8.5,61,23,PVC,Medium,1
+Ain_Diab,P-283,72.9,127.9,4.1,76,5,HDPE,High,0
+Ain_Sebaa,P-637,69.1,112.9,4.3,83,4,PVC,Low,0
+Anfa,P-1640,29.3,233.7,7.3,54,23,Cast Iron,Medium,1
+Beauséjour,P-511,66.4,117.2,4.7,82,3,PVC,High,0
+Ben_Msick,P-1134,67.3,132.4,4.9,59,9,Steel,Low,0
+Bourgogne,P-520,68.8,97.2,4.1,51,7,PVC,Low,0
+Bouskoura,P-1295,65.4,91.9,3.7,53,4,Cast Iron,Low,0
+Derb_Sultan,P-1933,35.3,246.6,7.7,78,23,HDPE,Medium,1
+Gauthier,P-1226,64.4,95.2,3.2,82,9,PVC,Low,0
+Hay_Hassani,P-1608,56.2,252.5,8.3,63,21,PVC,Low,1
+Hay_Mohammadi,P-450,59.7,99.6,4.2,62,5,PVC,High,0
+Lissasfa,P-685,58.9,115.0,4.3,52,5,PVC,Medium,0
+Maarif,P-090,67.6,131.8,3.1,70,7,Steel,Low,0
+Medina,P-1313,72.0,141.3,3.9,75,2,HDPE,Medium,0
+Racine,P-893,70.3,121.5,4.0,75,5,PVC,High,0
+Roches_Noires,P-977,62.7,129.0,4.6,65,7,Cast Iron,Low,0
+Sbata,P-1845,41.6,268.3,7.8,57,17,HDPE,Low,1
+Sidi_Bernoussi,P-1515,64.6,116.5,3.9,65,5,Cast Iron,Medium,0
+Sidi_Maarouf,P-530,60.5,93.0,3.6,52,5,Cast Iron,Low,0
+Val_Fleuri,P-1697,30.0,202.8,9.6,61,12,Steel,Low,1
+Ain_Diab,P-1992,47.5,205.9,9.2,62,12,PVC,Low,1
+Ain_Sebaa,P-1702,44.9,263.6,7.1,50,24,Cast Iron,Low,1
+Anfa,P-1554,60.9,147.7,3.3,56,7,HDPE,Low,0
+Beauséjour,P-1951,22.3,235.5,9.9,62,15,PVC,Low,1
+Ben_Msick,P-1514,55.7,83.8,3.8,50,6,PVC,Medium,0
+Bourgogne,P-1975,39.8,230.7,9.1,60,24,HDPE,High,1
+Bouskoura,P-1668,35.0,237.7,9.8,77,28,Steel,Low,1
+Derb_Sultan,P-1820,30.1,184.5,9.7,74,28,PVC,Low,1
+Gauthier,P-1825,41.7,199.9,9.3,80,14,PVC,High,1
+Hay_Hassani,P-1393,75.1,108.9,4.6,73,7,Cast Iron,Low,0
+Hay_Mohammadi,P-174,66.7,112.3,4.2,65,5,Cast Iron,Medium,0
+Lissasfa,P-1388,72.8,111.2,3.7,55,9,Cast Iron,Low,0
+Maarif,P-1491,62.2,105.1,3.4,62,9,PVC,Low,0
+Medina,P-1148,57.8,99.3,3.3,50,2,PVC,Medium,0
+Racine,P-1487,57.9,133.0,4.5,81,4,Cast Iron,Medium,0
+Roches_Noires,P-551,65.4,86.2,4.6,73,7,HDPE,Medium,0
+Sbata,P-686,68.6,114.7,3.9,56,6,PVC,Low,0
+Sidi_Bernoussi,P-560,62.9,123.9,4.2,59,9,HDPE,Medium,0
+Sidi_Maarouf,P-1204,67.7,129.2,4.3,83,9,PVC,Low,0
+Val_Fleuri,P-508,60.7,128.7,3.9,74,9,PVC,Medium,0
+Ain_Diab,P-1750,50.0,175.8,8.3,63,13,Steel,High,1
+Ain_Sebaa,P-935,67.2,123.1,4.0,78,3,Cast Iron,Medium,0
+Anfa,P-490,69.4,81.2,5.0,50,6,HDPE,Medium,0
+Beauséjour,P-250,67.0,123.8,3.6,51,1,Steel,High,0
+Ben_Msick,P-912,66.1,115.4,3.1,64,6,Steel,Low,0
+Bourgogne,P-1854,49.2,186.8,6.6,52,25,PVC,Low,1
+Bouskoura,P-754,70.3,107.7,3.7,77,6,PVC,Medium,0
+Derb_Sultan,P-1073,65.4,113.0,4.6,67,2,Steel,Low,0
+Gauthier,P-1414,75.8,97.5,4.0,68,5,HDPE,Medium,0
+Hay_Hassani,P-1448,67.9,97.9,3.3,73,5,PVC,Low,0
+Hay_Mohammadi,P-119,70.7,71.6,3.7,78,1,HDPE,Low,0
+Lissasfa,P-446,68.3,114.0,4.5,77,1,PVC,Low,0
+Maarif,P-344,62.5,102.1,3.8,63,4,HDPE,Medium,0
+Medina,P-868,66.7,96.7,3.6,56,3,HDPE,Low,0
+Racine,P-1504,65.0,110.8,4.4,76,6,HDPE,Medium,0
+Roches_Noires,P-177,65.1,85.9,3.9,59,2,Cast Iron,Low,0
+Sbata,P-701,62.4,115.8,3.5,64,7,PVC,Low,0
+Sidi_Bernoussi,P-980,68.8,113.0,4.9,77,2,PVC,Low,0
+Sidi_Maarouf,P-673,63.3,113.9,3.3,57,1,PVC,Medium,0
+Val_Fleuri,P-1746,42.4,214.6,9.8,68,12,PVC,High,1
+Ain_Diab,P-1800,40.2,189.5,6.8,61,17,HDPE,Low,1
+Ain_Sebaa,P-1278,67.0,112.0,4.4,84,8,HDPE,Medium,0
+Anfa,P-1678,55.2,215.5,7.9,52,13,PVC,Low,1
+Beauséjour,P-068,70.0,108.0,4.9,80,4,Steel,Medium,0
+Ben_Msick,P-662,62.3,96.6,4.1,74,1,Steel,High,0
+Bourgogne,P-738,69.9,115.1,3.8,60,2,Cast Iron,Low,0
+Bouskoura,P-1572,58.7,129.7,4.8,65,1,Cast Iron,Low,0
+Derb_Sultan,P-491,65.0,109.8,3.5,58,8,Cast Iron,Medium,0
+Gauthier,P-1648,49.9,226.4,7.5,70,11,Steel,Low,1
+Hay_Hassani,P-346,66.2,126.5,3.6,60,6,PVC,Medium,0
+Hay_Mohammadi,P-1323,64.6,86.8,5.0,69,7,PVC,Low,0
+Lissasfa,P-1353,67.7,116.4,3.9,73,7,Steel,Low,0
+Maarif,P-853,61.8,93.4,3.5,53,7,Cast Iron,Medium,0
+Medina,P-1978,49.5,263.4,8.2,57,23,HDPE,Low,1
+Racine,P-814,66.0,105.2,4.0,55,6,Cast Iron,High,0
+Roches_Noires,P-478,66.6,131.8,3.3,75,2,Cast Iron,Low,0
+Sbata,P-125,67.9,110.3,4.5,74,9,PVC,Low,0
+Sidi_Bernoussi,P-630,70.5,102.8,3.7,79,1,PVC,Low,0
+Sidi_Maarouf,P-385,61.2,110.5,3.7,59,3,PVC,Low,0
+Val_Fleuri,P-1591,59.6,126.0,3.7,62,3,HDPE,Low,0
+Ain_Diab,P-549,66.9,125.3,3.2,61,3,HDPE,High,0
+Ain_Sebaa,P-013,66.2,98.5,3.4,62,5,Cast Iron,High,0
+Anfa,P-1995,43.5,158.0,6.6,82,16,HDPE,Low,1
+Beauséjour,P-1270,71.2,119.7,4.3,66,9,PVC,Medium,0
+Ben_Msick,P-977,62.7,129.0,4.6,65,7,Cast Iron,Low,0
+Bourgogne,P-1521,71.1,117.5,3.8,58,4,HDPE,Medium,0
+Bouskoura,P-266,58.8,127.9,4.1,79,7,Cast Iron,Medium,0
+Derb_Sultan,P-814,66.0,105.2,4.0,55,6,Cast Iron,High,0
+Gauthier,P-1203,65.6,113.3,4.2,59,7,Steel,Low,0
+Hay_Hassani,P-349,61.4,120.4,3.4,80,3,HDPE,Low,0
+Hay_Mohammadi,P-1002,69.6,97.1,3.9,64,5,Cast Iron,Low,0
+Lissasfa,P-1985,49.5,227.3,9.3,62,14,Cast Iron,Medium,1
+Maarif,P-1956,53.7,201.7,9.9,67,13,Cast Iron,Low,1
+Medina,P-1025,73.6,82.0,3.1,83,9,Cast Iron,Medium,0
+Racine,P-1531,65.7,132.5,3.7,63,1,PVC,High,0
+Roches_Noires,P-688,63.1,87.0,3.6,64,2,HDPE,Low,0
+Sbata,P-1645,29.4,195.7,6.8,53,18,PVC,Low,1
+Sidi_Bernoussi,P-1076,62.5,137.3,4.0,76,6,PVC,High,0
+Sidi_Maarouf,P-222,55.7,100.3,3.0,59,5,HDPE,High,0
+Val_Fleuri,P-1752,46.8,229.9,9.9,52,18,PVC,High,1
+Ain_Diab,P-832,60.4,96.1,3.8,67,8,HDPE,Low,0
+Ain_Sebaa,P-1259,61.5,127.8,3.1,75,5,PVC,Low,0
+Anfa,P-1324,67.4,113.9,3.6,56,7,HDPE,Medium,0
+Beauséjour,P-893,70.3,121.5,4.0,75,5,PVC,High,0
+Ben_Msick,P-1303,64.1,113.2,3.4,64,5,PVC,Low,0
+Bourgogne,P-058,63.5,123.1,4.7,67,4,PVC,Low,0
+Bouskoura,P-348,58.0,97.1,3.6,56,4,PVC,High,0
+Derb_Sultan,P-179,63.7,140.4,3.8,80,3,Steel,Low,0
+Gauthier,P-1419,72.6,90.6,4.2,74,4,HDPE,Low,0
+Hay_Hassani,P-1212,61.5,92.3,4.4,79,6,HDPE,High,0
+Hay_Mohammadi,P-006,63.8,113.2,3.5,81,7,HDPE,Low,0
+Lissasfa,P-1842,21.2,198.7,7.3,63,24,PVC,Low,1
+Maarif,P-1738,29.3,215.2,7.6,83,13,HDPE,Medium,1
+Medina,P-239,61.7,103.9,3.7,54,6,HDPE,Low,0
+Racine,P-531,68.2,117.1,3.3,72,7,PVC,Low,0
+Roches_Noires,P-1135,63.8,110.6,3.5,65,6,HDPE,Low,0
+Sbata,P-1286,58.3,132.6,3.9,55,7,Steel,High,0
+Sidi_Bernoussi,P-783,66.9,92.0,3.8,72,8,HDPE,High,0
+Sidi_Maarouf,P-1852,57.8,234.8,8.5,51,18,PVC,High,1
+Val_Fleuri,P-842,68.4,87.3,3.8,56,3,PVC,Medium,0
+Ain_Diab,P-1821,38.7,208.0,9.8,66,10,PVC,Low,1
+Ain_Sebaa,P-1622,25.6,230.5,9.3,72,26,PVC,Low,1
+Anfa,P-373,72.3,112.4,3.1,67,8,HDPE,High,0
+Beauséjour,P-764,64.5,100.5,4.2,50,6,Steel,Medium,0
+Ben_Msick,P-1695,41.3,246.2,9.9,63,11,Steel,Low,1
+Bourgogne,P-297,69.5,116.3,4.5,60,4,HDPE,Low,0
+Bouskoura,P-1406,61.2,72.0,3.2,83,7,HDPE,Low,0
+Derb_Sultan,P-370,61.1,128.5,3.4,70,3,Cast Iron,Low,0
+Gauthier,P-190,57.4,118.8,4.7,76,1,Cast Iron,Low,0
+Hay_Hassani,P-822,72.0,122.7,3.4,61,7,Cast Iron,Low,0
+Hay_Mohammadi,P-240,69.3,120.3,4.2,73,4,PVC,Medium,0
+Lissasfa,P-546,61.0,116.5,3.5,56,4,Cast Iron,Medium,0
+Maarif,P-171,60.6,124.8,4.0,58,6,PVC,High,0
+Medina,P-1450,65.1,103.8,3.4,61,7,HDPE,Low,0
+Racine,P-421,75.3,125.7,4.1,71,2,Cast Iron,Medium,0
+Roches_Noires,P-1794,46.7,212.8,7.6,66,18,Cast Iron,High,1
+Sbata,P-273,70.8,99.9,4.9,61,1,PVC,High,0
+Sidi_Bernoussi,P-487,61.8,104.2,3.6,67,3,PVC,Medium,0
+Sidi_Maarouf,P-222,55.7,100.3,3.0,59,5,HDPE,High,0
+Val_Fleuri,P-296,61.5,117.8,3.7,80,2,Cast Iron,High,0
+Ain_Diab,P-1596,60.0,127.2,4.5,75,6,PVC,Medium,0
+Ain_Sebaa,P-1997,39.7,157.7,7.0,64,25,Cast Iron,Low,1
+Anfa,P-244,69.3,86.5,3.9,74,3,HDPE,Medium,0
+Beauséjour,P-1296,64.5,93.9,3.3,71,8,Cast Iron,Low,0
+Ben_Msick,P-067,64.6,73.4,4.4,58,5,PVC,Medium,0
+Bourgogne,P-1859,42.9,198.3,7.6,66,16,PVC,Low,1
+Bouskoura,P-1536,57.0,133.9,4.1,82,6,PVC,Low,0
+Derb_Sultan,P-1481,68.6,105.5,4.2,65,7,Cast Iron,Low,0
+Gauthier,P-175,66.4,97.5,4.6,82,6,PVC,Low,0
+Hay_Hassani,P-657,65.1,93.6,3.3,54,8,PVC,Low,0
+Hay_Mohammadi,P-1484,63.0,109.0,4.4,54,3,HDPE,High,0
+Lissasfa,P-1995,43.5,158.0,6.6,82,16,HDPE,Low,1
+Maarif,P-093,61.5,119.3,3.3,63,7,PVC,Medium,0
+Medina,P-1942,36.1,256.9,7.2,81,18,Cast Iron,High,1
+Racine,P-340,62.2,100.1,3.5,51,1,Cast Iron,Low,0
+Roches_Noires,P-730,61.1,102.7,3.2,51,3,Cast Iron,Low,0
+Sbata,P-1861,38.7,206.4,8.0,77,10,PVC,Low,1
+Sidi_Bernoussi,P-1533,66.6,108.4,4.0,76,7,PVC,Medium,0
+Sidi_Maarouf,P-1702,44.9,263.6,7.1,50,24,Cast Iron,Low,1
+Val_Fleuri,P-1560,63.6,90.5,3.3,76,6,PVC,Medium,0
+Ain_Diab,P-1184,57.1,105.0,4.1,54,4,PVC,Low,0
+Ain_Sebaa,P-634,62.9,114.7,3.5,74,1,Cast Iron,Low,0
+Anfa,P-707,58.6,112.2,4.6,62,9,PVC,Low,0
+Beauséjour,P-1707,46.7,204.3,10.0,81,16,Steel,Low,1
+Ben_Msick,P-311,63.9,105.2,3.5,68,3,PVC,Medium,0
+Bourgogne,P-767,64.8,109.5,4.2,77,4,PVC,Low,0
+Bouskoura,P-908,68.7,93.0,4.2,84,6,Steel,Low,0
+Derb_Sultan,P-1572,58.7,129.7,4.8,65,1,Cast Iron,Low,0
+Gauthier,P-1885,39.7,218.1,8.4,65,26,Cast Iron,Medium,1
+Hay_Hassani,P-1672,36.3,246.2,9.5,80,10,HDPE,High,1
+Hay_Mohammadi,P-302,62.2,95.0,4.6,84,1,Cast Iron,Low,0
+Lissasfa,P-1179,60.1,124.6,3.9,75,2,Steel,Low,0
+Maarif,P-1311,64.9,92.3,3.1,67,4,PVC,Low,0
+Medina,P-874,61.3,101.2,3.7,65,8,PVC,Low,0
+Racine,P-986,59.2,95.6,4.0,53,3,Steel,Medium,0
+Roches_Noires,P-974,61.7,139.8,4.5,75,6,PVC,Low,0
+Sbata,P-244,69.3,86.5,3.9,74,3,HDPE,Medium,0
+Sidi_Bernoussi,P-1586,68.5,90.6,3.6,67,7,HDPE,Low,0
+Sidi_Maarouf,P-1210,73.7,116.8,4.1,80,2,HDPE,Low,0
+Val_Fleuri,P-164,60.9,127.1,3.0,62,6,Cast Iron,Low,0
+Ain_Diab,P-1397,58.3,117.6,4.9,75,4,HDPE,Low,0
+Ain_Sebaa,P-719,63.2,101.1,3.5,80,4,Cast Iron,Medium,0
+Anfa,P-345,62.6,77.7,3.7,65,9,PVC,Low,0
+Beauséjour,P-614,59.4,109.9,4.5,61,7,HDPE,High,0
+Ben_Msick,P-410,67.6,92.8,3.6,70,9,Cast Iron,Low,0
+Bourgogne,P-1258,67.1,99.3,3.1,59,6,PVC,Medium,0
+Bouskoura,P-347,57.8,102.8,4.0,82,8,Steel,High,0
+Derb_Sultan,P-1052,67.0,99.4,5.0,80,8,PVC,Low,0
+Gauthier,P-969,64.8,82.7,4.2,68,7,PVC,High,0
+Hay_Hassani,P-610,72.5,129.1,4.0,74,6,PVC,Medium,0
+Hay_Mohammadi,P-1973,46.6,230.4,9.8,56,22,HDPE,High,1
+Lissasfa,P-1425,59.8,83.4,3.7,83,1,PVC,Low,0
+Maarif,P-1589,60.9,128.6,4.1,64,2,Steel,High,0
+Medina,P-1850,44.3,177.0,6.7,72,24,HDPE,Low,1
+Racine,P-1491,62.2,105.1,3.4,62,9,PVC,Low,0
+Roches_Noires,P-842,68.4,87.3,3.8,56,3,PVC,Medium,0
+Sbata,P-601,68.8,81.9,4.3,74,2,HDPE,Low,0
+Sidi_Bernoussi,P-1238,62.2,91.2,4.6,80,7,Cast Iron,Low,0
+Sidi_Maarouf,P-756,78.2,103.2,3.1,63,1,HDPE,Low,0
+Val_Fleuri,P-1958,71.4,212.8,7.0,68,14,Cast Iron,Low,1
+Ain_Diab,P-430,56.2,105.0,3.1,78,4,Steel,Low,0
+Ain_Sebaa,P-1071,64.8,91.0,3.2,70,3,PVC,Low,0
+Anfa,P-385,61.2,110.5,3.7,59,3,PVC,Low,0
+Beauséjour,P-1388,72.8,111.2,3.7,55,9,Cast Iron,Low,0
+Ben_Msick,P-1190,60.2,137.4,4.7,78,2,PVC,Medium,0
+Bourgogne,P-839,69.9,143.3,3.8,67,5,PVC,Medium,0
+Bouskoura,P-1210,73.7,116.8,4.1,80,2,HDPE,Low,0
+Derb_Sultan,P-1234,77.9,138.7,3.9,82,2,Cast Iron,Medium,0
+Gauthier,P-1065,63.2,87.3,3.8,56,5,HDPE,Medium,0
+Hay_Hassani,P-1303,64.1,113.2,3.4,64,5,PVC,Low,0
+Hay_Mohammadi,P-596,62.4,76.3,4.7,67,5,PVC,Low,0
+Lissasfa,P-196,66.9,100.1,3.9,53,3,HDPE,Low,0
+Maarif,P-1958,71.4,212.8,7.0,68,14,Cast Iron,Low,1
+Medina,P-987,72.5,108.2,4.7,78,7,PVC,High,0
+Racine,P-109,66.3,105.1,3.8,62,2,HDPE,Low,0
+Roches_Noires,P-809,71.3,123.7,3.4,53,9,HDPE,Medium,0
+Sbata,P-1465,62.1,112.6,4.3,73,4,HDPE,Medium,0
+Sidi_Bernoussi,P-444,64.6,120.3,4.6,52,2,HDPE,High,0
+Sidi_Maarouf,P-532,56.7,96.1,4.3,67,8,Steel,Low,0
+Val_Fleuri,P-596,62.4,76.3,4.7,67,5,PVC,Low,0
+Ain_Diab,P-229,61.4,82.0,4.6,82,2,Cast Iron,Medium,0
+Ain_Sebaa,P-1207,61.5,98.4,4.7,68,4,Cast Iron,Low,0
+Anfa,P-951,63.8,128.1,4.7,63,7,PVC,Medium,0
+Beauséjour,P-797,64.8,118.6,4.6,55,5,PVC,Low,0
+Ben_Msick,P-1196,67.2,81.8,3.2,55,5,Steel,Low,0
+Bourgogne,P-070,61.8,123.9,3.3,58,7,Cast Iron,Medium,0
+Bouskoura,P-745,67.6,72.1,3.2,58,4,Steel,Low,0
+Derb_Sultan,P-462,65.2,121.1,4.6,81,2,Steel,Low,0
+Gauthier,P-295,66.8,97.5,4.2,74,1,PVC,Medium,0
+Hay_Hassani,P-1906,44.5,210.3,9.4,51,16,PVC,Medium,1
+Hay_Mohammadi,P-1199,66.1,104.4,3.7,74,2,Cast Iron,Low,0
+Lissasfa,P-1247,65.2,116.6,4.3,78,3,PVC,Low,0
+Maarif,P-177,65.1,85.9,3.9,59,2,Cast Iron,Low,0
+Medina,P-182,60.7,104.6,3.2,63,4,PVC,Low,0
+Racine,P-685,58.9,115.0,4.3,52,5,PVC,Medium,0
+Roches_Noires,P-380,61.0,113.9,3.5,77,6,PVC,Low,0
+Sbata,P-532,56.7,96.1,4.3,67,8,Steel,Low,0
+Sidi_Bernoussi,P-112,64.9,107.6,4.9,70,3,Cast Iron,Low,0
+Sidi_Maarouf,P-999,62.1,115.0,4.9,56,4,PVC,Medium,0
+Val_Fleuri,P-1060,63.1,104.1,4.5,59,7,Steel,Medium,0
+Ain_Diab,P-1451,66.5,102.8,4.6,79,8,Cast Iron,Medium,0
+Ain_Sebaa,P-1151,60.0,122.6,3.4,63,8,PVC,High,0
+Anfa,P-415,66.7,125.3,3.5,73,3,Cast Iron,High,0
+Beauséjour,P-1547,60.0,120.3,4.0,71,5,Cast Iron,Low,0
+Ben_Msick,P-1307,65.1,118.0,4.9,84,5,HDPE,High,0
+Bourgogne,P-252,69.6,132.7,5.0,66,6,HDPE,Medium,0
+Bouskoura,P-1255,71.1,115.5,4.9,82,8,Cast Iron,High,0
+Derb_Sultan,P-1096,64.6,129.2,5.0,55,8,PVC,Low,0
+Gauthier,P-1796,32.5,210.2,7.1,52,14,Steel,High,1
+Hay_Hassani,P-772,62.2,98.8,3.0,55,8,Cast Iron,Medium,0
+Hay_Mohammadi,P-1620,51.5,246.8,7.3,65,10,PVC,Medium,1
+Lissasfa,P-1812,41.5,232.6,8.1,79,24,HDPE,Medium,1
+Maarif,P-374,69.8,117.5,3.4,52,6,PVC,Low,0
+Medina,P-1781,25.9,215.5,9.7,77,27,PVC,Low,1
+Racine,P-1885,39.7,218.1,8.4,65,26,Cast Iron,Medium,1
+Roches_Noires,P-1096,64.6,129.2,5.0,55,8,PVC,Low,0
+Sbata,P-499,60.6,121.9,5.0,83,6,HDPE,Medium,0
+Sidi_Bernoussi,P-1298,63.5,95.8,4.7,84,2,PVC,Low,0
+Sidi_Maarouf,P-1200,71.8,116.6,4.9,53,5,Cast Iron,Medium,0
+Val_Fleuri,P-295,66.8,97.5,4.2,74,1,PVC,Medium,0
+Ain_Diab,P-1186,69.7,130.0,4.3,71,5,Steel,High,0
+Ain_Sebaa,P-295,66.8,97.5,4.2,74,1,PVC,Medium,0
+Anfa,P-1440,68.7,114.4,4.6,83,6,Steel,Medium,0
+Beauséjour,P-1931,27.7,240.1,9.4,81,23,HDPE,Low,1
+Ben_Msick,P-390,62.1,125.5,3.5,80,8,Cast Iron,High,0
+Bourgogne,P-1726,50.9,237.5,7.6,81,20,HDPE,Low,1
+Bouskoura,P-390,62.1,125.5,3.5,80,8,Cast Iron,High,0
+Derb_Sultan,P-085,61.0,101.7,3.4,81,9,PVC,Low,0
+Gauthier,P-211,67.9,91.2,3.4,55,8,Steel,Medium,0
+Hay_Hassani,P-1554,60.9,147.7,3.3,56,7,HDPE,Low,0
+Hay_Mohammadi,P-277,66.0,120.2,3.9,64,4,HDPE,Low,0
+Lissasfa,P-1474,65.1,94.1,3.2,50,4,Cast Iron,Medium,0
+Maarif,P-1111,64.0,92.6,3.2,69,8,Cast Iron,Low,0
+Medina,P-056,69.7,97.7,3.5,65,1,HDPE,Medium,0
+Racine,P-1468,67.0,112.0,4.2,63,2,PVC,Low,0
+Roches_Noires,P-1599,65.1,115.0,3.7,76,3,HDPE,Medium,0
+Sbata,P-1419,72.6,90.6,4.2,74,4,HDPE,Low,0
+Sidi_Bernoussi,P-867,66.4,97.4,3.5,79,3,PVC,Low,0
+Sidi_Maarouf,P-1236,73.2,112.8,3.7,66,5,Steel,Low,0
+Val_Fleuri,P-1147,59.5,99.4,3.7,59,1,PVC,High,0
+Ain_Diab,P-1514,55.7,83.8,3.8,50,6,PVC,Medium,0
+Ain_Sebaa,P-708,73.8,110.4,3.5,82,2,Cast Iron,Medium,0
+Anfa,P-522,67.7,154.8,4.9,69,9,HDPE,High,0
+Beauséjour,P-1176,63.6,98.7,4.6,74,6,PVC,High,0
+Ben_Msick,P-1854,49.2,186.8,6.6,52,25,PVC,Low,1
+Bourgogne,P-1860,42.6,214.1,6.8,63,10,Cast Iron,Low,1
+Bouskoura,P-1676,36.8,222.2,6.8,66,19,Steel,Low,1
+Derb_Sultan,P-722,56.4,102.4,4.8,62,2,Steel,Medium,0
+Gauthier,P-1601,38.2,195.3,7.4,70,11,HDPE,Medium,1
+Hay_Hassani,P-078,63.5,128.1,3.3,81,6,PVC,Medium,0
+Hay_Mohammadi,P-999,62.1,115.0,4.9,56,4,PVC,Medium,0
+Lissasfa,P-1185,60.1,98.3,4.2,54,7,PVC,Low,0
+Maarif,P-1942,36.1,256.9,7.2,81,18,Cast Iron,High,1
+Medina,P-1696,59.4,210.5,7.3,57,26,HDPE,Low,1
+Racine,P-099,65.0,86.7,3.9,83,1,Cast Iron,High,0
+Roches_Noires,P-1591,59.6,126.0,3.7,62,3,HDPE,Low,0
+Sbata,P-524,67.9,105.3,4.0,55,5,Cast Iron,Medium,0
+Sidi_Bernoussi,P-1074,58.6,134.5,3.3,73,7,Steel,Low,0
+Sidi_Maarouf,P-809,71.3,123.7,3.4,53,9,HDPE,Medium,0
+Val_Fleuri,P-508,60.7,128.7,3.9,74,9,PVC,Medium,0
+Ain_Diab,P-1974,41.9,222.6,7.8,75,27,HDPE,Low,1
+Ain_Sebaa,P-189,60.8,103.6,3.4,73,7,Cast Iron,Low,0
+Anfa,P-1351,59.1,102.2,3.1,69,2,Cast Iron,Low,0
+Beauséjour,P-008,68.8,97.7,3.9,75,9,PVC,Low,0
+Ben_Msick,P-979,57.1,118.2,4.0,80,8,Cast Iron,Low,0
+Bourgogne,P-621,61.0,120.6,4.4,78,4,Cast Iron,Medium,0
+Bouskoura,P-1342,65.0,106.4,3.8,65,4,Cast Iron,High,0
+Derb_Sultan,P-890,70.5,115.7,4.9,71,3,Cast Iron,Low,0
+Gauthier,P-1663,18.8,231.2,7.1,83,17,PVC,High,1
+Hay_Hassani,P-368,65.1,84.4,4.7,61,6,Cast Iron,Low,0
+Hay_Mohammadi,P-537,60.7,124.6,3.9,82,4,PVC,Medium,0
+Lissasfa,P-127,60.0,92.3,3.8,52,6,HDPE,Low,0
+Maarif,P-476,63.8,120.8,3.1,50,8,PVC,Low,0
+Medina,P-1732,36.5,195.2,8.1,50,16,Cast Iron,High,1
+Racine,P-1993,51.9,160.7,7.0,63,13,PVC,Low,1
+Roches_Noires,P-1751,13.0,202.4,9.9,59,19,Cast Iron,High,1
+Sbata,P-1025,73.6,82.0,3.1,83,9,Cast Iron,Medium,0
+Sidi_Bernoussi,P-203,70.4,120.8,3.9,75,2,Steel,Low,0
+Sidi_Maarouf,P-424,69.9,109.3,3.7,65,7,HDPE,High,0
+Val_Fleuri,P-1917,32.1,217.4,7.1,63,22,HDPE,Medium,1
+Ain_Diab,P-209,67.6,105.3,5.0,55,6,PVC,Low,0
+Ain_Sebaa,P-1742,38.3,235.6,9.3,65,11,Cast Iron,High,1
+Anfa,P-670,70.5,119.4,4.1,62,5,PVC,Low,0
+Beauséjour,P-778,63.8,106.4,4.0,56,5,Cast Iron,Low,0
+Ben_Msick,P-1273,59.5,123.2,3.8,68,1,Cast Iron,Low,0
+Bourgogne,P-965,64.6,128.3,4.4,59,5,HDPE,Low,0
+Bouskoura,P-788,67.3,90.6,4.2,54,5,PVC,Low,0
+Derb_Sultan,P-1032,56.7,100.1,4.8,79,4,Steel,Low,0
+Gauthier,P-690,67.2,119.2,4.9,78,6,Steel,Medium,0
+Hay_Hassani,P-638,65.4,124.1,4.8,71,1,HDPE,Medium,0
+Hay_Mohammadi,P-1689,42.8,258.3,7.5,59,12,PVC,Low,1
+Lissasfa,P-778,63.8,106.4,4.0,56,5,Cast Iron,Low,0
+Maarif,P-705,57.2,113.7,4.3,82,5,PVC,High,0
+Medina,P-1175,61.2,95.0,3.3,53,4,PVC,High,0
+Racine,P-1645,29.4,195.7,6.8,53,18,PVC,Low,1
+Roches_Noires,P-1970,51.3,258.7,7.9,68,27,PVC,Low,1
+Sbata,P-1869,29.1,224.2,9.3,79,15,PVC,Low,1
+Sidi_Bernoussi,P-1444,58.5,133.8,3.5,84,9,Cast Iron,Medium,0
+Sidi_Maarouf,P-1589,60.9,128.6,4.1,64,2,Steel,High,0
+Val_Fleuri,P-1201,65.6,112.8,3.1,81,2,PVC,Low,0
+Ain_Diab,P-789,64.6,103.2,3.9,84,2,PVC,Low,0
+Ain_Sebaa,P-1953,30.9,285.5,8.6,79,24,HDPE,Medium,1
+Anfa,P-685,58.9,115.0,4.3,52,5,PVC,Medium,0
+Beauséjour,P-1782,39.2,210.2,9.2,68,21,PVC,Low,1
+Ben_Msick,P-321,65.5,116.6,4.7,62,5,HDPE,Low,0
+Bourgogne,P-839,69.9,143.3,3.8,67,5,PVC,Medium,0
+Bouskoura,P-342,66.2,116.3,3.1,80,4,PVC,Low,0
+Derb_Sultan,P-1796,32.5,210.2,7.1,52,14,Steel,High,1
+Gauthier,P-1964,46.5,243.1,9.4,62,13,Steel,Medium,1
+Hay_Hassani,P-709,54.6,104.7,4.3,54,7,Cast Iron,High,0
+Hay_Mohammadi,P-208,67.6,115.3,3.7,60,5,PVC,Low,0
+Lissasfa,P-1386,66.5,101.5,3.8,73,8,Steel,High,0
+Maarif,P-965,64.6,128.3,4.4,59,5,HDPE,Low,0
+Medina,P-175,66.4,97.5,4.6,82,6,PVC,Low,0
+Racine,P-1027,65.2,112.9,3.4,65,7,HDPE,Low,0
+Roches_Noires,P-344,62.5,102.1,3.8,63,4,HDPE,Medium,0
+Sbata,P-1156,70.0,85.5,5.0,56,1,PVC,High,0
+Sidi_Bernoussi,P-1253,55.0,119.6,3.2,55,8,HDPE,Low,0
+Sidi_Maarouf,P-1475,61.1,99.2,4.1,53,5,HDPE,High,0
+Val_Fleuri,P-2000,32.6,230.8,8.0,74,16,PVC,Low,1
+Ain_Diab,P-1547,60.0,120.3,4.0,71,5,Cast Iron,Low,0
+Ain_Sebaa,P-210,84.3,110.0,4.0,50,3,HDPE,Low,0
+Anfa,P-1573,66.5,114.8,3.5,59,6,PVC,Medium,0
+Beauséjour,P-1567,65.3,113.4,3.2,56,5,PVC,Low,0
+Ben_Msick,P-1743,40.7,229.7,8.2,59,24,PVC,Medium,1
+Bourgogne,P-698,58.7,90.3,4.8,80,1,PVC,Medium,0
+Bouskoura,P-1923,29.3,209.6,9.7,56,22,HDPE,Medium,1
+Derb_Sultan,P-226,70.4,129.8,4.2,62,3,HDPE,Low,0
+Gauthier,P-1040,70.2,106.9,3.8,51,3,Cast Iron,Low,0
+Hay_Hassani,P-988,69.4,111.4,4.7,54,2,PVC,Low,0
+Hay_Mohammadi,P-1676,36.8,222.2,6.8,66,19,Steel,Low,1
+Lissasfa,P-612,64.7,92.9,3.4,57,6,HDPE,Low,0
+Maarif,P-095,63.0,125.6,3.4,64,4,PVC,Low,0
+Medina,P-772,62.2,98.8,3.0,55,8,Cast Iron,Medium,0
+Racine,P-101,57.9,115.6,3.0,67,4,PVC,High,0
+Roches_Noires,P-772,62.2,98.8,3.0,55,8,Cast Iron,Medium,0
+Sbata,P-992,54.8,119.0,4.1,75,4,PVC,Low,0
+Sidi_Bernoussi,P-908,68.7,93.0,4.2,84,6,Steel,Low,0
+Sidi_Maarouf,P-768,73.9,116.8,4.3,82,6,HDPE,Low,0
+Val_Fleuri,P-1195,57.0,87.0,5.0,59,6,PVC,Low,0
+Ain_Diab,P-1083,63.4,80.5,3.4,82,7,Steel,Low,0
+Ain_Sebaa,P-090,67.6,131.8,3.1,70,7,Steel,Low,0
+Anfa,P-773,68.2,107.3,4.7,67,6,HDPE,Low,0
+Beauséjour,P-1786,25.4,203.5,7.5,83,19,HDPE,Medium,1
+Ben_Msick,P-1710,30.3,221.2,8.2,75,17,PVC,Low,1
+Bourgogne,P-1392,61.6,98.0,3.5,57,9,PVC,High,0
+Bouskoura,P-933,57.8,96.7,3.3,81,6,Cast Iron,Medium,0
+Derb_Sultan,P-1905,38.9,268.4,9.1,69,28,PVC,Low,1
+Gauthier,P-443,54.7,90.6,3.2,62,4,PVC,Medium,0
+Hay_Hassani,P-1821,38.7,208.0,9.8,66,10,PVC,Low,1
+Hay_Mohammadi,P-1673,36.1,185.7,8.2,60,10,HDPE,Low,1
+Lissasfa,P-649,63.8,110.2,3.2,61,6,PVC,Medium,0
+Maarif,P-1120,70.3,134.8,4.3,71,7,Cast Iron,Low,0
+Medina,P-1516,64.4,117.1,3.1,67,2,HDPE,Low,0
+Racine,P-1085,66.9,107.2,4.5,84,5,HDPE,Medium,0
+Roches_Noires,P-179,63.7,140.4,3.8,80,3,Steel,Low,0
+Sbata,P-467,68.1,98.6,4.1,57,5,Cast Iron,Low,0
+Sidi_Bernoussi,P-710,73.5,133.5,3.8,63,4,PVC,Low,0
+Sidi_Maarouf,P-012,62.7,98.6,3.5,64,7,HDPE,Medium,0
+Val_Fleuri,P-913,66.2,99.0,3.3,70,9,HDPE,Medium,0
+Ain_Diab,P-1296,64.5,93.9,3.3,71,8,Cast Iron,Low,0
+Ain_Sebaa,P-916,66.4,137.7,4.9,68,8,Cast Iron,Low,0
+Anfa,P-611,68.3,119.8,4.8,62,6,HDPE,High,0
+Beauséjour,P-002,64.3,107.8,3.2,63,8,Cast Iron,Low,0
+Ben_Msick,P-1771,40.4,250.1,6.9,66,16,PVC,Medium,1
+Bourgogne,P-654,59.5,125.5,4.3,72,9,Cast Iron,Low,0
+Bouskoura,P-610,72.5,129.1,4.0,74,6,PVC,Medium,0
+Derb_Sultan,P-1652,43.3,236.5,8.0,58,23,Cast Iron,Low,1
+Gauthier,P-192,69.3,116.9,3.1,76,2,Cast Iron,Medium,0
+Hay_Hassani,P-1865,53.0,208.8,7.6,74,15,Cast Iron,Low,1
+Hay_Mohammadi,P-634,62.9,114.7,3.5,74,1,Cast Iron,Low,0
+Lissasfa,P-1797,36.8,215.1,8.5,56,23,HDPE,Medium,1
+Maarif,P-979,57.1,118.2,4.0,80,8,Cast Iron,Low,0
+Medina,P-161,60.1,93.3,4.4,56,7,PVC,Medium,0
+Racine,P-1172,66.4,119.1,4.5,72,4,PVC,High,0
+Roches_Noires,P-1794,46.7,212.8,7.6,66,18,Cast Iron,High,1
+Sbata,P-1507,68.5,114.8,3.7,76,1,PVC,Low,0
+Sidi_Bernoussi,P-951,63.8,128.1,4.7,63,7,PVC,Medium,0
+Sidi_Maarouf,P-616,65.6,120.0,4.8,84,9,PVC,Low,0
+Val_Fleuri,P-539,70.0,91.3,3.2,53,3,Cast Iron,Low,0
+Ain_Diab,P-1056,61.6,97.1,3.6,72,6,PVC,High,0
+Ain_Sebaa,P-1031,63.7,72.7,3.6,74,9,HDPE,High,0
+Anfa,P-1655,43.4,224.5,7.7,75,13,PVC,Medium,1
+Beauséjour,P-1772,57.0,205.1,6.8,77,25,HDPE,High,1
+Ben_Msick,P-1897,37.4,261.8,8.8,80,18,Cast Iron,High,1
+Bourgogne,P-736,67.4,102.0,5.0,78,4,Cast Iron,Low,0
+Bouskoura,P-1274,63.4,120.8,3.1,61,3,HDPE,High,0
+Derb_Sultan,P-735,70.1,139.8,3.7,71,1,HDPE,Low,0
+Gauthier,P-940,62.2,104.1,4.6,56,7,Cast Iron,Low,0
+Hay_Hassani,P-664,62.3,95.8,4.4,65,4,HDPE,Low,0
+Hay_Mohammadi,P-756,78.2,103.2,3.1,63,1,HDPE,Low,0
+Lissasfa,P-906,65.2,121.3,3.3,76,4,Steel,High,0
+Maarif,P-1837,28.6,257.1,9.5,57,26,Cast Iron,Medium,1
+Medina,P-1817,18.5,208.5,7.0,57,28,HDPE,Low,1
+Racine,P-974,61.7,139.8,4.5,75,6,PVC,Low,0
+Roches_Noires,P-1707,46.7,204.3,10.0,81,16,Steel,Low,1
+Sbata,P-1604,32.0,220.0,9.5,74,27,HDPE,Low,1
+Sidi_Bernoussi,P-1390,61.2,112.1,4.4,63,2,PVC,Low,0
+Sidi_Maarouf,P-1955,34.0,202.6,6.6,51,15,PVC,Low,1
+Val_Fleuri,P-1459,71.4,110.3,4.1,55,6,PVC,Low,0
+Ain_Diab,P-560,62.9,123.9,4.2,59,9,HDPE,Medium,0
+Ain_Sebaa,P-232,66.1,121.9,4.8,62,8,Cast Iron,High,0
+Anfa,P-216,68.8,114.0,3.1,76,9,Cast Iron,High,0
+Beauséjour,P-782,58.3,100.3,4.7,62,7,PVC,Medium,0
+Ben_Msick,P-336,64.3,118.6,3.9,68,8,PVC,Low,0
+Bourgogne,P-537,60.7,124.6,3.9,82,4,PVC,Medium,0
+Bouskoura,P-704,58.0,125.4,3.8,65,2,Cast Iron,Low,0
+Derb_Sultan,P-1951,22.3,235.5,9.9,62,15,PVC,Low,1
+Gauthier,P-1633,33.6,212.9,8.1,76,22,HDPE,High,1
+Hay_Hassani,P-1596,60.0,127.2,4.5,75,6,PVC,Medium,0
+Hay_Mohammadi,P-556,62.9,118.0,3.7,68,9,Cast Iron,Low,0
+Lissasfa,P-1683,31.0,225.4,6.5,79,18,Steel,Low,1
+Maarif,P-859,62.2,127.7,3.2,84,4,HDPE,Low,0
+Medina,P-862,57.4,117.3,5.0,51,8,PVC,Medium,0
+Racine,P-743,61.9,110.7,3.1,60,5,Steel,High,0
+Roches_Noires,P-1510,72.4,102.0,4.9,82,3,PVC,Medium,0
+Sbata,P-1814,49.0,222.9,9.8,83,28,PVC,Medium,1
+Sidi_Bernoussi,P-1924,42.4,171.7,8.5,76,25,HDPE,Medium,1
+Sidi_Maarouf,P-1042,62.7,112.4,4.1,80,4,HDPE,Low,0
+Val_Fleuri,P-1545,62.0,130.6,3.4,82,1,PVC,Low,0
+Ain_Diab,P-108,65.9,119.6,4.8,73,3,Cast Iron,Medium,0
+Ain_Sebaa,P-1861,38.7,206.4,8.0,77,10,PVC,Low,1
+Anfa,P-1648,49.9,226.4,7.5,70,11,Steel,Low,1
+Beauséjour,P-1125,73.2,107.9,3.5,78,9,PVC,Low,0
+Ben_Msick,P-1574,58.2,112.9,3.8,78,7,PVC,Medium,0
+Bourgogne,P-181,68.1,107.1,4.4,52,5,PVC,High,0
+Bouskoura,P-643,63.7,97.3,4.4,81,7,PVC,Medium,0
+Derb_Sultan,P-035,69.1,125.9,3.7,69,9,HDPE,Medium,0
+Gauthier,P-1700,41.8,213.3,9.5,78,18,PVC,High,1
+Hay_Hassani,P-1779,35.7,157.7,7.3,64,18,PVC,Medium,1
+Hay_Mohammadi,P-1486,69.7,102.3,3.1,63,8,PVC,High,0
+Lissasfa,P-922,59.9,121.2,4.0,65,4,HDPE,Medium,0
+Maarif,P-1898,56.0,241.3,8.1,84,10,HDPE,High,1
+Medina,P-464,66.1,91.4,3.2,82,1,HDPE,Medium,0
+Racine,P-1269,61.3,113.5,3.5,61,6,HDPE,High,0
+Roches_Noires,P-1651,45.8,232.2,9.4,54,17,PVC,Low,1
+Sbata,P-1324,67.4,113.9,3.6,56,7,HDPE,Medium,0
+Sidi_Bernoussi,P-079,65.5,107.9,3.6,84,5,Steel,Medium,0
+Sidi_Maarouf,P-1155,73.2,94.4,3.2,77,2,HDPE,Medium,0
+Val_Fleuri,P-263,48.8,128.5,4.9,69,7,PVC,Low,0
+Ain_Diab,P-680,71.4,106.0,4.6,54,8,PVC,Medium,0
+Ain_Sebaa,P-1404,68.6,108.5,4.8,57,6,HDPE,Low,0
+Anfa,P-1119,66.0,125.7,4.4,72,7,Steel,Medium,0
+Beauséjour,P-1489,57.4,96.1,3.5,55,5,Cast Iron,Medium,0
+Ben_Msick,P-897,64.2,78.7,4.9,73,4,PVC,Low,0
+Bourgogne,P-640,58.5,116.0,4.9,72,3,Cast Iron,Medium,0
+Bouskoura,P-045,57.6,97.7,3.9,70,4,PVC,Low,0
+Derb_Sultan,P-885,68.4,68.8,3.6,52,2,PVC,Medium,0
+Gauthier,P-914,72.9,121.4,3.0,84,1,HDPE,High,0
+Hay_Hassani,P-1619,35.7,255.8,9.3,56,21,Steel,Low,1
+Hay_Mohammadi,P-182,60.7,104.6,3.2,63,4,PVC,Low,0
+Lissasfa,P-1899,45.6,232.9,7.2,81,12,HDPE,Low,1
+Maarif,P-1096,64.6,129.2,5.0,55,8,PVC,Low,0
+Medina,P-1095,68.7,97.0,3.8,50,5,PVC,Low,0
+Racine,P-1529,62.6,82.5,4.1,72,2,HDPE,Low,0
+Roches_Noires,P-181,68.1,107.1,4.4,52,5,PVC,High,0
+Sbata,P-1950,39.5,181.6,9.4,79,26,HDPE,Low,1
+Sidi_Bernoussi,P-1604,32.0,220.0,9.5,74,27,HDPE,Low,1
+Sidi_Maarouf,P-043,64.4,102.1,3.6,52,9,PVC,Medium,0
+Val_Fleuri,P-407,59.7,90.5,4.5,70,4,PVC,Low,0
+Ain_Diab,P-027,59.2,137.0,3.8,80,8,Cast Iron,Low,0
+Ain_Sebaa,P-1568,67.6,126.1,3.9,50,9,Steel,Low,0
+Anfa,P-1686,51.9,194.5,8.5,74,12,HDPE,Low,1
+Beauséjour,P-345,62.6,77.7,3.7,65,9,PVC,Low,0
+Ben_Msick,P-277,66.0,120.2,3.9,64,4,HDPE,Low,0
+Bourgogne,P-528,65.2,119.1,4.4,79,2,PVC,Low,0
+Bouskoura,P-566,63.0,103.9,4.7,82,3,HDPE,High,0
+Derb_Sultan,P-1564,69.4,127.9,3.7,73,9,HDPE,Low,0
+Gauthier,P-1908,28.7,177.8,6.6,67,21,PVC,Low,1
+Hay_Hassani,P-1507,68.5,114.8,3.7,76,1,PVC,Low,0
+Hay_Mohammadi,P-1807,42.7,221.0,9.2,71,16,PVC,High,1
+Lissasfa,P-1650,65.9,207.1,6.8,67,23,PVC,Low,1
+Maarif,P-1956,53.7,201.7,9.9,67,13,Cast Iron,Low,1
+Medina,P-562,75.4,111.3,3.4,53,1,PVC,Low,0
+Racine,P-658,64.9,123.4,4.8,66,9,Steel,Medium,0
+Roches_Noires,P-1673,36.1,185.7,8.2,60,10,HDPE,Low,1
+Sbata,P-1209,58.0,123.5,4.7,74,3,Steel,High,0
+Sidi_Bernoussi,P-1020,67.1,118.3,4.6,70,8,PVC,Medium,0
+Sidi_Maarouf,P-289,66.4,101.0,4.2,70,8,Cast Iron,Low,0
+Val_Fleuri,P-739,73.3,133.3,3.3,66,5,PVC,Low,0
+Ain_Diab,P-1496,75.0,139.0,4.1,60,4,PVC,Medium,0
+Ain_Sebaa,P-1852,57.8,234.8,8.5,51,18,PVC,High,1
+Anfa,P-1872,37.9,224.7,6.7,75,20,HDPE,Medium,1
+Beauséjour,P-1491,62.2,105.1,3.4,62,9,PVC,Low,0
+Ben_Msick,P-1054,66.3,98.2,4.6,70,1,HDPE,Low,0
+Bourgogne,P-231,61.3,99.7,4.5,75,6,HDPE,Low,0
+Bouskoura,P-1303,64.1,113.2,3.4,64,5,PVC,Low,0
+Derb_Sultan,P-954,72.2,132.8,3.5,64,4,HDPE,High,0
+Gauthier,P-1319,62.0,126.8,3.2,80,6,Cast Iron,Low,0
+Hay_Hassani,P-1947,43.8,236.1,7.7,76,14,Cast Iron,High,1
+Hay_Mohammadi,P-1290,54.2,105.7,3.9,56,4,Steel,Low,0
+Lissasfa,P-1059,67.7,92.0,3.8,69,1,PVC,Medium,0
+Maarif,P-285,75.7,103.0,3.3,80,5,PVC,High,0
+Medina,P-788,67.3,90.6,4.2,54,5,PVC,Low,0
+Racine,P-1683,31.0,225.4,6.5,79,18,Steel,Low,1
+Roches_Noires,P-1459,71.4,110.3,4.1,55,6,PVC,Low,0
+Sbata,P-1874,47.8,175.7,9.2,70,12,Cast Iron,Low,1
+Sidi_Bernoussi,P-837,72.8,138.6,3.4,82,6,PVC,Low,0
+Sidi_Maarouf,P-1409,63.4,106.7,4.2,58,2,HDPE,Low,0
+Val_Fleuri,P-1356,52.0,107.5,4.5,84,7,PVC,Low,0
+Ain_Diab,P-282,68.3,99.8,4.1,80,8,HDPE,Medium,0
+Ain_Sebaa,P-241,61.0,111.6,4.9,55,2,Steel,Medium,0
+Anfa,P-317,68.4,122.6,4.1,51,7,HDPE,Medium,0
+Beauséjour,P-1496,75.0,139.0,4.1,60,4,PVC,Medium,0
+Ben_Msick,P-751,60.4,136.3,4.4,70,2,HDPE,Medium,0
+Bourgogne,P-1588,63.2,96.2,3.6,69,6,Steel,Low,0
+Bouskoura,P-490,69.4,81.2,5.0,50,6,HDPE,Medium,0
+Derb_Sultan,P-378,65.9,90.1,3.3,54,8,HDPE,High,0
+Gauthier,P-1208,61.7,122.5,3.4,83,2,Cast Iron,Medium,0
+Hay_Hassani,P-1907,24.3,259.8,9.2,69,13,HDPE,High,1
+Hay_Mohammadi,P-333,65.4,87.2,3.7,68,8,Cast Iron,High,0
+Lissasfa,P-1017,61.7,87.2,4.4,80,4,Cast Iron,Low,0
+Maarif,P-067,64.6,73.4,4.4,58,5,PVC,Medium,0
+Medina,P-482,60.2,135.8,4.2,69,2,Cast Iron,Low,0
+Racine,P-1667,30.0,241.9,7.3,68,16,HDPE,Low,1
+Roches_Noires,P-300,68.1,87.5,3.7,60,5,Cast Iron,Low,0
+Sbata,P-1030,59.9,110.5,4.4,69,2,Cast Iron,Medium,0
+Sidi_Bernoussi,P-1567,65.3,113.4,3.2,56,5,PVC,Low,0
+Sidi_Maarouf,P-971,65.6,81.3,3.9,51,2,Cast Iron,Low,0
+Val_Fleuri,P-1717,43.3,317.3,9.5,52,17,PVC,Low,1
+Ain_Diab,P-937,59.9,100.9,4.3,72,6,PVC,Low,0
+Ain_Sebaa,P-088,66.6,107.8,3.5,77,5,Steel,Medium,0
+Anfa,P-861,66.0,102.0,3.5,84,9,HDPE,High,0
+Beauséjour,P-1816,31.1,166.2,7.8,68,26,Cast Iron,Low,1
+Ben_Msick,P-1777,33.9,165.1,8.6,62,16,HDPE,Low,1
+Bourgogne,P-1371,64.1,108.8,4.4,62,9,PVC,Low,0
+Bouskoura,P-956,70.6,136.2,3.3,82,3,PVC,Low,0
+Derb_Sultan,P-1027,65.2,112.9,3.4,65,7,HDPE,Low,0
+Gauthier,P-956,70.6,136.2,3.3,82,3,PVC,Low,0
+Hay_Hassani,P-856,62.1,102.3,4.3,71,6,HDPE,Medium,0
+Hay_Mohammadi,P-1889,35.3,224.3,8.4,63,14,HDPE,Low,1
+Lissasfa,P-1862,48.1,196.3,7.0,76,14,PVC,Low,1
+Maarif,P-1783,25.0,188.7,6.6,53,28,PVC,Medium,1
+Medina,P-1354,68.8,111.2,3.3,54,2,HDPE,Low,0
+Racine,P-1639,60.6,216.3,6.8,54,27,PVC,High,1
+Roches_Noires,P-1097,65.4,125.6,3.1,57,7,Cast Iron,Medium,0
+Sbata,P-1788,32.5,193.4,8.7,82,11,PVC,Medium,1
+Sidi_Bernoussi,P-1167,71.9,104.2,4.7,58,1,PVC,Low,0
+Sidi_Maarouf,P-1964,46.5,243.1,9.4,62,13,Steel,Medium,1
+Val_Fleuri,P-1444,58.5,133.8,3.5,84,9,Cast Iron,Medium,0
+Ain_Diab,P-955,64.6,95.8,4.7,55,2,Cast Iron,Medium,0
+Ain_Sebaa,P-913,66.2,99.0,3.3,70,9,HDPE,Medium,0
+Anfa,P-416,61.3,114.1,4.3,60,8,HDPE,Low,0
+Beauséjour,P-1253,55.0,119.6,3.2,55,8,HDPE,Low,0
+Ben_Msick,P-779,64.6,109.1,3.3,66,8,HDPE,Low,0
+Bourgogne,P-1789,43.2,225.4,6.8,61,23,Steel,Low,1
+Bouskoura,P-555,66.7,97.0,3.9,83,7,PVC,Low,0
+Derb_Sultan,P-1822,40.8,228.1,7.8,73,28,HDPE,High,1
+Gauthier,P-560,62.9,123.9,4.2,59,9,HDPE,Medium,0
+Hay_Hassani,P-205,58.1,95.7,3.3,62,9,HDPE,Low,0
+Hay_Mohammadi,P-040,66.0,83.5,4.7,59,1,HDPE,Low,0
+Lissasfa,P-1859,42.9,198.3,7.6,66,16,PVC,Low,1
+Maarif,P-341,60.9,120.5,4.5,60,9,PVC,Low,0
+Medina,P-1126,59.3,121.1,4.7,72,9,HDPE,Low,0
+Racine,P-074,72.8,113.0,4.8,82,6,Cast Iron,High,0
+Roches_Noires,P-895,71.9,117.6,4.8,75,3,Cast Iron,Low,0
+Sbata,P-463,61.5,117.2,3.3,56,6,HDPE,High,0
+Sidi_Bernoussi,P-1957,18.6,217.2,7.8,54,28,Steel,Low,1
+Sidi_Maarouf,P-1699,45.1,248.0,6.9,76,25,HDPE,Medium,1
+Val_Fleuri,P-1417,65.3,122.6,3.8,74,5,PVC,Low,0
+Ain_Diab,P-850,62.3,101.9,4.9,81,5,Cast Iron,Low,0
+Ain_Sebaa,P-009,62.7,119.9,3.1,66,9,PVC,Medium,0
+Anfa,P-1153,61.8,66.4,3.2,57,9,HDPE,Medium,0
+Beauséjour,P-1506,62.7,89.4,3.5,64,4,HDPE,Low,0
+Ben_Msick,P-859,62.2,127.7,3.2,84,4,HDPE,Low,0
+Bourgogne,P-839,69.9,143.3,3.8,67,5,PVC,Medium,0
+Bouskoura,P-316,65.1,116.3,4.9,50,4,HDPE,Low,0
+Derb_Sultan,P-083,72.4,88.3,4.4,70,9,HDPE,Medium,0
+Gauthier,P-1975,39.8,230.7,9.1,60,24,HDPE,High,1
+Hay_Hassani,P-101,57.9,115.6,3.0,67,4,PVC,High,0
+Hay_Mohammadi,P-1580,60.9,94.0,4.7,66,8,PVC,High,0
+Lissasfa,P-1815,37.3,182.1,7.2,84,28,PVC,Low,1
+Maarif,P-1851,33.5,204.3,7.2,64,18,PVC,Medium,1
+Medina,P-1440,68.7,114.4,4.6,83,6,Steel,Medium,0
+Racine,P-375,75.8,126.8,3.7,81,3,HDPE,Low,0
+Roches_Noires,P-1109,61.9,116.8,4.2,65,2,HDPE,Medium,0
+Sbata,P-346,66.2,126.5,3.6,60,6,PVC,Medium,0
+Sidi_Bernoussi,P-653,63.7,117.7,3.3,56,1,HDPE,Medium,0
+Sidi_Maarouf,P-1109,61.9,116.8,4.2,65,2,HDPE,Medium,0
+Val_Fleuri,P-508,60.7,128.7,3.9,74,9,PVC,Medium,0
+Ain_Diab,P-304,68.1,113.8,4.6,76,2,HDPE,Medium,0
+Ain_Sebaa,P-866,63.1,105.4,3.4,56,6,Steel,High,0
+Anfa,P-884,70.2,116.9,4.2,56,3,PVC,Low,0
+Beauséjour,P-367,66.1,102.0,3.1,53,3,HDPE,Medium,0
+Ben_Msick,P-341,60.9,120.5,4.5,60,9,PVC,Low,0
+Bourgogne,P-1885,39.7,218.1,8.4,65,26,Cast Iron,Medium,1
+Bouskoura,P-1423,63.2,116.4,4.9,70,6,Steel,Low,0
+Derb_Sultan,P-1765,37.5,226.8,7.8,56,20,PVC,Low,1
+Gauthier,P-700,64.1,129.9,4.4,52,4,Steel,Medium,0
+Hay_Hassani,P-1098,55.0,118.8,3.3,53,8,HDPE,Low,0
+Hay_Mohammadi,P-1074,58.6,134.5,3.3,73,7,Steel,Low,0
+Lissasfa,P-726,64.1,110.1,5.0,72,6,PVC,High,0
+Maarif,P-946,59.6,92.8,4.1,52,4,PVC,Low,0
+Medina,P-112,64.9,107.6,4.9,70,3,Cast Iron,Low,0
+Racine,P-1780,33.1,217.4,9.8,66,24,Steel,Medium,1
+Roches_Noires,P-057,60.8,102.9,3.7,71,2,Steel,Medium,0
+Sbata,P-895,71.9,117.6,4.8,75,3,Cast Iron,Low,0
+Sidi_Bernoussi,P-1153,61.8,66.4,3.2,57,9,HDPE,Medium,0
+Sidi_Maarouf,P-1418,66.3,113.1,4.4,73,6,Cast Iron,Medium,0
+Val_Fleuri,P-1822,40.8,228.1,7.8,73,28,HDPE,High,1
+Ain_Diab,P-990,65.1,146.2,3.7,79,7,PVC,Low,0
+Ain_Sebaa,P-1229,69.8,121.7,4.6,74,6,Cast Iron,Low,0
+Anfa,P-1982,26.2,269.2,8.2,72,24,HDPE,Medium,1
+Beauséjour,P-1975,39.8,230.7,9.1,60,24,HDPE,High,1
+Ben_Msick,P-1601,38.2,195.3,7.4,70,11,HDPE,Medium,1
+Bourgogne,P-077,65.4,119.2,4.2,83,2,HDPE,Low,0
+Bouskoura,P-789,64.6,103.2,3.9,84,2,PVC,Low,0
+Derb_Sultan,P-966,72.2,106.1,4.7,66,9,HDPE,Low,0
+Gauthier,P-355,64.9,128.2,5.0,75,1,HDPE,Medium,0
+Hay_Hassani,P-1314,67.8,94.8,4.3,66,3,PVC,Low,0
+Hay_Mohammadi,P-1777,33.9,165.1,8.6,62,16,HDPE,Low,1
+Lissasfa,P-168,74.5,91.1,3.7,77,2,Cast Iron,Medium,0
+Maarif,P-540,62.1,110.8,4.3,71,9,PVC,Low,0
+Medina,P-225,62.6,100.3,3.9,70,5,PVC,Medium,0
+Racine,P-300,68.1,87.5,3.7,60,5,Cast Iron,Low,0
+Roches_Noires,P-1444,58.5,133.8,3.5,84,9,Cast Iron,Medium,0
+Sbata,P-1777,33.9,165.1,8.6,62,16,HDPE,Low,1
+Sidi_Bernoussi,P-1428,59.5,130.8,4.6,66,3,HDPE,Medium,0
+Sidi_Maarouf,P-706,68.0,125.7,3.3,69,9,Cast Iron,Low,0
+Val_Fleuri,P-636,56.7,126.1,3.2,65,4,PVC,Medium,0
+Ain_Diab,P-998,68.2,91.4,3.5,52,2,PVC,High,0
+Ain_Sebaa,P-600,66.9,102.6,3.6,63,5,HDPE,Low,0
+Anfa,P-1164,56.8,99.6,4.7,53,7,HDPE,Medium,0
+Beauséjour,P-455,62.3,120.2,4.3,52,1,Cast Iron,High,0
+Ben_Msick,P-763,77.8,123.4,4.6,51,2,Cast Iron,Low,0
+Bourgogne,P-1339,63.1,117.5,3.1,73,1,PVC,Low,0
+Bouskoura,P-643,63.7,97.3,4.4,81,7,PVC,Medium,0
+Derb_Sultan,P-1496,75.0,139.0,4.1,60,4,PVC,Medium,0
+Gauthier,P-465,64.4,123.0,3.3,54,7,HDPE,Low,0
+Hay_Hassani,P-797,64.8,118.6,4.6,55,5,PVC,Low,0
+Hay_Mohammadi,P-1787,36.9,229.5,9.7,82,19,Cast Iron,Medium,1
+Lissasfa,P-1236,73.2,112.8,3.7,66,5,Steel,Low,0
+Maarif,P-398,71.8,94.9,3.7,78,6,Steel,High,0
+Medina,P-397,56.4,96.2,4.7,82,3,PVC,High,0
+Racine,P-1370,60.6,112.0,3.0,75,7,Steel,High,0
+Roches_Noires,P-468,68.8,110.6,3.9,64,6,PVC,Low,0
+Sbata,P-1533,66.6,108.4,4.0,76,7,PVC,Medium,0
+Sidi_Bernoussi,P-086,62.5,91.7,4.5,68,9,HDPE,Low,0
+Sidi_Maarouf,P-269,62.8,102.4,4.6,73,8,PVC,High,0
+Val_Fleuri,P-658,64.9,123.4,4.8,66,9,Steel,Medium,0
+Ain_Diab,P-235,75.7,91.8,4.0,79,9,HDPE,Low,0
+Ain_Sebaa,P-1716,39.1,215.3,9.3,84,18,HDPE,Low,1
+Anfa,P-309,67.7,118.0,3.4,70,8,Cast Iron,Low,0
+Beauséjour,P-357,64.9,104.5,4.4,58,2,HDPE,Medium,0
+Ben_Msick,P-1110,74.6,82.0,3.4,66,1,HDPE,Medium,0
+Bourgogne,P-141,66.1,112.5,3.7,57,1,HDPE,Medium,0
+Bouskoura,P-914,72.9,121.4,3.0,84,1,HDPE,High,0
+Derb_Sultan,P-522,67.7,154.8,4.9,69,9,HDPE,High,0
+Gauthier,P-1445,67.0,120.4,4.7,57,9,PVC,Low,0
+Hay_Hassani,P-1446,61.7,92.9,4.5,67,6,HDPE,Medium,0
+Hay_Mohammadi,P-1789,43.2,225.4,6.8,61,23,Steel,Low,1
+Lissasfa,P-1089,63.7,80.7,3.3,68,9,HDPE,Low,0
+Maarif,P-1735,48.0,243.8,9.1,60,22,HDPE,High,1
+Medina,P-860,68.2,112.9,3.7,62,3,PVC,Medium,0
+Racine,P-1134,67.3,132.4,4.9,59,9,Steel,Low,0
+Roches_Noires,P-379,75.9,103.8,3.6,53,4,PVC,Low,0
+Sbata,P-806,63.5,83.4,4.3,50,7,PVC,Low,0
+Sidi_Bernoussi,P-1936,25.0,231.6,6.5,55,15,Cast Iron,Medium,1
+Sidi_Maarouf,P-1544,62.7,93.8,4.5,71,5,HDPE,Low,0
+Val_Fleuri,P-459,62.2,117.5,4.1,72,8,HDPE,Medium,0
+Ain_Diab,P-388,74.4,96.1,4.9,50,7,Steel,Medium,0
+Ain_Sebaa,P-082,66.8,119.0,4.5,55,6,HDPE,Low,0
+Anfa,P-1719,47.1,214.6,9.4,59,15,HDPE,High,1
+Beauséjour,P-259,67.2,70.9,3.5,64,1,HDPE,Low,0
+Ben_Msick,P-1543,73.3,123.2,3.2,75,2,Cast Iron,High,0
+Bourgogne,P-1507,68.5,114.8,3.7,76,1,PVC,Low,0
+Bouskoura,P-527,56.9,116.3,4.3,53,3,HDPE,Low,0
+Derb_Sultan,P-1213,61.4,135.0,3.4,80,7,Cast Iron,High,0
+Gauthier,P-1230,76.1,109.4,3.9,68,1,HDPE,Low,0
+Hay_Hassani,P-1104,64.3,126.1,4.1,53,2,PVC,Low,0
+Hay_Mohammadi,P-1705,44.1,215.8,9.1,67,21,PVC,Low,1
+Lissasfa,P-376,61.2,131.7,4.2,59,4,HDPE,High,0
+Maarif,P-1029,68.1,102.4,3.7,72,4,PVC,Medium,0
+Medina,P-482,60.2,135.8,4.2,69,2,Cast Iron,Low,0
+Racine,P-907,58.2,103.8,4.1,84,8,PVC,Low,0
+Roches_Noires,P-1573,66.5,114.8,3.5,59,6,PVC,Medium,0
+Sbata,P-1656,37.0,230.9,6.8,67,10,HDPE,High,1
+Sidi_Bernoussi,P-756,78.2,103.2,3.1,63,1,HDPE,Low,0
+Sidi_Maarouf,P-1892,40.1,237.5,8.7,78,20,HDPE,Low,1
+Val_Fleuri,P-765,70.7,113.8,4.8,61,8,HDPE,Low,0
+Ain_Diab,P-898,65.7,135.9,4.7,77,4,PVC,Low,0
+Ain_Sebaa,P-540,62.1,110.8,4.3,71,9,PVC,Low,0
+Anfa,P-1677,52.2,222.2,10.0,50,23,HDPE,Medium,1
+Beauséjour,P-052,63.1,97.0,4.0,73,8,Cast Iron,Low,0
+Ben_Msick,P-351,66.6,125.9,4.9,77,7,HDPE,Medium,0
+Bourgogne,P-854,70.9,113.3,4.4,50,3,PVC,Low,0
+Bouskoura,P-1387,71.5,97.8,3.1,70,6,PVC,High,0
+Derb_Sultan,P-334,61.6,104.6,4.8,56,2,HDPE,Low,0
+Gauthier,P-1690,37.4,215.4,7.1,69,23,HDPE,Medium,1
+Hay_Hassani,P-554,66.3,115.8,4.7,71,5,HDPE,Low,0
+Hay_Mohammadi,P-347,57.8,102.8,4.0,82,8,Steel,High,0
+Lissasfa,P-1354,68.8,111.2,3.3,54,2,HDPE,Low,0
+Maarif,P-1089,63.7,80.7,3.3,68,9,HDPE,Low,0
+Medina,P-381,60.8,95.5,3.4,53,3,Steel,Medium,0
+Racine,P-1923,29.3,209.6,9.7,56,22,HDPE,Medium,1
+Roches_Noires,P-122,60.5,121.8,4.9,78,5,Cast Iron,Low,0
+Sbata,P-224,56.9,107.3,3.3,79,6,Steel,Low,0
+Sidi_Bernoussi,P-114,77.3,95.0,4.9,68,3,PVC,High,0
+Sidi_Maarouf,P-471,63.6,126.1,4.7,54,4,PVC,High,0
+Val_Fleuri,P-792,66.0,101.6,3.8,56,4,Steel,Low,0
+Ain_Diab,P-677,59.4,115.2,5.0,80,7,PVC,Low,0
+Ain_Sebaa,P-783,66.9,92.0,3.8,72,8,HDPE,High,0
+Anfa,P-1302,70.0,95.9,4.8,62,1,PVC,Low,0
+Beauséjour,P-1622,25.6,230.5,9.3,72,26,PVC,Low,1
+Ben_Msick,P-947,57.4,111.3,4.1,50,9,HDPE,Low,0
+Bourgogne,P-916,66.4,137.7,4.9,68,8,Cast Iron,Low,0
+Bouskoura,P-1689,42.8,258.3,7.5,59,12,PVC,Low,1
+Derb_Sultan,P-136,72.7,101.4,3.9,67,6,PVC,Low,0
+Gauthier,P-1846,29.7,244.8,9.7,62,26,Cast Iron,High,1
+Hay_Hassani,P-1709,38.7,232.7,7.7,74,27,Steel,Low,1
+Hay_Mohammadi,P-526,56.0,117.2,4.4,74,8,PVC,Low,0
+Lissasfa,P-902,63.0,103.6,4.7,84,1,PVC,High,0
+Maarif,P-1262,65.4,110.7,4.0,74,7,PVC,Medium,0
+Medina,P-1264,60.4,127.6,4.5,59,8,HDPE,Low,0
+Racine,P-1640,29.3,233.7,7.3,54,23,Cast Iron,Medium,1
+Roches_Noires,P-1406,61.2,72.0,3.2,83,7,HDPE,Low,0
+Sbata,P-1260,64.7,131.5,4.4,66,5,Cast Iron,Low,0
+Sidi_Bernoussi,P-1943,42.7,202.1,8.3,55,11,PVC,High,1
+Sidi_Maarouf,P-301,60.9,125.8,3.9,79,9,PVC,Low,0
+Val_Fleuri,P-487,61.8,104.2,3.6,67,3,PVC,Medium,0
+Ain_Diab,P-350,63.9,104.1,3.6,63,1,Cast Iron,High,0
+Ain_Sebaa,P-1154,58.4,104.4,4.3,53,3,Cast Iron,Medium,0
+Anfa,P-826,72.3,135.6,3.7,77,6,PVC,Medium,0
+Beauséjour,P-498,64.0,105.8,4.9,52,2,PVC,Low,0
+Ben_Msick,P-1925,60.7,212.1,8.8,63,11,Cast Iron,Medium,1
+Bourgogne,P-1110,74.6,82.0,3.4,66,1,HDPE,Medium,0
+Bouskoura,P-1701,43.5,252.0,8.7,64,20,Cast Iron,High,1
+Derb_Sultan,P-1607,41.2,196.6,8.4,77,22,Steel,Medium,1
+Gauthier,P-410,67.6,92.8,3.6,70,9,Cast Iron,Low,0
+Hay_Hassani,P-702,70.2,126.4,4.4,82,6,HDPE,Low,0
+Hay_Mohammadi,P-1958,71.4,212.8,7.0,68,14,Cast Iron,Low,1
+Lissasfa,P-1586,68.5,90.6,3.6,67,7,HDPE,Low,0
+Maarif,P-329,68.1,120.4,3.5,73,9,PVC,Low,0
+Medina,P-429,70.3,126.9,4.0,82,4,Cast Iron,Medium,0
+Racine,P-1447,62.4,108.3,5.0,62,3,HDPE,Low,0
+Roches_Noires,P-945,74.2,114.9,3.3,66,6,Cast Iron,High,0
+Sbata,P-007,72.9,110.0,4.0,82,4,Cast Iron,Low,0
+Sidi_Bernoussi,P-1302,70.0,95.9,4.8,62,1,PVC,Low,0
+Sidi_Maarouf,P-935,67.2,123.1,4.0,78,3,Cast Iron,Medium,0
+Val_Fleuri,P-1007,69.5,117.3,4.1,76,9,Steel,Low,0
+Ain_Diab,P-1724,46.2,166.4,7.5,73,20,PVC,Low,1
+Ain_Sebaa,P-060,69.9,112.9,4.0,75,3,HDPE,Medium,0
+Anfa,P-1453,66.2,108.1,3.1,77,8,HDPE,Low,0
+Beauséjour,P-1915,22.0,175.0,8.0,73,12,PVC,Low,1
+Ben_Msick,P-228,59.6,101.0,3.1,50,8,HDPE,High,0
+Bourgogne,P-129,65.5,120.7,3.6,74,1,HDPE,Low,0
+Bouskoura,P-602,60.4,119.3,3.6,81,7,Cast Iron,Low,0
+Derb_Sultan,P-227,65.3,131.3,3.9,50,5,PVC,Low,0
+Gauthier,P-1520,74.3,76.7,3.6,62,1,HDPE,Medium,0
+Hay_Hassani,P-1306,60.5,125.9,4.7,52,7,HDPE,Low,0
+Hay_Mohammadi,P-847,66.4,101.2,3.6,60,7,PVC,Medium,0
+Lissasfa,P-232,66.1,121.9,4.8,62,8,Cast Iron,High,0
+Maarif,P-549,66.9,125.3,3.2,61,3,HDPE,High,0
+Medina,P-1718,41.9,289.2,8.4,68,10,PVC,Low,1
+Racine,P-984,64.8,114.3,4.0,78,5,PVC,Low,0
+Roches_Noires,P-1790,53.4,259.1,9.7,51,22,PVC,Medium,1
+Sbata,P-784,68.1,94.4,4.5,78,6,HDPE,Low,0
+Sidi_Bernoussi,P-609,56.1,123.5,3.5,76,4,HDPE,Low,0
+Sidi_Maarouf,P-1955,34.0,202.6,6.6,51,15,PVC,Low,1
+Val_Fleuri,P-1342,65.0,106.4,3.8,65,4,Cast Iron,High,0
+Ain_Diab,P-881,77.6,76.4,4.6,58,4,Cast Iron,High,0
+Ain_Sebaa,P-1452,73.5,91.2,3.4,80,6,PVC,Medium,0
+Anfa,P-039,58.4,109.6,4.9,59,6,HDPE,Medium,0
+Beauséjour,P-349,61.4,120.4,3.4,80,3,HDPE,Low,0
+Ben_Msick,P-910,75.8,128.9,3.0,58,8,PVC,Low,0
+Bourgogne,P-816,57.6,122.2,4.8,72,4,PVC,Low,0
+Bouskoura,P-1734,37.0,224.4,9.3,70,22,PVC,High,1
+Derb_Sultan,P-378,65.9,90.1,3.3,54,8,HDPE,High,0
+Gauthier,P-1329,59.0,93.6,4.4,59,1,HDPE,Medium,0
+Hay_Hassani,P-657,65.1,93.6,3.3,54,8,PVC,Low,0
+Hay_Mohammadi,P-730,61.1,102.7,3.2,51,3,Cast Iron,Low,0
+Lissasfa,P-835,64.8,106.3,3.9,80,2,Cast Iron,Low,0
+Maarif,P-1067,58.5,136.3,4.3,60,5,HDPE,Low,0
+Medina,P-1799,50.8,190.2,8.3,69,18,HDPE,Low,1
+Racine,P-910,75.8,128.9,3.0,58,8,PVC,Low,0
+Roches_Noires,P-1004,61.8,138.3,3.1,78,1,PVC,High,0
+Sbata,P-767,64.8,109.5,4.2,77,4,PVC,Low,0
+Sidi_Bernoussi,P-853,61.8,93.4,3.5,53,7,Cast Iron,Medium,0
+Sidi_Maarouf,P-258,61.5,103.7,4.0,66,3,PVC,Medium,0
+Val_Fleuri,P-739,73.3,133.3,3.3,66,5,PVC,Low,0
+Ain_Diab,P-662,62.3,96.6,4.1,74,1,Steel,High,0
+Ain_Sebaa,P-755,60.3,108.9,4.3,57,2,PVC,Medium,0
+Anfa,P-1230,76.1,109.4,3.9,68,1,HDPE,Low,0
+Beauséjour,P-951,63.8,128.1,4.7,63,7,PVC,Medium,0
+Ben_Msick,P-392,67.5,96.1,3.6,52,6,HDPE,High,0
+Bourgogne,P-1436,66.4,123.3,4.8,64,4,Steel,Medium,0
+Bouskoura,P-682,59.4,105.5,4.6,50,2,Steel,Medium,0
+Derb_Sultan,P-608,58.8,76.9,3.4,66,5,PVC,High,0
+Gauthier,P-719,63.2,101.1,3.5,80,4,Cast Iron,Medium,0
+Hay_Hassani,P-1620,51.5,246.8,7.3,65,10,PVC,Medium,1
+Hay_Mohammadi,P-1286,58.3,132.6,3.9,55,7,Steel,High,0
+Lissasfa,P-1491,62.2,105.1,3.4,62,9,PVC,Low,0
+Maarif,P-1862,48.1,196.3,7.0,76,14,PVC,Low,1
+Medina,P-056,69.7,97.7,3.5,65,1,HDPE,Medium,0
+Racine,P-1187,60.1,92.0,4.7,54,9,Steel,Low,0
+Roches_Noires,P-1823,37.8,218.7,8.2,70,16,Steel,Low,1
+Sbata,P-1717,43.3,317.3,9.5,52,17,PVC,Low,1
+Sidi_Bernoussi,P-039,58.4,109.6,4.9,59,6,HDPE,Medium,0
+Sidi_Maarouf,P-1012,66.0,129.9,3.5,62,6,HDPE,Medium,0
+Val_Fleuri,P-1029,68.1,102.4,3.7,72,4,PVC,Medium,0
+Ain_Diab,P-1834,42.9,177.3,6.7,76,19,HDPE,Medium,1
+Ain_Sebaa,P-1114,67.5,91.9,4.6,60,6,Cast Iron,Low,0
+Anfa,P-1942,36.1,256.9,7.2,81,18,Cast Iron,High,1
+Beauséjour,P-1614,39.2,231.9,6.6,73,26,PVC,Medium,1
+Ben_Msick,P-098,66.3,93.9,4.5,69,4,HDPE,High,0
+Bourgogne,P-141,66.1,112.5,3.7,57,1,HDPE,Medium,0
+Bouskoura,P-1566,63.6,110.8,4.2,82,5,HDPE,Low,0
+Derb_Sultan,P-1298,63.5,95.8,4.7,84,2,PVC,Low,0
+Gauthier,P-1358,67.0,78.1,4.2,58,6,HDPE,Low,0
+Hay_Hassani,P-1167,71.9,104.2,4.7,58,1,PVC,Low,0
+Hay_Mohammadi,P-1960,42.2,225.6,7.5,81,18,PVC,Medium,1
+Lissasfa,P-786,70.4,104.7,3.0,50,7,PVC,Low,0
+Maarif,P-245,59.0,134.3,3.6,50,7,PVC,Medium,0
+Medina,P-1158,76.3,111.6,3.8,51,4,Cast Iron,Low,0
+Racine,P-1113,69.4,105.5,3.0,83,6,HDPE,High,0
+Roches_Noires,P-1794,46.7,212.8,7.6,66,18,Cast Iron,High,1
+Sbata,P-1115,65.8,115.8,4.6,83,5,PVC,High,0
+Sidi_Bernoussi,P-939,66.2,85.4,4.6,82,2,HDPE,Medium,0
+Sidi_Maarouf,P-758,65.9,98.6,4.1,75,5,HDPE,Medium,0
+Val_Fleuri,P-313,69.1,113.5,4.3,75,8,PVC,Low,0
+Ain_Diab,P-464,66.1,91.4,3.2,82,1,HDPE,Medium,0
+Ain_Sebaa,P-1698,33.2,230.0,7.6,75,19,PVC,Medium,1
+Anfa,P-093,61.5,119.3,3.3,63,7,PVC,Medium,0
+Beauséjour,P-655,77.9,100.1,3.4,73,2,Cast Iron,High,0
+Ben_Msick,P-587,62.7,90.2,4.9,68,6,Cast Iron,Low,0
+Bourgogne,P-1192,58.3,120.7,4.9,76,6,HDPE,Low,0
+Bouskoura,P-165,69.8,133.7,4.4,60,3,PVC,Low,0
+Derb_Sultan,P-1657,41.7,220.2,9.9,68,29,Steel,Medium,1
+Gauthier,P-1405,70.0,116.5,4.0,56,8,PVC,Low,0
+Hay_Hassani,P-087,69.6,102.4,3.9,82,1,PVC,Low,0
+Hay_Mohammadi,P-858,67.4,106.5,4.8,63,9,HDPE,Medium,0
+Lissasfa,P-1457,68.8,126.3,3.7,74,1,HDPE,High,0
+Maarif,P-1452,73.5,91.2,3.4,80,6,PVC,Medium,0
+Medina,P-1975,39.8,230.7,9.1,60,24,HDPE,High,1
+Racine,P-222,55.7,100.3,3.0,59,5,HDPE,High,0
+Roches_Noires,P-647,51.5,104.4,3.2,50,1,PVC,Low,0
+Sbata,P-1128,61.2,129.8,3.1,58,9,Cast Iron,Low,0
+Sidi_Bernoussi,P-469,62.3,120.2,3.2,53,1,PVC,Low,0
+Sidi_Maarouf,P-243,67.5,139.6,4.0,50,6,Cast Iron,Low,0
+Val_Fleuri,P-690,67.2,119.2,4.9,78,6,Steel,Medium,0
+Ain_Diab,P-644,57.5,100.2,3.6,71,6,Steel,High,0
+Ain_Sebaa,P-446,68.3,114.0,4.5,77,1,PVC,Low,0
+Anfa,P-1212,61.5,92.3,4.4,79,6,HDPE,High,0
+Beauséjour,P-966,72.2,106.1,4.7,66,9,HDPE,Low,0
+Ben_Msick,P-686,68.6,114.7,3.9,56,6,PVC,Low,0
+Bourgogne,P-079,65.5,107.9,3.6,84,5,Steel,Medium,0
+Bouskoura,P-1996,50.7,220.9,8.2,82,17,Cast Iron,High,1
+Derb_Sultan,P-1845,41.6,268.3,7.8,57,17,HDPE,Low,1
+Gauthier,P-1893,35.6,196.0,7.5,68,25,Steel,Low,1
+Hay_Hassani,P-1258,67.1,99.3,3.1,59,6,PVC,Medium,0
+Hay_Mohammadi,P-042,65.9,103.9,4.4,79,6,PVC,High,0
+Lissasfa,P-1525,63.1,101.3,3.2,82,8,PVC,Low,0
+Maarif,P-303,68.7,104.2,4.0,71,5,HDPE,Medium,0
+Medina,P-1160,63.4,114.7,4.8,63,1,HDPE,Low,0
+Racine,P-1751,13.0,202.4,9.9,59,19,Cast Iron,High,1
+Roches_Noires,P-1167,71.9,104.2,4.7,58,1,PVC,Low,0
+Sbata,P-321,65.5,116.6,4.7,62,5,HDPE,Low,0
+Sidi_Bernoussi,P-635,59.9,135.5,4.8,62,4,PVC,Low,0
+Sidi_Maarouf,P-418,65.6,115.1,4.8,52,3,Steel,High,0
+Val_Fleuri,P-1218,66.4,102.1,3.9,53,7,Cast Iron,Low,0
+Ain_Diab,P-1944,36.6,148.3,9.5,73,26,HDPE,Medium,1
+Ain_Sebaa,P-175,66.4,97.5,4.6,82,6,PVC,Low,0
+Anfa,P-1227,65.2,97.3,4.4,70,3,Cast Iron,Medium,0
+Beauséjour,P-1847,52.7,252.7,8.7,70,13,HDPE,High,1
+Ben_Msick,P-1183,69.6,93.4,3.8,51,8,PVC,Low,0
+Bourgogne,P-1257,73.4,96.8,3.9,62,8,PVC,Low,0
+Bouskoura,P-887,67.9,102.1,4.5,51,1,HDPE,High,0
+Derb_Sultan,P-701,62.4,115.8,3.5,64,7,PVC,Low,0
+Gauthier,P-286,55.2,116.9,5.0,81,8,PVC,Medium,0
+Hay_Hassani,P-1846,29.7,244.8,9.7,62,26,Cast Iron,High,1
+Hay_Mohammadi,P-249,73.8,107.2,3.6,78,8,PVC,Low,0
+Lissasfa,P-732,60.1,135.3,4.6,68,2,PVC,Low,0
+Maarif,P-778,63.8,106.4,4.0,56,5,Cast Iron,Low,0
+Medina,P-1744,51.6,225.0,7.0,51,13,PVC,High,1
+Racine,P-044,63.5,112.3,4.3,64,7,Cast Iron,Low,0
+Roches_Noires,P-088,66.6,107.8,3.5,77,5,Steel,Medium,0
+Sbata,P-1028,65.6,116.7,4.7,53,7,PVC,Low,0
+Sidi_Bernoussi,P-1400,61.7,103.9,4.6,75,4,HDPE,Medium,0
+Sidi_Maarouf,P-1099,69.6,108.1,3.1,54,2,HDPE,Low,0
+Val_Fleuri,P-1270,71.2,119.7,4.3,66,9,PVC,Medium,0
+Ain_Diab,P-1926,30.8,209.9,9.7,63,23,HDPE,Low,1
+Ain_Sebaa,P-1189,67.8,123.4,3.2,58,3,PVC,Low,0
+Anfa,P-886,74.2,102.5,3.7,66,3,PVC,Low,0
+Beauséjour,P-533,64.7,118.3,3.1,75,8,PVC,Low,0
+Ben_Msick,P-906,65.2,121.3,3.3,76,4,Steel,High,0
+Bourgogne,P-1689,42.8,258.3,7.5,59,12,PVC,Low,1
+Bouskoura,P-193,66.1,140.4,4.9,64,6,Cast Iron,High,0
+Derb_Sultan,P-793,66.4,103.8,4.4,84,7,PVC,High,0
+Gauthier,P-1987,47.3,236.6,9.6,54,20,PVC,High,1
+Hay_Hassani,P-1605,35.2,243.5,8.7,64,28,PVC,Low,1
+Hay_Mohammadi,P-1257,73.4,96.8,3.9,62,8,PVC,Low,0
+Lissasfa,P-1996,50.7,220.9,8.2,82,17,Cast Iron,High,1
+Maarif,P-756,78.2,103.2,3.1,63,1,HDPE,Low,0
+Medina,P-1176,63.6,98.7,4.6,74,6,PVC,High,0
+Racine,P-095,63.0,125.6,3.4,64,4,PVC,Low,0
+Roches_Noires,P-887,67.9,102.1,4.5,51,1,HDPE,High,0
+Sbata,P-188,64.6,106.0,4.8,56,8,PVC,Low,0
+Sidi_Bernoussi,P-1928,37.1,233.9,8.7,82,11,PVC,Medium,1
+Sidi_Maarouf,P-1603,33.5,281.5,7.0,70,18,PVC,Low,1
+Val_Fleuri,P-125,67.9,110.3,4.5,74,9,PVC,Low,0
+Ain_Diab,P-1845,41.6,268.3,7.8,57,17,HDPE,Low,1
+Ain_Sebaa,P-908,68.7,93.0,4.2,84,6,Steel,Low,0
+Anfa,P-1171,68.8,95.8,4.1,67,8,Cast Iron,High,0
+Beauséjour,P-1225,64.1,114.3,3.7,57,7,Steel,Low,0
+Ben_Msick,P-1518,68.2,116.4,4.6,64,1,HDPE,Medium,0
+Bourgogne,P-715,64.8,115.5,3.5,68,9,HDPE,Low,0
+Bouskoura,P-397,56.4,96.2,4.7,82,3,PVC,High,0
+Derb_Sultan,P-1650,65.9,207.1,6.8,67,23,PVC,Low,1
+Gauthier,P-1159,69.9,129.9,4.2,75,1,Cast Iron,Low,0
+Hay_Hassani,P-404,65.2,105.9,3.8,71,8,Cast Iron,Low,0
+Hay_Mohammadi,P-996,63.6,111.2,3.7,79,4,HDPE,Low,0
+Lissasfa,P-301,60.9,125.8,3.9,79,9,PVC,Low,0
+Maarif,P-1180,59.5,117.7,3.3,83,9,Steel,Medium,0
+Medina,P-1052,67.0,99.4,5.0,80,8,PVC,Low,0
+Racine,P-1254,66.9,125.9,3.4,84,2,HDPE,Medium,0
+Roches_Noires,P-1817,18.5,208.5,7.0,57,28,HDPE,Low,1
+Sbata,P-215,63.4,102.9,5.0,71,1,HDPE,Low,0
+Sidi_Bernoussi,P-1243,62.1,85.0,3.6,65,3,PVC,Low,0
+Sidi_Maarouf,P-1605,35.2,243.5,8.7,64,28,PVC,Low,1
+Val_Fleuri,P-164,60.9,127.1,3.0,62,6,Cast Iron,Low,0
+Ain_Diab,P-1409,63.4,106.7,4.2,58,2,HDPE,Low,0
+Ain_Sebaa,P-1816,31.1,166.2,7.8,68,26,Cast Iron,Low,1
+Anfa,P-1870,35.9,249.9,9.5,77,15,PVC,Medium,1
+Beauséjour,P-1802,39.4,172.0,7.7,66,17,HDPE,Medium,1
+Ben_Msick,P-884,70.2,116.9,4.2,56,3,PVC,Low,0
+Bourgogne,P-1247,65.2,116.6,4.3,78,3,PVC,Low,0
+Bouskoura,P-1362,67.9,84.7,4.0,50,7,PVC,Low,0
+Derb_Sultan,P-559,67.0,114.9,4.5,82,7,HDPE,Low,0
+Gauthier,P-1004,61.8,138.3,3.1,78,1,PVC,High,0
+Hay_Hassani,P-1948,39.7,232.8,9.1,67,19,PVC,Medium,1
+Hay_Mohammadi,P-1111,64.0,92.6,3.2,69,8,Cast Iron,Low,0
+Lissasfa,P-1985,49.5,227.3,9.3,62,14,Cast Iron,Medium,1
+Maarif,P-1882,56.2,225.3,6.5,71,29,HDPE,High,1
+Medina,P-367,66.1,102.0,3.1,53,3,HDPE,Medium,0
+Racine,P-229,61.4,82.0,4.6,82,2,Cast Iron,Medium,0
+Roches_Noires,P-780,68.1,117.2,4.9,81,9,Cast Iron,Low,0
+Sbata,P-115,64.0,121.1,4.4,73,4,PVC,Medium,0
+Sidi_Bernoussi,P-1759,56.1,228.3,9.8,77,14,HDPE,Low,1
+Sidi_Maarouf,P-1182,72.0,117.8,3.0,61,4,Cast Iron,Low,0
+Val_Fleuri,P-775,68.1,102.6,3.4,64,1,HDPE,Low,0
+Ain_Diab,P-1098,55.0,118.8,3.3,53,8,HDPE,Low,0
+Ain_Sebaa,P-1520,74.3,76.7,3.6,62,1,HDPE,Medium,0
+Anfa,P-1074,58.6,134.5,3.3,73,7,Steel,Low,0
+Beauséjour,P-793,66.4,103.8,4.4,84,7,PVC,High,0
+Ben_Msick,P-234,61.7,123.4,4.1,82,5,Cast Iron,Low,0
+Bourgogne,P-1852,57.8,234.8,8.5,51,18,PVC,High,1
+Bouskoura,P-658,64.9,123.4,4.8,66,9,Steel,Medium,0
+Derb_Sultan,P-057,60.8,102.9,3.7,71,2,Steel,Medium,0
+Gauthier,P-828,62.4,109.1,4.1,67,8,PVC,High,0
+Hay_Hassani,P-491,65.0,109.8,3.5,58,8,Cast Iron,Medium,0
+Hay_Mohammadi,P-984,64.8,114.3,4.0,78,5,PVC,Low,0
+Lissasfa,P-1991,48.0,169.3,8.9,80,27,HDPE,High,1
+Maarif,P-356,60.0,113.9,3.5,55,5,HDPE,Low,0
+Medina,P-084,62.4,75.6,3.6,82,5,HDPE,Low,0
+Racine,P-1487,57.9,133.0,4.5,81,4,Cast Iron,Medium,0
+Roches_Noires,P-569,55.6,122.9,4.1,71,1,HDPE,Medium,0
+Sbata,P-1234,77.9,138.7,3.9,82,2,Cast Iron,Medium,0
+Sidi_Bernoussi,P-910,75.8,128.9,3.0,58,8,PVC,Low,0
+Sidi_Maarouf,P-768,73.9,116.8,4.3,82,6,HDPE,Low,0
+Val_Fleuri,P-381,60.8,95.5,3.4,53,3,Steel,Medium,0
+Ain_Diab,P-1756,53.7,160.9,7.2,72,16,PVC,High,1
+Ain_Sebaa,P-1086,67.2,114.6,4.4,50,5,Cast Iron,Low,0
+Anfa,P-112,64.9,107.6,4.9,70,3,Cast Iron,Low,0
+Beauséjour,P-1175,61.2,95.0,3.3,53,4,PVC,High,0
+Ben_Msick,P-913,66.2,99.0,3.3,70,9,HDPE,Medium,0
+Bourgogne,P-796,70.3,97.3,3.5,51,8,Cast Iron,High,0
+Bouskoura,P-1657,41.7,220.2,9.9,68,29,Steel,Medium,1
+Derb_Sultan,P-1403,70.9,112.9,4.4,55,7,HDPE,Low,0
+Gauthier,P-1464,60.7,125.4,3.5,78,3,HDPE,Low,0
+Hay_Hassani,P-047,62.7,110.0,4.5,53,2,PVC,Low,0
+Hay_Mohammadi,P-1435,64.2,144.1,4.5,79,1,HDPE,High,0
+Lissasfa,P-1141,63.5,122.7,3.8,55,6,HDPE,Low,0
+Maarif,P-1149,73.0,108.3,4.6,75,5,PVC,High,0
+Medina,P-1181,65.9,124.7,3.7,58,3,PVC,Low,0
+Racine,P-168,74.5,91.1,3.7,77,2,Cast Iron,Medium,0
+Roches_Noires,P-020,57.9,91.4,3.1,64,3,PVC,Low,0
+Sbata,P-638,65.4,124.1,4.8,71,1,HDPE,Medium,0
+Sidi_Bernoussi,P-1455,67.8,66.1,3.0,77,3,Cast Iron,Medium,0
+Sidi_Maarouf,P-1873,36.9,187.1,8.5,71,27,HDPE,Low,1
+Val_Fleuri,P-1179,60.1,124.6,3.9,75,2,Steel,Low,0
+Ain_Diab,P-1151,60.0,122.6,3.4,63,8,PVC,High,0
+Ain_Sebaa,P-471,63.6,126.1,4.7,54,4,PVC,High,0
+Anfa,P-1396,65.9,89.2,3.1,70,4,HDPE,High,0
+Beauséjour,P-1000,67.9,107.7,3.6,58,9,PVC,Low,0
+Ben_Msick,P-317,68.4,122.6,4.1,51,7,HDPE,Medium,0
+Bourgogne,P-1171,68.8,95.8,4.1,67,8,Cast Iron,High,0
+Bouskoura,P-1328,64.3,101.2,4.7,78,3,PVC,High,0
+Derb_Sultan,P-373,72.3,112.4,3.1,67,8,HDPE,High,0
+Gauthier,P-1474,65.1,94.1,3.2,50,4,Cast Iron,Medium,0
+Hay_Hassani,P-334,61.6,104.6,4.8,56,2,HDPE,Low,0
+Hay_Mohammadi,P-1777,33.9,165.1,8.6,62,16,HDPE,Low,1
+Lissasfa,P-1928,37.1,233.9,8.7,82,11,PVC,Medium,1
+Maarif,P-1923,29.3,209.6,9.7,56,22,HDPE,Medium,1
+Medina,P-1027,65.2,112.9,3.4,65,7,HDPE,Low,0
+Racine,P-1029,68.1,102.4,3.7,72,4,PVC,Medium,0
+Roches_Noires,P-1894,38.9,162.8,6.9,57,29,HDPE,High,1
+Sbata,P-1378,70.2,95.5,4.1,76,8,PVC,Medium,0
+Sidi_Bernoussi,P-1491,62.2,105.1,3.4,62,9,PVC,Low,0
+Sidi_Maarouf,P-257,71.3,123.3,3.9,53,7,PVC,High,0
+Val_Fleuri,P-680,71.4,106.0,4.6,54,8,PVC,Medium,0
+Ain_Diab,P-704,58.0,125.4,3.8,65,2,Cast Iron,Low,0
+Ain_Sebaa,P-264,59.9,93.9,4.9,73,2,Cast Iron,High,0
+Anfa,P-994,61.6,106.8,4.6,75,5,Steel,Low,0
+Beauséjour,P-157,74.3,104.4,3.3,76,4,HDPE,High,0
+Ben_Msick,P-722,56.4,102.4,4.8,62,2,Steel,Medium,0
+Bourgogne,P-1966,40.9,230.9,8.1,58,13,Cast Iron,Medium,1
+Bouskoura,P-914,72.9,121.4,3.0,84,1,HDPE,High,0
+Derb_Sultan,P-666,65.5,89.5,3.5,51,8,HDPE,Medium,0
+Gauthier,P-1333,63.9,133.8,3.1,68,6,Steel,Low,0
+Hay_Hassani,P-1798,32.0,226.4,9.9,57,14,PVC,Medium,1
+Hay_Mohammadi,P-1733,39.8,159.4,8.0,61,29,Cast Iron,Low,1
+Lissasfa,P-1171,68.8,95.8,4.1,67,8,Cast Iron,High,0
+Maarif,P-758,65.9,98.6,4.1,75,5,HDPE,Medium,0
+Medina,P-1540,50.6,107.6,4.5,69,5,PVC,Low,0
+Racine,P-201,66.8,137.1,3.6,59,7,HDPE,Low,0
+Roches_Noires,P-834,61.2,105.9,4.2,74,8,Steel,High,0
+Sbata,P-1752,46.8,229.9,9.9,52,18,PVC,High,1
+Sidi_Bernoussi,P-1293,65.0,129.2,3.9,81,7,Steel,Medium,0
+Sidi_Maarouf,P-1447,62.4,108.3,5.0,62,3,HDPE,Low,0
+Val_Fleuri,P-1693,48.7,256.5,9.3,51,28,PVC,Low,1
+Ain_Diab,P-1815,37.3,182.1,7.2,84,28,PVC,Low,1
+Ain_Sebaa,P-1117,77.0,107.1,3.3,75,3,HDPE,Low,0
+Anfa,P-1195,57.0,87.0,5.0,59,6,PVC,Low,0
+Beauséjour,P-082,66.8,119.0,4.5,55,6,HDPE,Low,0
+Ben_Msick,P-1075,70.0,99.0,4.0,59,9,PVC,Low,0
+Bourgogne,P-1257,73.4,96.8,3.9,62,8,PVC,Low,0
+Bouskoura,P-1791,21.2,237.6,9.9,77,15,PVC,Medium,1
+Derb_Sultan,P-1738,29.3,215.2,7.6,83,13,HDPE,Medium,1
+Gauthier,P-550,62.0,141.3,4.8,60,2,Steel,Low,0
+Hay_Hassani,P-114,77.3,95.0,4.9,68,3,PVC,High,0
+Hay_Mohammadi,P-461,74.8,111.1,4.4,67,5,PVC,Low,0
+Lissasfa,P-128,62.2,126.7,3.6,51,1,HDPE,Low,0
+Maarif,P-272,57.8,102.7,3.3,71,1,PVC,Low,0
+Medina,P-360,60.9,116.1,3.2,61,3,PVC,Low,0
+Racine,P-1206,65.2,99.8,3.7,65,7,HDPE,Low,0
+Roches_Noires,P-473,57.4,98.2,4.3,54,5,Cast Iron,Low,0
+Sbata,P-1626,50.8,191.6,7.7,78,26,HDPE,Low,1
+Sidi_Bernoussi,P-1268,60.5,104.3,3.6,78,7,PVC,Low,0
+Sidi_Maarouf,P-927,62.2,108.3,4.0,60,5,Cast Iron,Medium,0
+Val_Fleuri,P-1580,60.9,94.0,4.7,66,8,PVC,High,0
+Ain_Diab,P-1347,52.2,105.7,4.5,62,1,PVC,Medium,0
+Ain_Sebaa,P-508,60.7,128.7,3.9,74,9,PVC,Medium,0
+Anfa,P-1614,39.2,231.9,6.6,73,26,PVC,Medium,1
+Beauséjour,P-1329,59.0,93.6,4.4,59,1,HDPE,Medium,0
+Ben_Msick,P-623,74.4,111.3,4.5,66,8,PVC,Low,0
+Bourgogne,P-983,60.2,121.0,4.7,56,9,PVC,Medium,0
+Bouskoura,P-969,64.8,82.7,4.2,68,7,PVC,High,0
+Derb_Sultan,P-1155,73.2,94.4,3.2,77,2,HDPE,Medium,0
+Gauthier,P-1039,66.1,95.6,5.0,69,9,Cast Iron,Medium,0
+Hay_Hassani,P-559,67.0,114.9,4.5,82,7,HDPE,Low,0
+Hay_Mohammadi,P-667,63.7,122.7,3.1,59,4,PVC,Low,0
+Lissasfa,P-1311,64.9,92.3,3.1,67,4,PVC,Low,0
+Maarif,P-1783,25.0,188.7,6.6,53,28,PVC,Medium,1
+Medina,P-1758,49.5,281.3,7.9,68,13,HDPE,Low,1
+Racine,P-343,66.2,117.4,3.1,82,4,HDPE,Medium,0
+Roches_Noires,P-494,60.7,131.7,3.0,58,5,Cast Iron,High,0
+Sbata,P-1063,70.7,108.6,3.0,69,3,Cast Iron,High,0
+Sidi_Bernoussi,P-1979,32.3,237.0,9.6,52,24,PVC,Low,1
+Sidi_Maarouf,P-1645,29.4,195.7,6.8,53,18,PVC,Low,1
+Val_Fleuri,P-1539,59.2,109.3,4.7,61,4,PVC,Low,0
