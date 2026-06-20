@@ -4,9 +4,16 @@ import json
 import os
 from datetime import datetime
 
+from pathlib import Path
+
+BASE_DIR   = Path(__file__).resolve().parent      # src/
+DATA_DIR   = BASE_DIR / "data"                    # src/data
+MODELS_DIR = BASE_DIR / "models"                  # src/models
+
+
 # ─── DOOM v2 ─────────────────────────────────────────
 try:
-    from src.doom_engine_v2 import DoomEngineV2
+    from doom_engine_v2 import DoomEngineV2   # ✅ même dossier
     doom = DoomEngineV2()
     DOOM_READY = True
     print("✅ Doom v2 chargé")
@@ -21,19 +28,20 @@ app = Flask(__name__)
 # CHARGEMENT DES DONNÉES
 # ─────────────────────────────────────────
 def load_data():
-    csv_path = "data/network_data.csv"
-    if not os.path.exists(csv_path):
+    csv_path = DATA_DIR / "network_data.csv"
+    if not csv_path.exists():
         return None
     df = pd.read_csv(csv_path)
     df["date"] = pd.to_datetime(df["date"])
     return df
 
 def load_json():
-    json_path = "data/dashboard_data.json"
-    if not os.path.exists(json_path):
+    json_path = DATA_DIR / "dashboard_data.json"
+    if not json_path.exists():
         return []
     with open(json_path, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 def enrich_with_doom(sector_dict):
     """Ajoute le diagnostic Doom v2 à un dict secteur."""
