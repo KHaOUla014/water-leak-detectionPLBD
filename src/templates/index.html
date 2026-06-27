@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Lydec — Détection Fuites Casablanca</title>
+  <title>DOOM V2 — Détection Intelligente des Fuites</title>
 
   <!-- Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -11,6 +11,7 @@
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
 
   <style>
     /* ═══════════════════════════════════
@@ -19,54 +20,92 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0f172a;
-      --bg2:       #1e293b;
-      --bg3:       #334155;
-      --accent:    #3b82f6;
-      --accent2:   #60a5fa;
-      --text:      #f1f5f9;
-      --text2:     #94a3b8;
-      --green:     #10b981;
-      --orange:    #f59e0b;
-      --red:       #ef4444;
-      --radius:    12px;
-      --shadow:    0 4px 24px rgba(0,0,0,0.35);
+      --bg:          #0f1b2d;
+      --panel:       #16263d;
+      --accent:      #38bdf8;   /* bleu ciel principal */
+      --accent-soft: #7dd3fc;   /* bleu ciel clair (hover) */
+      --accent-deep: #0ea5e9;   /* bleu ciel profond (boutons) */
+      --text:        #e2e8f0;
+      --text-dim:    #94a3b8;
+      --critical:    #ef4444;
+      --suspect:     #f59e0b;
+      --normal:      #22c55e;
     }
 
-    html, body {
-      height: 100%;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 14px;
+    .logo {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.5);
+      transition: transform .3s ease;
     }
+    .logo:hover {
+      transform: scale(1.08) rotate(6deg);
+    }
+
+    .badge-v2 {
+      background: var(--accent-deep);
+      color: #fff;
+      font-size: .55em;
+      padding: 2px 8px;
+      border-radius: 6px;
+      vertical-align: middle;
+      box-shadow: 0 0 10px rgba(56, 189, 248, .6);
+    }
+
+    .upload-zone {
+      border: 2px dashed var(--accent);
+      border-radius: 12px;
+      padding: 22px;
+      text-align: center;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .upload-zone:hover,
+    .upload-zone.dragover {
+      background: rgba(56, 189, 248, .08);
+      border-color: var(--accent-soft);
+    }
+
+    .btn-analyze {
+      width: 100%;
+      margin-top: 12px;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: var(--accent-deep);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .btn-analyze:hover {
+      background: var(--accent);
+      box-shadow: 0 0 16px rgba(56, 189, 248, .5);
+    }
+
 
     /* ═══════════════════════════════════
-       LAYOUT
+       LAYOUT PRINCIPAL
     ═══════════════════════════════════ */
-    .app {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      grid-template-columns: 300px 1fr;
-      grid-template-areas:
-        "header  header"
-        "sidebar main";
+    .app-wrapper {
+      display: flex;
+      flex-direction: column;
       height: 100vh;
-      overflow: hidden;
     }
 
     /* ═══════════════════════════════════
        HEADER
     ═══════════════════════════════════ */
     header {
-      grid-area: header;
-      background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
-      border-bottom: 1px solid var(--bg3);
-      padding: 0 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0 24px;
       height: 64px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
       z-index: 100;
     }
 
@@ -76,26 +115,68 @@
       gap: 14px;
     }
 
+    @keyframes logoPulse {
+      0%, 100% { box-shadow: 0 0 12px rgba(59, 130, 246, 0.4); }
+      50%       { box-shadow: 0 0 22px rgba(59, 130, 246, 0.75); }
+    }
+
     .logo {
-      width: 40px;
-      height: 40px;
-      background: var(--accent);
-      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+      animation: logoPulse 2.5s ease-in-out infinite;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .logo:hover {
+      transform: scale(1.08) rotate(-5deg);
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .header-title h1 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      background: linear-gradient(135deg, #f1f5f9, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .version-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #3b82f6, #60a5fa);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+      -webkit-text-fill-color: white;
     }
 
     .header-title p {
       font-size: 0.75rem;
       color: var(--text2);
+      margin-top: 1px;
     }
 
     .header-right {
@@ -104,115 +185,62 @@
       gap: 16px;
     }
 
-    #data-source {
-      font-size: 0.78rem;
-      color: var(--text2);
-      background: var(--bg2);
-      padding: 5px 12px;
-      border-radius: 20px;
-    }
-
-    .live-badge {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
-      color: var(--green);
-    }
-
-    .live-dot {
+    .status-dot {
       width: 8px; height: 8px;
-      background: var(--green);
       border-radius: 50%;
-      animation: blink 1.5s infinite;
+      background: var(--success);
+      box-shadow: 0 0 6px var(--success);
+      animation: pulse 2s infinite;
     }
 
-    @keyframes blink {
+    @keyframes pulse {
       0%, 100% { opacity: 1; }
-      50%       { opacity: 0.2; }
+      50%       { opacity: 0.4; }
+    }
+
+    #live-time {
+      font-size: 0.8rem;
+      color: var(--text2);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ═══════════════════════════════════
+       CONTENU PRINCIPAL
+    ═══════════════════════════════════ */
+    .main-content {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
     }
 
     /* ═══════════════════════════════════
        SIDEBAR
     ═══════════════════════════════════ */
     .sidebar {
-      grid-area: sidebar;
+      width: 260px;
       background: var(--bg2);
-      border-right: 1px solid var(--bg3);
-      overflow-y: auto;
+      border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       gap: 0;
+      overflow-y: auto;
+      flex-shrink: 0;
     }
-
-    .sidebar::-webkit-scrollbar { width: 5px; }
-    .sidebar::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 
     .sidebar-section {
       padding: 16px;
-      border-bottom: 1px solid var(--bg3);
+      border-bottom: 1px solid var(--border);
     }
 
-    .section-title {
-      font-size: 0.7rem;
-      font-weight: 700;
+    .sidebar-section h3 {
+      font-size: 0.68rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       color: var(--text2);
       margin-bottom: 12px;
     }
 
-    /* Compteurs statut */
-    .status-counts {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 8px;
-    }
-
-    .status-count-card {
-      background: var(--bg3);
-      border-radius: var(--radius);
-      padding: 10px 8px;
-      text-align: center;
-    }
-
-    .status-count-card .count {
-      font-size: 1.6rem;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .status-count-card .label {
-      font-size: 0.68rem;
-      color: var(--text2);
-      margin-top: 3px;
-    }
-
-    .count-normal  { color: var(--green); }
-    .count-suspect { color: var(--orange); }
-    .count-fuite   { color: var(--red); }
-
-    /* Pertes totales */
-    .total-loss-card {
-      background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(239,68,68,0.05));
-      border: 1px solid rgba(239,68,68,0.25);
-      border-radius: var(--radius);
-      padding: 12px 14px;
-    }
-
-    .total-loss-card .loss-label {
-      font-size: 0.72rem;
-      color: var(--text2);
-      margin-bottom: 4px;
-    }
-
-    .total-loss-card .loss-value {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--red);
-    }
-
-    /* KPIs */
+    /* KPI Cards */
     .kpi-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -222,277 +250,239 @@
     .kpi-card {
       background: var(--bg3);
       border-radius: 10px;
-      padding: 10px 12px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid var(--border);
     }
 
-    .kpi-card .kpi-label {
-      font-size: 0.68rem;
-      color: var(--text2);
-      margin-bottom: 3px;
-    }
-
-    .kpi-card .kpi-value {
-      font-size: 1rem;
+    .kpi-value {
+      font-size: 1.3rem;
       font-weight: 700;
-      color: var(--accent2);
+      line-height: 1;
     }
 
-    /* Filtres carte */
-    .filter-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .filter-btn {
-      background: var(--bg3);
-      border: 1px solid transparent;
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.83rem;
-      text-align: left;
-      transition: all 0.2s;
-    }
-
-    .filter-btn:hover {
-      border-color: var(--accent);
-      background: rgba(59,130,246,0.12);
-    }
-
-    .filter-btn.active {
-      background: rgba(59,130,246,0.2);
-      border-color: var(--accent);
-      color: var(--accent2);
-      font-weight: 600;
-    }
-
-    /* Upload */
-    .drop-zone {
-      border: 2px dashed var(--bg3);
-      border-radius: var(--radius);
-      padding: 16px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.2s;
+    .kpi-label {
+      font-size: 0.62rem;
       color: var(--text2);
-      font-size: 0.82rem;
-      line-height: 1.6;
+      margin-top: 3px;
     }
 
-    .drop-zone:hover, .drop-zone.dragover {
-      border-color: var(--accent);
-      background: rgba(59,130,246,0.08);
-      color: var(--text);
-    }
+    .kpi-card.danger  .kpi-value { color: var(--danger); }
+    .kpi-card.warning .kpi-value { color: var(--warning); }
+    .kpi-card.success .kpi-value { color: var(--success); }
+    .kpi-card.info    .kpi-value { color: var(--accent2); }
 
-    .drop-zone .drop-icon { font-size: 1.6rem; display: block; margin-bottom: 6px; }
-
-    #upload-status {
-      margin-top: 8px;
-      font-size: 0.78rem;
-      min-height: 20px;
-      line-height: 1.5;
-    }
-
-    .msg-success { color: var(--green); }
-    .msg-error   { color: var(--red); }
-
-    /* Boutons actions */
-    .action-buttons {
+    /* Filtres */
+    .filter-btn {
       display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .btn {
-      padding: 9px 14px;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 8px 10px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
       border-radius: 8px;
-      border: none;
+      color: var(--text);
+      font-size: 0.82rem;
       cursor: pointer;
-      font-size: 0.83rem;
-      font-weight: 600;
+      margin-bottom: 6px;
       transition: all 0.2s;
-      text-align: center;
     }
 
-    .btn-primary  { background: var(--accent); color: white; }
-    .btn-primary:hover  { background: #2563eb; }
-    .btn-success  { background: var(--green); color: white; }
-    .btn-success:hover  { background: #059669; }
-    .btn-danger   { background: rgba(239,68,68,0.15); color: var(--red);
-                    border: 1px solid rgba(239,68,68,0.3); }
-    .btn-danger:hover   { background: rgba(239,68,68,0.25); }
-    .btn-outline  { background: transparent; color: var(--accent2);
-                    border: 1px solid var(--accent); }
-    .btn-outline:hover  { background: rgba(59,130,246,0.1); }
+    .filter-btn:hover           { background: var(--bg); border-color: var(--accent); }
+    .filter-btn.active          { background: rgba(59,130,246,0.15); border-color: var(--accent); }
+
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-danger  { background: var(--danger); box-shadow: 0 0 6px var(--danger); }
+    .dot-warning { background: var(--warning); box-shadow: 0 0 6px var(--warning); }
+    .dot-success { background: var(--success); box-shadow: 0 0 6px var(--success); }
+    .dot-all     { background: var(--accent2); }
+
+    /* Mini chart */
+    #mini-chart-wrap {
+      height: 90px;
+      position: relative;
+    }
 
     /* ═══════════════════════════════════
-       MAIN
+       ZONE CENTRALE (onglets)
     ═══════════════════════════════════ */
-    main {
-      grid-area: main;
+    .center-area {
+      flex: 1;
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
 
-    /* Onglets */
-    .tabs {
+    .tabs-bar {
       display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 10px 16px 0;
       background: var(--bg2);
-      border-bottom: 1px solid var(--bg3);
-      padding: 0 16px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
     }
 
     .tab {
-      padding: 14px 20px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 8px 8px 0 0;
+      font-size: 0.82rem;
+      font-weight: 600;
       color: var(--text2);
-      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-bottom: none;
       transition: all 0.2s;
+      background: transparent;
     }
 
-    .tab:hover { color: var(--text); }
-    .tab.active { color: var(--accent2); border-bottom-color: var(--accent); }
+    .tab:hover  { color: var(--text); background: var(--bg3); }
+    .tab.active { color: var(--text); background: var(--bg); border-color: var(--border); }
 
-    /* Panneaux */
+    .tab-panels {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
     .tab-panel {
       display: none;
-      flex: 1;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .tab-panel.active { display: flex; flex-direction: column; }
+
+    /* ═══════════════════════════════════
+       MAP PANEL
+    ═══════════════════════════════════ */
+    #map-panel {
       overflow: hidden;
     }
 
-    .tab-panel.active {
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── Carte ── */
     #map {
       flex: 1;
-      width: 100%;
+      min-height: 0;
     }
 
-    /* ── Tableau ── */
-    .table-toolbar {
+    /* ═══════════════════════════════════
+       TABLE PANEL
+    ═══════════════════════════════════ */
+    #table-panel {
+      padding: 16px;
+      flex-direction: column;
+      gap: 12px;
+      overflow: auto;
+    }
+
+    .toolbar {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 12px 16px;
-      background: var(--bg2);
-      border-bottom: 1px solid var(--bg3);
+      flex-wrap: wrap;
     }
 
-    .table-toolbar input,
-    .table-toolbar select {
-      background: var(--bg3);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--text);
+    .toolbar input {
       padding: 7px 12px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
       border-radius: 8px;
-      font-size: 0.83rem;
+      color: var(--text);
+      font-size: 0.82rem;
       outline: none;
+      width: 220px;
+      transition: border-color 0.2s;
     }
 
-    .table-toolbar input { flex: 1; }
-    .table-toolbar input::placeholder { color: var(--text2); }
+    .toolbar input:focus { border-color: var(--accent); }
+
+    .toolbar select {
+      padding: 7px 10px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.82rem;
+      outline: none;
+      cursor: pointer;
+    }
 
     #tableCount {
+      margin-left: auto;
       font-size: 0.78rem;
       color: var(--text2);
-      white-space: nowrap;
-      margin-left: auto;
     }
 
     .table-wrapper {
-      flex: 1;
-      overflow-y: auto;
+      overflow: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
     }
-
-    .table-wrapper::-webkit-scrollbar { width: 5px; }
-    .table-wrapper::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 
     table {
       width: 100%;
       border-collapse: collapse;
+      font-size: 0.82rem;
     }
 
     thead th {
-      background: var(--bg2);
-      color: var(--text2);
+      padding: 10px 14px;
+      background: var(--bg3);
+      text-align: left;
       font-size: 0.72rem;
-      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      padding: 10px 14px;
-      text-align: left;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid var(--bg3);
+      color: var(--text2);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
     }
 
     tbody tr {
-      border-bottom: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid var(--border);
       transition: background 0.15s;
     }
 
-    tbody tr:hover { background: rgba(59,130,246,0.07); }
+    tbody tr:hover { background: var(--bg3); }
+    tbody td { padding: 9px 14px; vertical-align: middle; }
 
-    tbody td {
-      padding: 10px 14px;
-      vertical-align: middle;
-    }
-
-    .empty-row {
-      text-align: center;
-      color: var(--text2);
-      padding: 40px !important;
-    }
+    .empty-row { text-align: center; color: var(--text2); padding: 24px !important; }
 
     /* Badges statut */
-    .status-badge {
+    .badge {
       display: inline-block;
-      padding: 3px 10px;
+      padding: 2px 9px;
       border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
-    .status-0 { background: rgba(16,185,129,0.2);  color: var(--green); }
-    .status-1 { background: rgba(245,158,11,0.2);  color: var(--orange); }
-    .status-2 { background: rgba(239,68,68,0.2);   color: var(--red); }
+    .badge-CRITIQUE { background: rgba(239,68,68,0.15);  color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+    .badge-SUSPECT  { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+    .badge-NORMAL   { background: rgba(34,197,94,0.15);  color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
 
-    /* Barre métrique */
-    .metric-bar { display: flex; flex-direction: column; gap: 3px; }
-    .metric-bar span { font-size: 0.82rem; font-weight: 600; }
-    .bar {
-      height: 4px;
-      background: var(--bg3);
-      border-radius: 2px;
-      overflow: hidden;
-      width: 80px;
-    }
-    .fill { height: 100%; border-radius: 2px; transition: width 0.4s; }
-
-    /* Bouton action tableau */
-    .action-btn {
-      background: rgba(59,130,246,0.1);
-      border: 1px solid rgba(59,130,246,0.25);
-      color: var(--accent2);
-      padding: 5px 10px;
+    /* Bouton action */
+    .btn-details {
+      padding: 4px 12px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.35);
       border-radius: 6px;
+      color: var(--accent2);
+      font-size: 0.75rem;
       cursor: pointer;
-      font-size: 0.78rem;
-      white-space: nowrap;
       transition: all 0.2s;
     }
 
-    .action-btn:hover { background: rgba(59,130,246,0.2); }
+    .btn-details:hover {
+      background: rgba(59,130,246,0.3);
+      border-color: var(--accent);
+    }
 
     /* ═══════════════════════════════════
        MODAL HISTORIQUE
@@ -501,282 +491,281 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.65);
       z-index: 1000;
       align-items: center;
       justify-content: center;
-      padding: 20px;
-      backdrop-filter: blur(4px);
     }
+
+    #historyModal.open { display: flex; }
 
     .modal-box {
       background: var(--bg2);
-      border: 1px solid var(--bg3);
-      border-radius: 16px;
-      width: 100%;
-      max-width: 860px;
-      max-height: 90vh;
-      overflow-y: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      width: min(720px, 92vw);
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
       box-shadow: var(--shadow);
+      overflow: hidden;
     }
-
-    .modal-box::-webkit-scrollbar { width: 5px; }
-    .modal-box::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 
     .modal-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 22px;
-      border-bottom: 1px solid var(--bg3);
-      position: sticky;
-      top: 0;
-      background: var(--bg2);
-      z-index: 2;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
     }
 
-    .modal-header h2 { font-size: 1rem; font-weight: 700; }
+    .modal-header h2 { font-size: 1rem; }
 
     .modal-close {
       background: var(--bg3);
       border: none;
       color: var(--text);
-      width: 32px; height: 32px;
-      border-radius: 50%;
+      width: 28px; height: 28px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 0.85rem;
       transition: background 0.2s;
     }
 
-    .modal-close:hover { background: rgba(239,68,68,0.25); color: var(--red); }
+    .modal-close:hover { background: var(--danger); }
 
-    .modal-body { padding: 20px 22px; }
+    .modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .modal-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .modal-kpi {
+      background: var(--bg3);
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .modal-kpi .val { font-size: 1.4rem; font-weight: 700; }
+    .modal-kpi .lbl { font-size: 0.65rem; color: var(--text2); margin-top: 2px; }
+
+    #historyChartWrap { height: 220px; position: relative; }
 
     /* ═══════════════════════════════════
-       RESPONSIVE
+       SCROLLBAR
     ═══════════════════════════════════ */
-    @media (max-width: 900px) {
-      .app {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr;
-        grid-template-areas:
-          "header"
-          "sidebar"
-          "main";
-      }
+    ::-webkit-scrollbar       { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
 
-      .sidebar {
-        overflow-x: auto;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        border-right: none;
-        border-bottom: 1px solid var(--bg3);
-      }
+    /* ═══════════════════════════════════
+       UPLOAD DROPZONE
+    ═══════════════════════════════════ */
+    .dropzone {
+      border: 2px dashed var(--border);
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s;
+      margin-bottom: 10px;
+    }
+    .dropzone:hover,
+    .dropzone.drag-over {
+      border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.08);
+    }
+    .dropzone-icon { font-size: 1.6rem; display: block; margin-bottom: 4px; }
+    .dropzone-text { font-size: 0.78rem; color: var(--text); font-weight: 600; margin: 0; }
+    .dropzone-sub  { font-size: 0.67rem; color: var(--text2); margin: 2px 0 0; }
 
-      .sidebar-section { min-width: 200px; border-bottom: none; border-right: 1px solid var(--bg3); }
+    /* ═══════════════════════════════════
+       ANALYZE BUTTON
+    ═══════════════════════════════════ */
+    .analyze-btn {
+      width: 100%;
+      padding: 11px 14px;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
+      letter-spacing: 0.3px;
+    }
+    .analyze-btn:hover:not(:disabled) {
+      background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      box-shadow: 0 6px 18px rgba(59, 130, 246, 0.5);
+      transform: translateY(-1px);
+    }
+    .analyze-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   </style>
 </head>
-
 <body>
-<div class="app">
 
-  <!-- ═══════════════════
+<div class="app-wrapper">
+
+  <!-- ═══════════════════════════════════
        HEADER
-  ═══════════════════ -->
-  <header>
-    <div class="header-left">
-      <div class="logo">💧</div>
-      <div class="header-title">
-        <h1>Lydec — Détection des Fuites</h1>
-        <p>Réseau d'eau potable — Grand Casablanca</p>
+  ═══════════════════════════════════ -->
+  <header class="topbar">
+    <div class="brand">
+      <img src="/assets/logo.png" alt="Logo DOOM" class="logo">
+      <div class="brand-text">
+        <h1>DOOM <span class="badge-v2">V2</span></h1>
+        <p>IA de détection des fuites — Grand Casablanca</p>
       </div>
     </div>
-    <div class="header-right">
-      <span id="data-source">📊 Données : Lydec Casablanca (défaut)</span>
-      <div class="live-badge">
-        <div class="live-dot"></div>
-        <span>LIVE</span>
-      </div>
+    <div class="clock">
+      <span class="dot"></span>
+      <span id="clock">--:--:--</span>
     </div>
   </header>
 
-  <!-- ═══════════════════
-       SIDEBAR
-  ═══════════════════ -->
-  <aside class="sidebar">
 
-    <!-- Statuts -->
-    <div class="sidebar-section">
-      <div class="section-title">📊 État du réseau</div>
-      <div class="status-counts">
-        <div class="status-count-card">
-          <div class="count count-normal" id="count-green">—</div>
-          <div class="label">Normal</div>
-        </div>
-        <div class="status-count-card">
-          <div class="count count-suspect" id="count-orange">—</div>
-          <div class="label">Suspect</div>
-        </div>
-        <div class="status-count-card">
-          <div class="count count-fuite" id="count-red">—</div>
-          <div class="label">Fuite</div>
+  <!-- ═══════════════════════════════════
+       CONTENU PRINCIPAL
+  ═══════════════════════════════════ -->
+  <div class="main-content">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <h3>📊 Vue globale</h3>
+        <div class="kpi-grid">
+          <div class="kpi-card danger">
+            <div class="kpi-value" id="kpi-critique">—</div>
+            <div class="kpi-label">Critiques</div>
+          </div>
+          <div class="kpi-card warning">
+            <div class="kpi-value" id="kpi-suspect">—</div>
+            <div class="kpi-label">Suspects</div>
+          </div>
+          <div class="kpi-card success">
+            <div class="kpi-value" id="kpi-normal">—</div>
+            <div class="kpi-label">Normaux</div>
+          </div>
+          <div class="kpi-card info">
+            <div class="kpi-value" id="kpi-total">—</div>
+            <div class="kpi-label">Total</div>
+          </div>
         </div>
       </div>
-      <div class="total-loss-card" style="margin-top:10px">
-        <div class="loss-label">💧 Pertes totales estimées</div>
-        <div class="loss-value" id="total-loss">— m³</div>
-      </div>
-    </div>
 
-    <!-- KPIs -->
-    <div class="sidebar-section">
-      <div class="section-title">📈 Indicateurs Lydec</div>
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">📅 Date</div>
-          <div class="kpi-value" id="kpi-date">—</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">⚡ Rendement réseau</div>
-          <div class="kpi-value" id="kpi-yield">— %</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">📊 ILP moyen</div>
-          <div class="kpi-value" id="kpi-ilp">—</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">💧 Taux de pertes</div>
-          <div class="kpi-value" id="kpi-loss-pct">— %</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">🚿 Volume perdu</div>
-          <div class="kpi-value" id="kpi-lost-m3">— m³</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">⬇️ ΔP moyen</div>
-          <div class="kpi-value" id="kpi-delta-p">— bar</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Filtres carte -->
-    <div class="sidebar-section">
-      <div class="section-title">🗺️ Filtres carte</div>
-      <div class="filter-buttons">
-        <button class="filter-btn active" data-status="ALL"    onclick="filterMap('ALL')">
-          🔵 Tous les secteurs
+      <div class="sidebar-section">
+        <h3>🔍 Filtres carte</h3>
+        <button class="filter-btn active" data-status="ALL" onclick="filterMap('ALL', this)">
+          <span class="dot dot-all"></span> Tous les secteurs
         </button>
-        <button class="filter-btn" data-status="NORMAL"  onclick="filterMap('NORMAL')">
-          🟢 Normaux uniquement
+        <button class="filter-btn" data-status="CRITIQUE" onclick="filterMap('CRITIQUE', this)">
+          <span class="dot dot-danger"></span> Critiques uniquement
         </button>
-        <button class="filter-btn" data-status="SUSPECT" onclick="filterMap('SUSPECT')">
-          🟡 Suspects uniquement
+        <button class="filter-btn" data-status="SUSPECT" onclick="filterMap('SUSPECT', this)">
+          <span class="dot dot-warning"></span> Suspects uniquement
         </button>
-        <button class="filter-btn" data-status="FUITE"   onclick="filterMap('FUITE')">
-          🔴 Fuites uniquement
+        <button class="filter-btn" data-status="NORMAL" onclick="filterMap('NORMAL', this)">
+          <span class="dot dot-success"></span> Normaux uniquement
         </button>
       </div>
-    </div>
 
-    <!-- Upload -->
-    <div class="sidebar-section">
-      <div class="section-title">📂 Import données</div>
-      <label id="drop-zone" class="drop-zone" for="csv-input">
-        <span class="drop-icon">📁</span>
-        Glisser un fichier CSV<br>ou cliquer pour parcourir
-      </label>
-      <input type="file" id="csv-input" accept=".csv,.xlsx"
-             style="display:none" />
-      <div id="upload-status"></div>
-    </div>
-
-    <!-- Actions -->
-    <div class="sidebar-section">
-      <div class="section-title">⚙️ Actions</div>
-      <div class="action-buttons">
-        <button class="btn btn-primary"  onclick="runAnalysis()">
-          🔍 Lancer l'analyse
-        </button>
-        <button class="btn btn-success"  onclick="exportResults()">
-          📥 Exporter CSV
-        </button>
-        <button class="btn btn-danger"   onclick="resetData()">
-          ↺ Réinitialiser
-        </button>
-      </div>
-    </div>
-
-  </aside>
-
-  <!-- ═══════════════════
-       MAIN
-  ═══════════════════ -->
-  <main>
-
-    <!-- Onglets -->
-    <div class="tabs">
-      <div class="tab active" onclick="switchTab('map-panel', this)">
-        🗺️ Carte
-      </div>
-      <div class="tab" onclick="switchTab('table-panel', this)">
-        📋 Tableau des secteurs
-      </div>
-    </div>
-
-    <!-- Panneau CARTE -->
-    <div id="map-panel" class="tab-panel active">
-      <div id="map"></div>
-    </div>
-
-    <!-- Panneau TABLEAU -->
-    <div id="table-panel" class="tab-panel">
-      <div class="table-toolbar">
-        <input type="text"   id="searchInput"  placeholder="🔍 Rechercher un quartier…" />
-        <select id="filterStatus">
-          <option value="all">Tous les statuts</option>
-          <option value="0">✅ Normal</option>
-          <option value="1">⚠️ Suspect</option>
-          <option value="2">🚨 Fuite</option>
-        </select>
-        <select id="sortBy">
-          <option value="status_code">Trier : Priorité</option>
-          <option value="sector_id">Trier : Nom</option>
-          <option value="ilp">Trier : ILP</option>
-          <option value="loss">Trier : Pertes</option>
-          <option value="delta_p">Trier : ΔP</option>
-        </select>
-        <span id="tableCount">— secteur(s)</span>
+      <!-- ── Upload & Analyse ─────────────────────────────────── -->
+      <div class="upload-section">
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">📁</div>
+          <strong>Glissez votre CSV ici</strong>
+          <small>ou cliquez pour sélectionner</small>
+        </div>
+        <input type="file" id="fileInput" accept=".csv" hidden>
+        <button id="analyzeBtn" class="btn-analyze">🚀 Lancer l'analyse DOOM</button>
       </div>
 
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>Quartier</th>
-              <th>Statut</th>
-              <th>Réseau</th>
-              <th>ILP (m³/km/j)</th>
-              <th>Pertes (m³)</th>
-              <th>ΔP (bar)</th>
-              <th>Recommandation</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="sectorsTableBody">
-            <tr>
-              <td colspan="8" class="empty-row">⏳ Chargement des données…</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="sidebar-section">
+        <h3>📈 ILP moyen (7 j)</h3>
+        <div id="mini-chart-wrap">
+          <canvas id="miniChart"></canvas>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ZONE CENTRALE -->
+    <div class="center-area">
+
+      <div class="tabs-bar">
+        <div class="tab active" onclick="switchTab('map-panel', this)">🗺️ Carte réseau</div>
+        <div class="tab" onclick="switchTab('table-panel', this)">📋 Tableau de bord</div>
+      </div>
+
+      <div class="tab-panels">
+
+        <!-- ONGLET CARTE -->
+        <div class="tab-panel active" id="map-panel">
+          <div id="map"></div>
+        </div>
+
+        <!-- ONGLET TABLEAU -->
+        <div class="tab-panel" id="table-panel">
+
+          <div class="toolbar">
+            <input type="text" id="searchInput" placeholder="🔍 Rechercher un quartier…" oninput="filterTable()" />
+            <select id="filterStatus" onchange="filterTable()">
+              <option value="">Tous les statuts</option>
+              <option value="CRITIQUE">Critique</option>
+              <option value="SUSPECT">Suspect</option>
+              <option value="NORMAL">Normal</option>
+            </select>
+            <select id="sortField" onchange="filterTable()">
+              <option value="">Trier par…</option>
+              <option value="ilp">Trier : ILP</option>
+              <option value="pertes">Trier : Pertes</option>
+              <option value="delta_p">Trier : ΔP</option>
+            </select>
+            <span id="tableCount">— secteur(s)</span>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Quartier</th>
+                  <th>Statut</th>
+                  <th>Réseau</th>
+                  <th>ILP (m³/km/j)</th>
+                  <th>Pertes (m³)</th>
+                  <th>ΔP (bar)</th>
+                  <th>Recommandation</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="sectorsTableBody">
+                <tr>
+                  <td colspan="8" class="empty-row">⏳ Chargement des données…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
       </div>
     </div>
-
-  </main>
-
+  </div>
 </div>
 
 <!-- ═══════════════════
@@ -789,7 +778,6 @@
       <button class="modal-close" onclick="closeHistory()">✕</button>
     </div>
     <div class="modal-body" id="historyBody">
-      <!-- Rempli dynamiquement par dashboard.js -->
     </div>
   </div>
 </div>
@@ -797,16 +785,34 @@
 <!-- ═══════════════════
      SCRIPTS
 ═══════════════════ -->
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script>
+  // Horloge live
+  function updateClock() {
+    const el = document.getElementById("clock");
+    if (!el) return;
+    const now = new Date();
+    el.textContent = now.toLocaleTimeString("fr-FR", {
+      hour: "2-digit", minute: "2-digit", second: "2-digit"
+    });
+  }
+
+  // Démarre l'horloge une fois le DOM prêt
+  document.addEventListener("DOMContentLoaded", () => {
+    updateClock();
+    setInterval(updateClock, 1000);
+  });
+
+
   // Gestion des onglets
   function switchTab(panelId, tabEl) {
     document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
     document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
     document.getElementById(panelId).classList.add("active");
     tabEl.classList.add("active");
-
-    // Forcer Leaflet à recalculer la taille si on revient sur la carte
-    if (panelId === "map-panel" && typeof map !== "undefined") {
+    if (panelId === "map-panel" && typeof window.map !== "undefined") {
       setTimeout(() => {
         if (window.map && typeof window.map.invalidateSize === "function") {
           window.map.invalidateSize();
@@ -815,23 +821,126 @@
     }
   }
 
-  // Filtres carte (depuis sidebar)
-  function filterMap(status) {
+  // Filtres carte
+  function filterMap(status, btn) {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-    document.querySelector(`.filter-btn[data-status="${status}"]`)?.classList.add("active");
-
+    if (btn) btn.classList.add("active");
     const filtered = status === "ALL"
-      ? allSectors
-      : allSectors.filter(s => s.status === status);
+      ? (window.allSectors || [])
+      : (window.allSectors || []).filter(s => s.status === status);
+    if (window.markersLayer) window.markersLayer.clearLayers();
+    if (window.pipesLayer)   window.pipesLayer.clearLayers();
+    if (typeof window.updateMap === "function") window.updateMap(filtered);
+  }
 
-    // Redessiner uniquement les marqueurs
-    markersLayer.clearLayers();
-    pipesLayer.clearLayers();
-    updateMap(filtered);
+  // Fermer modal
+  function closeHistory(e) {
+    if (!e || e.target === document.getElementById("historyModal")) {
+      document.getElementById("historyModal").classList.remove("open");
+    }
+  }
+
+  // Filtre tableau
+  function filterTable() {
+    const q      = document.getElementById("searchInput").value.toLowerCase();
+    const status = document.getElementById("filterStatus").value;
+    const sort   = document.getElementById("sortField").value;
+    let data     = [...(window.allSectors || [])];
+
+    if (q)      data = data.filter(s => s.name.toLowerCase().includes(q));
+    if (status) data = data.filter(s => s.status === status);
+
+    if (sort === "ilp")     data.sort((a, b) => b.ilp - a.ilp);
+    if (sort === "pertes")  data.sort((a, b) => b.pertes - a.pertes);
+    if (sort === "delta_p") data.sort((a, b) => b.delta_p - a.delta_p);
+
+    renderTable(data);
+  }
+
+  // Rendu tableau
+  function renderTable(data) {
+    const tbody = document.getElementById("sectorsTableBody");
+    document.getElementById("tableCount").textContent = data.length + " secteur(s)";
+    if (!data.length) {
+      tbody.innerHTML = '<tr><td colspan="8" class="empty-row">Aucun résultat</td></tr>';
+      return;
+    }
+    tbody.innerHTML = data.map(s => `
+      <tr>
+        <td><strong>${s.name}</strong></td>
+        <td><span class="badge badge-${s.status}">${s.status}</span></td>
+        <td>${s.network || "—"}</td>
+        <td>${(+s.ilp).toFixed(2)}</td>
+        <td>${(+s.pertes).toFixed(0)}</td>
+        <td>${(+s.delta_p).toFixed(2)}</td>
+        <td style="font-size:0.75rem;color:var(--text2)">${s.recommandation || "—"}</td>
+        <td><button class="btn-details" onclick="openHistory('${s.name}')">📈 Détails</button></td>
+      </tr>
+    `).join("");
+  }
+
+  // Ouvrir modal
+  function openHistory(name) {
+    const sector = (window.allSectors || []).find(s => s.name === name);
+    if (!sector) return;
+    document.getElementById("historyTitle").textContent = "📈 " + name;
+    const body = document.getElementById("historyBody");
+    body.innerHTML = `
+      <div class="modal-kpis">
+        <div class="modal-kpi">
+          <div class="val" style="color:var(--accent2)">${(+sector.ilp).toFixed(2)}</div>
+          <div class="lbl">ILP (m³/km/j)</div>
+        </div>
+        <div class="modal-kpi">
+          <div class="val" style="color:var(--warning)">${(+sector.pertes).toFixed(0)}</div>
+          <div class="lbl">Pertes (m³)</div>
+        </div>
+        <div class="modal-kpi">
+          <div class="val" style="color:var(--danger)">${(+sector.delta_p).toFixed(2)}</div>
+          <div class="lbl">ΔP (bar)</div>
+        </div>
+        <div class="modal-kpi">
+          <div class="val">${sector.network || "—"}</div>
+          <div class="lbl">Réseau (km)</div>
+        </div>
+      </div>
+      <p style="font-size:0.82rem;color:var(--text2)">💡 ${sector.recommandation || "Aucune recommandation"}</p>
+      <div id="historyChartWrap"><canvas id="historyChart"></canvas></div>
+    `;
+    document.getElementById("historyModal").classList.add("open");
+
+    // Générer des données historiques simulées pour le graphique
+    const labels = ["J-6","J-5","J-4","J-3","J-2","J-1","Auj."];
+    const base = +sector.ilp;
+    const vals = labels.map((_, i) => +(base * (0.85 + Math.random() * 0.3)).toFixed(2));
+    vals[6] = base;
+
+    new Chart(document.getElementById("historyChart"), {
+      type: "line",
+      data: {
+        labels,
+        datasets: [{
+          label: "ILP (m³/km/j)",
+          data: vals,
+          borderColor: "#3b82f6",
+          backgroundColor: "rgba(59,130,246,0.12)",
+          tension: 0.4,
+          fill: true,
+          pointBackgroundColor: "#60a5fa",
+          pointRadius: 4,
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: "#94a3b8", font: { size: 11 } } } },
+        scales: {
+          x: { ticks: { color: "#94a3b8" }, grid: { color: "rgba(255,255,255,0.05)" } },
+          y: { ticks: { color: "#94a3b8" }, grid: { color: "rgba(255,255,255,0.05)" } }
+        }
+      }
+    });
   }
 </script>
-
-<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
-
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>

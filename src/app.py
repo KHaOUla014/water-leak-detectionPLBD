@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request, send_file
+from flask import Flask, jsonify, render_template, request, send_file, send_from_directory
 import pandas as pd
 import json
 import os
@@ -25,6 +25,13 @@ except Exception as e:
 app = Flask(__name__)
 
 # ─────────────────────────────────────────
+# ROUTE STATIQUE ASSETS  ← après app = Flask() ✓
+# ─────────────────────────────────────────
+@app.route("/assets/<path:filename>")
+def assets(filename):
+    return send_from_directory("assets", filename)
+
+# ─────────────────────────────────────────
 # CHARGEMENT DES DONNÉES
 # ─────────────────────────────────────────
 def load_data():
@@ -44,36 +51,29 @@ def load_json():
 
 
 def enrich_with_doom(sector_dict):
-    """Ajoute le diagnostic Doom v2 à un dict secteur."""
     if not DOOM_READY:
         return sector_dict
     try:
-        # On utilise pressure_out comme pression capteur, delta_p × volume comme proxy débit
-        pressure = float(sector_dict.get('pressure_out', sector_dict.get('pressure_in', 3.0)))
-        # Approximation flow_rate à partir de daily_consumption (m³/jour → L/s)
-        daily = float(sector_dict.get('daily_consumption', 8000))
-        flow_ls = daily * 1000 / 86400  # m³/j → L/s
-        temp = 20.0  # placeholder (pas de T° dans tes données)
+        # Reconstitue les 4 arguments positionnels attendus par diagnose()
+        sector_id    = sector_dict.get("sector", "Inconnu")
+        pressure_out = float(sector_dict.get("pressure_out", 3.0))
+        daily_conso  = float(sector_dict.get("daily_consumption", 8000))
+        flow_ls      = daily_conso * 1000 / 86400          # m³/j → L/s
+        age_years    = 20.0                                # défaut
 
-        diag = doom.diagnose(
-            sector_id=sector_dict.get('sector', sector_dict.get('sector_id')),
-            pressure_bar=pressure,
-            flow_rate_ls=flow_ls,
-            temperature_c=temp
-        )
-        sector_dict['doom_score'] = diag['score']
-        sector_dict['doom_status'] = diag['status']
-        sector_dict['doom_label'] = diag['label']
-        sector_dict['pipe_age'] = diag['pipe_age']
-        sector_dict['material'] = diag['material']
-        sector_dict['corrosivity'] = diag['corrosivity']
-        sector_dict['recommendation'] = diag['recommendation']
+        diag = doom.diagnose(sector_id, pressure_out, flow_ls, age_years)
+
+        sector_dict['doom_score']  = diag.get('score')
+        sector_dict['doom_status'] = diag.get('status')
+        sector_dict['doom_label']  = diag.get('label')
     except Exception as e:
         sector_dict['doom_error'] = str(e)
     return sector_dict
 
+
+
 # ─────────────────────────────────────────
-# ROUTES PRINCIPALES (existantes)
+# ROUTES PRINCIPALES
 # ─────────────────────────────────────────
 @app.route("/")
 def index():
@@ -81,7 +81,6 @@ def index():
 
 @app.route("/api/sectors/latest")
 def sectors_latest():
-    """Dernier jour + enrichissement Doom v2"""
     data = load_json()
     enriched = [enrich_with_doom(dict(s)) for s in data]
     return jsonify(enriched)
@@ -181,11 +180,10 @@ def network_stats():
     return jsonify(stats.to_dict(orient="records"))
 
 # ─────────────────────────────────────────
-# 🆕 ROUTES DOOM v2
+# ROUTES DOOM v2
 # ─────────────────────────────────────────
 @app.route("/api/doom/status")
 def doom_status():
-    """État du moteur Doom v2"""
     if not DOOM_READY:
         return jsonify({"ready": False, "reason": "Modèles non chargés"})
     return jsonify({
@@ -198,7 +196,6 @@ def doom_status():
 
 @app.route("/api/doom/diagnose/<sector_name>")
 def doom_diagnose(sector_name):
-    """Diagnostic Doom v2 pour un secteur (basé sur dernières données)"""
     if not DOOM_READY:
         return jsonify({"error": "Doom v2 non disponible"}), 503
     df = load_data()
@@ -217,7 +214,6 @@ def doom_diagnose(sector_name):
 
 @app.route("/api/doom/all")
 def doom_all():
-    """Diagnostic Doom v2 pour TOUS les secteurs"""
     if not DOOM_READY:
         return jsonify({"error": "Doom v2 non disponible"}), 503
     df = load_data()
@@ -238,7 +234,6 @@ def doom_all():
 
 @app.route("/api/doom/compare")
 def doom_compare():
-    """Compare ancien système (statut) vs Doom v2"""
     if not DOOM_READY:
         return jsonify({"error": "Doom v2 non disponible"}), 503
     df = load_data()
@@ -272,7 +267,7 @@ def doom_compare():
     })
 
 # ─────────────────────────────────────────
-# UPLOAD / RESET / EXPORT (inchangé)
+# UPLOAD / RESET / EXPORT
 # ─────────────────────────────────────────
 @app.route("/api/upload", methods=["POST"])
 def upload_csv():
@@ -284,14 +279,59 @@ def upload_csv():
     try:
         os.makedirs("data", exist_ok=True)
         path = "data/network_data.csv"
+
         f.save(path)
         df = pd.read_csv(path)
+        try:
+            df_uploaded = pd.read_csv(path)
+            latest = df_uploaded.groupby("sector").last().reset_index()
+            latest.to_json(DATA_DIR / "dashboard_data.json", orient="records", date_format="iso")
+        except Exception:
+            pass
+
         return jsonify({
             "success":  True,
             "filename": f.filename,
             "rows":     len(df),
             "sectors":  int(df["sector"].nunique()) if "sector" in df.columns else 0
         })
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+@app.route("/api/analyze", methods=["POST"])
+def analyze():
+    if not DOOM_READY:
+        return jsonify({"success": False, "error": "Modèle DOOM v2 non disponible"}), 503
+
+    df = load_data()
+    if df is None:
+        return jsonify({"success": False,
+                        "error": "Aucune donnée. Importez d'abord un fichier CSV."}), 404
+
+    try:
+        latest_date = df["date"].max()
+        df_latest = df[df["date"] == latest_date].copy()
+
+        results = []
+        for _, row in df_latest.iterrows():
+            diag = doom.diagnose(
+                pressure_bar=float(row.get("pressure_out", 3.0)),
+                flow_rate_ls=float(row.get("flow_rate_ls", 0.1)),
+                temperature_c=float(row.get("temperature_c", 20.0)),
+            )
+            results.append({
+                "name": row.get("sector", "Inconnu"),
+                "status": diag.get("status", "NORMAL"),
+                "ilp": float(row.get("ilp", 0)),
+                "pertes": float(row.get("volume_lost", 0)),
+                "delta_p": float(row.get("delta_p", 0)),
+                "recommandation": diag.get("label", "—"),
+                "lat": float(row.get("lat", 33.57)),
+                "lon": float(row.get("lon", -7.59)),
+                "doom_score": diag.get("score", 0),
+            })
+
+        return jsonify({"success": True, "sectors_count": len(results), "sectors": results})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 

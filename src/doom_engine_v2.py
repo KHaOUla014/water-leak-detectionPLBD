@@ -8,8 +8,8 @@ PROCESSED_DIR = BASE_DIR / "data" / "processed"
 
 ALPHA_TEMPORAL = 0.7
 BETA_STATIC = 0.3
-THRESHOLD_SUSPECT = 0.35
-THRESHOLD_LEAK = 0.65
+THRESHOLD_SUSPECT = 0.25   # was 0.35  <- Option A
+THRESHOLD_LEAK = 0.50      # was 0.65  <- Option A
 
 BAR_TO_PSI = 14.5038
 LS_TO_GPM = 15.8503
@@ -27,6 +27,7 @@ class DoomEngineV2:
         stat = joblib.load(MODELS_DIR / "doom_static.pkl")
         self.temporal_model = temp['model']
         self.temporal_features = temp['features']
+        self.temporal_threshold = temp.get('threshold', 0.20)   # <- Option A
         self.static_model = stat['model']
         self.static_features = stat['features']
 

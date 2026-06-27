@@ -11,7 +11,7 @@ RAW_DIR = Path("data/raw")
 PROCESSED_DIR = Path("data/processed")
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
-# Au lieu de : CASA_SECTORS = [f"SEC_{i:02d}" for i in range(1, 21)]
+
 
 def get_casa_sectors():
     """Récupère les vrais noms de secteurs depuis network_data.csv"""
@@ -73,11 +73,13 @@ def prepare_static():
     df = pd.read_csv(RAW_DIR / "water_network_leak_dataset.csv", sep=";")
     df.columns = [c.strip().lower().replace(' ', '_') for c in df.columns]
     
-    # Conversion virgule décimale → point
+    # Conversion virgule décimale → point (robuste)
     num_cols = ['pressure_psi', 'flow_gpm', 'velocity_fps', 'temperature_f', 'pipe_age_years']
     for c in num_cols:
-        if df[c].dtype == 'object':
-            df[c] = df[c].astype(str).str.replace(',', '.').astype(float)
+        df[c] = (df[c].astype(str)
+                      .str.replace(',', '.', regex=False)
+                      .astype(float))
+
     
     sectors = CASA_SECTORS
     sampled = df.sample(n=2000, random_state=42, replace=True).reset_index(drop=True)
