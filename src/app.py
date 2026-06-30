@@ -50,23 +50,25 @@ def load_json():
         return json.load(f)
 
 
+LEGACY_TO_BADGE = {"NORMAL": "normal", "SUSPECT": "suspect", "FUITE": "leak"}
+
 def enrich_with_doom(sector_dict):
+    """Ajoute le diagnostic DOOM SANS jamais écraser le statut legacy fiable."""
     if not DOOM_READY:
         return sector_dict
     try:
-        # Reconstitue les 4 arguments positionnels attendus par diagnose()
         sector_id    = sector_dict.get("sector", "Inconnu")
         pressure_out = float(sector_dict.get("pressure_out", 3.0))
         daily_conso  = float(sector_dict.get("daily_consumption", 8000))
-        flow_ls      = daily_conso * 1000 / 86400          # m³/j → L/s
-        age_years    = 20.0                                # défaut
+        flow_ls      = daily_conso * 1000 / 86400
+        temperature  = float(sector_dict.get("temperature_c", 20.0))  # ✅ bon 4e arg
 
-        diag = doom.diagnose(sector_id, pressure_out, flow_ls, age_years)
-
+        diag = doom.diagnose(sector_id, pressure_out, flow_ls, temperature)
         sector_dict['doom_score']  = diag.get('score')
         sector_dict['doom_status'] = diag.get('status')
         sector_dict['doom_label']  = diag.get('label')
     except Exception as e:
+        # En cas d'échec DOOM : on retombe proprement sur le legacy
         sector_dict['doom_error'] = str(e)
     return sector_dict
 
@@ -81,9 +83,33 @@ def index():
 
 @app.route("/api/sectors/latest")
 def sectors_latest():
-    data = load_json()
-    enriched = [enrich_with_doom(dict(s)) for s in data]
+    """Source de vérité = CSV (statut legacy + géo réelle), enrichi DOOM."""
+    df = load_data()
+    if df is None:
+        # fallback JSON si CSV absent
+        data = load_json()
+        return jsonify([enrich_with_doom(dict(s)) for s in data])
+
+    latest_date = df["date"].max()
+    df_latest = df[df["date"] == latest_date].copy()
+
+    enriched = []
+    for _, row in df_latest.iterrows():
+        item = {
+            "sector":            row["sector"],
+            "status":            row["status"],          # ✅ NORMAL/SUSPECT/FUITE garanti
+            "lat":               float(row["lat"]),
+            "lon":               float(row["lon"]),
+            "ilp":               float(row.get("ilp", 0)),
+            "volume_lost":       float(row.get("volume_lost", 0)),
+            "delta_p":           float(row.get("delta_p", 0)),
+            "network":           float(row.get("length_km", 0)),
+            "pressure_out":      float(row.get("pressure_out", 3.0)),
+            "daily_consumption": float(row.get("daily_consumption", 8000)),
+        }
+        enriched.append(enrich_with_doom(item))
     return jsonify(enriched)
+
 
 @app.route("/api/sectors/summary")
 def sectors_summary():
@@ -178,6 +204,11 @@ def network_stats():
         fuite_rate=("status", lambda x: round((x == "FUITE").mean() * 100, 1))
     ).round(2).reset_index()
     return jsonify(stats.to_dict(orient="records"))
+
+@app.route("/favicon.ico")
+def favicon():
+    return ("", 204)  # No Content, plus de 404
+
 
 # ─────────────────────────────────────────
 # ROUTES DOOM v2
@@ -314,22 +345,29 @@ def analyze():
 
         results = []
         for _, row in df_latest.iterrows():
+            flow_ls = float(row.get("daily_consumption", 8000)) * 1000 / 86400
             diag = doom.diagnose(
-                pressure_bar=float(row.get("pressure_out", 3.0)),
-                flow_rate_ls=float(row.get("flow_rate_ls", 0.1)),
-                temperature_c=float(row.get("temperature_c", 20.0)),
+                row.get("sector", "Inconnu"),                       # ✅ sector_id
+                float(row.get("pressure_out", 3.0)),
+                flow_ls,                                            # ✅ flow cohérent
+                float(row.get("temperature_c", 20.0)),
             )
             results.append({
-                "name": row.get("sector", "Inconnu"),
-                "status": diag.get("status", "NORMAL"),
-                "ilp": float(row.get("ilp", 0)),
-                "pertes": float(row.get("volume_lost", 0)),
-                "delta_p": float(row.get("delta_p", 0)),
-                "recommandation": diag.get("label", "—"),
-                "lat": float(row.get("lat", 33.57)),
-                "lon": float(row.get("lon", -7.59)),
-                "doom_score": diag.get("score", 0),
+                "name":           row.get("sector", "Inconnu"),
+                "status":         diag.get("status", "NORMAL"),
+                "ilp":            float(row.get("ilp", 0)),
+                "pertes":         float(row.get("volume_lost", 0)),
+                "delta_p":        float(row.get("delta_p", 0)),
+                "network":        float(row.get("length_km", 0)),   # ✅ ajouté (le JS l'attend)
+                "recommandation": diag.get("recommendation", diag.get("label", "—")),
+                "lat":            float(row.get("lat", 33.57)),
+                "lon":            float(row.get("lon", -7.59)),
+                "doom_score":     diag.get("score", 0),
+                "pipe_age":       diag.get("pipe_age"),
+                "material":       diag.get("material", ""),
+                "corrosivity":    diag.get("corrosivity", ""),
             })
+
 
         return jsonify({"success": True, "sectors_count": len(results), "sectors": results})
     except Exception as e:
